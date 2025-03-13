@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/ui/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,11 +23,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav > 
-          {/* navbar  */}
-        </nav>
+        <NavBar></NavBar>
         <main>
-         {children}
+          {children}
         </main>
         <footer className="bg-sky-100 py-10 w-10/12">
           {/* footer  */}
