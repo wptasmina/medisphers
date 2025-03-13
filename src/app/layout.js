@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <main>
          {children}
         </main>
-        <footer className="bg-sky-100 py-10 w-10/12">
+        <footer className="">
           {/* footer  */}
         </footer>
       </body>
