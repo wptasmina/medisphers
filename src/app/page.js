@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button"
 export default function Home() {
   return (
    <div className="text-6xl text-center">
-    Hellow word
+    Hello word
+    <h1>Welcome to Medisphers</h1>
    </div>
 
   );
