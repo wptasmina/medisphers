@@ -22,18 +22,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="text-center bg-amber-400"> 
-          <ul className="flex justify-center items-center gap-4 py-4 ">
-            <li>Home</li>
-            <li>about</li>
-            <li>services</li>
-          </ul>
+        <nav > 
+          {/* navbar  */}
         </nav>
         <main>
          {children}
         </main>
         <footer className="bg-sky-100 py-10 w-10/12">
-          Awesome Next JS Project
+          {/* footer  */}
         </footer>
       </body>
     </html>
