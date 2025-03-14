@@ -1,3 +1,5 @@
+
+import { Button } from '@/components/ui/button';
 import React from 'react'
 
 export default function ServiceCard({ item }) {
@@ -16,7 +18,7 @@ export default function ServiceCard({ item }) {
           <div>
             <time dateTime={datetime} className="block text-xs text-gray-500">{datetime}</time>
           </div>
-          <p>{availability}</p>
+          <p className="text-gray-900 font-medium">{availability}</p>
         </div>
 
         <div className='flex justify-between items-center '>
@@ -24,9 +26,10 @@ export default function ServiceCard({ item }) {
           <p>Year: {year}</p>
         </div>
 
-        <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+        <p className="mt-2 mb-4 line-clamp-3 text-sm/relaxed text-gray-500">
           {desc}
         </p>
+        <Button >Details</Button>
       </div>
     </div>
   );
