@@ -15,7 +15,7 @@ export default function NavBar() {
                             <li><Link href="/" className="btn btn-ghost">Home</Link></li>
                             <li><Link href="/about" className="btn btn-ghost">About</Link></li>
                             <li><Link href="/doctor" className="btn btn-ghost">All Doctor</Link></li>
-                            <li><Link href="/contact-us" className="btn btn-ghost">Contact Us</Link></li>
+                            <li><Link href="/contact" className="btn btn-ghost">Contact Us</Link></li>
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl">MediSphere</a>
