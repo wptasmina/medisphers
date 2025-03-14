@@ -49,7 +49,7 @@ const doctors = [
   {
     id: 6,
     name: "Dr. Olivia Brown",
-    specialty: "Gynecologist",
+    specialty: "Gynecologist", 
     image: "https://i.ibb.co.com/rR1VD96t/dr-sarah-lee.jpg",
     visitingTime: "Mon - Fri (9:00 AM - 7:00 PM)",
     fee: "$140",
@@ -139,7 +139,7 @@ const DoctorSection = () => {
                   <p className="text-lg text-gray-500 dark:text-gray-400">{doctor.specialty}</p>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">{doctor.visitingTime}</p>
                   <p className="text-primary font-semibold text-xl mt-3">{doctor.fee}</p>
-                  <button className="btn btn-primary btn-wide mt-4 transition-all hover:bg-primary-dark">
+                  <button className="btn btn-primary w-full btn-wide mt-4 transition-all hover:bg-primary-dark">
                     Book Appointment
                   </button>
                 </div>
