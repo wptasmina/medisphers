@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "name": "Dr. Emily Watson",
+      "role": "Cardiologist",
+      "review": "MediSpheres has transformed our hospital management. The intuitive interface and robust features make patient care seamless!",
+      "rating": 5,
+      "img": "https://i.ibb.co.com/N6htD2Wm/drEmily.jpg",
+      "date": "2025-03-10"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "role": "Patient",
+      "review": "Great experience! The doctors are very knowledgeable and the service is quick.",
+      "rating": 5,
+      "img": "https://i.ibb.co.com/xqVJhynq/drSarah.jpg",
+      "date": "2025-03-08"
+    },
+    {
+      "id": 3,
+      "name": "Michael Smith",
+      "role": "Patient",
+      "review": "The hospital is well-maintained and the staff is friendly. Could improve the waiting time.",
+      "rating": 4,
+      "img": "https://i.ibb.co.com/R4sg8dDx/dr-Michael.jpg",
+      "date": "2025-03-07"
+    },
+    {
+      "id": 4,
+      "name": "Emily Brown",
+      "role": "Nurse",
+      "review": "Exceptional care! The emergency services were very efficient and well-managed.",
+      "rating": 5,
+      "img": "https://i.ibb.co.com/N6htD2Wm/drEmily.jpg",
+      "date": "2025-03-06"
+    },
+    {
+      "id": 5,
+      "name": "David Wilson",
+      "role": "Patient",
+      "review": "Good service overall, but the billing process took longer than expected.",
+      "rating": 4,
+      "img": "https://i.ibb.co.com/jkrxSkhQ/drDavid.jpg",
+      "date": "2025-03-05"
+    },
+    {
+      "id": 6,
+      "name": "Olivia Martin",
+      "role": "Doctor",
+      "review": "Friendly doctors and a clean environment. I had a smooth and pleasant experience.",
+      "rating": 5,
+      "img": "https://i.ibb.co.com/ZzNG69v3/drOlivia.jpg",
+      "date": "2025-03-04"
+    },
+    {
+      "id": 7,
+      "name": "James Anderson",
+      "role": "Hospital Administrator",
+      "review": "Well-trained medical staff and modern equipment. Some areas need better organization.",
+      "rating": 4,
+      "img": "https://i.ibb.co.com/v6Xj2SMs/drJames.jpg",
+      "date": "2025-03-03"
+    },
+    {
+      "id": 8,
+      "name": "Sophia Thompson",
+      "role": "Patient",
+      "review": "Amazing healthcare services! They truly care about their patients' well-being.",
+      "rating": 5,
+      "img": "https://i.ibb.co.com/VWhBMd5F/drSophia.jpg",
+      "date": "2025-03-02"
+    }
+  ]
+  
