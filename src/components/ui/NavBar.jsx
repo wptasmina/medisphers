@@ -18,7 +18,13 @@ export default function NavBar() {
                             <li><Link href="/contact" className="btn btn-ghost">Contact Us</Link></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">MediSphere</a>
+                    <div className="flex items-center text-center justify-center gap-1">
+                        <img src="https://i.ibb.co.com/zH84FwfK/IMG-20250315-WA0013.jpg" alt="" 
+                        className="w-14 h-14 rounded-full"
+                        />
+                        <h1 className="text-3xl font-medium items-center text-center justify-center">MediSphere</h1>
+                        {/* <a className="btn btn-ghost text-xl">MediSphere</a> */}
+                    </div>
                 </div>
 
                 <div className="navbar-end">

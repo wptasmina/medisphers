@@ -105,7 +105,7 @@ const DoctorSection = () => {
   };
 
   return (
-    <section className="py-11 bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white">
+    <section className="py-11 bg-fuchsia-400 text-white">
       <div className="container w-11/12 mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4 tracking-wide">Meet Our Experts</h2>
         <p className="text-xl mb-6 opacity-80">
