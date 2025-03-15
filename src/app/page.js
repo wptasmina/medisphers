@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import Hero from "./_components/Hero";
 import Service from './_components/Service';
+import Reviews from "./reviews/page";
 
 
 
@@ -11,6 +12,7 @@ export default function Home() {
    <div className="">
     <Hero/>
     <Service/>
+    <Reviews/>
     
 
    </div>
