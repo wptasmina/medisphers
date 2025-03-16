@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#010104] text-gray-300 py-12 md:py-16 lg:py-20">
+    <footer className="bg-[#010104] text-gray-300 my-6 py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         <div className="space-y-4">
           <h4 className="text-lg font-semibold">Company</h4>
@@ -31,26 +31,26 @@ export default function Footer() {
           </ul>
         </div>
         <div className="space-y-4">
-          <h4 className="text-lg font-semibold">Products</h4>
+          <h4 className="text-lg font-semibold">Services</h4>
           <ul className="space-y-2 text-sm">
             <li>
               <a href="#" className="hover:text-gray-100">
-                Men
+                Health Tests
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-gray-100">
-                Women
+                E-Phrama
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-gray-100">
-                Kids
+                Consult
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-gray-100">
-                Accessories
+                Facilities
               </a>
             </li>
           </ul>
@@ -100,7 +100,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1 flex justify-end">
+        <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1 flex justify-start">
           <Link href="/" className="flex items-start space-x-2" prefetch={false}>      
             <span className="text-lg font-semibold">Medispheres Inc</span>
           </Link>

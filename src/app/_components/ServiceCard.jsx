@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight, LayoutList } from 'lucide-react';
@@ -7,6 +8,15 @@ import React from 'react'
 export default function ServiceCard({ item }) {
     const { img, name, year,title, availability, datetime, desc } = item;
   
+=======
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import React from "react";
+
+export default function ServiceCard({ item }) {
+  const { img, name, year, availability, datetime, desc } = item;
+
+>>>>>>> 06b3a8256cb79b2e66d5c90770ae0962797b1863
   return (
     <div className=" p-4 overflow-hidden rounded-lg shadow-sm hover:shadow-lg hover:scale-110 transition-all ease-in-out border">
       <img
