@@ -14,7 +14,7 @@ export default function NavBar() {
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <li><Link href="/" className="btn btn-ghost">Home</Link></li>
                             <li><Link href="/about" className="btn btn-ghost">About</Link></li>
-                            <li><Link href="/doctor" className="btn btn-ghost">All Doctor</Link></li>
+                            <li><Link href="/doctors" className="btn btn-ghost">All Doctor</Link></li>
                             <li><Link href="/contact" className="btn btn-ghost">Contact Us</Link></li>
                         </ul>
                     </div>
@@ -26,14 +26,14 @@ export default function NavBar() {
                         <ul className="menu menu-horizontal px-1">
                             <li><Link href="/" className="btn btn-ghost">Home</Link></li>
                             <li><Link href="/about" className="btn btn-ghost">About</Link></li>
-                            <li><Link href="/doctor" className="btn btn-ghost">All Doctor</Link></li>
+                            <li><Link href="/doctors" className="btn btn-ghost">All Doctor</Link></li>
                             <li><Link href="/contact" className="btn btn-ghost">Contact Us</Link></li>
                         </ul>
                     </div>
                     <div>
-                        {/* <a className="btn">Login</a> */}
+                       
                         <button className="btn">
-                            <Link href="/auth/signin">Login</Link>
+                            <Link href="/auth/signin">Sign In</Link>
                         </button>
                     </div>
                 </div>
