@@ -11,7 +11,6 @@ export default function Service() {
         fetch("/service.json")
         .then(res=>res.json())
         .then(data=> setService(data))
-        
       },[])
       
   return (
