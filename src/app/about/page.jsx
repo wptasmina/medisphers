@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -35,7 +36,7 @@ export default function About() {
         </div>
 
         <div className="mt-10">
-          <a href="/contact-us" className="btn btn-primary">Get in Touch</a>
+          <Link href="/contact" className="btn btn-primary">Get in Touch</Link>
         </div>
       </div>
     </>
