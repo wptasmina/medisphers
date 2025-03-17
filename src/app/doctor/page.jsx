@@ -1,12 +1,12 @@
 "use client";
 
-// import DoctorDetails from '@/components/doctorDetails/DoctorDetails';
+import DoctorDetails from '@/components/doctorDetails/DoctorDetails';
 
 
 const page = () => {
     return (
         <div>
-
+            <DoctorDetails />
         </div>
     );
 };

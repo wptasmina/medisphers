@@ -27,7 +27,7 @@ export default function ServiceCard({ item }) {
 
       <div className='flex lg:gap-4 gap-2 justify-center items-center mb-4'>
         <Button className="bg-[#022dbb] md:px-4 cursor-pointer">
-          <Link href="/" className='inline-flex gap-1 items-center'><LayoutList />Details</Link>
+          <Link href="/doctor" className='inline-flex gap-1 items-center'><LayoutList />Details</Link>
         </Button>
         <Button className="bg-[#022dbb] md:px-4 cursor-pointer">
           <Link href="/" className='inline-flex gap-1 items-center'><ArrowUpRight />Book Now</Link>
