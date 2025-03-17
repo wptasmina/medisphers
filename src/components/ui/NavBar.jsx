@@ -42,7 +42,7 @@ export default function NavBar() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
 
     );
