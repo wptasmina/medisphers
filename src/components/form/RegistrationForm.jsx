@@ -134,12 +134,12 @@ const RegistrationForm = () => {
 
        
         <div className="mt-6">
-          <Button type="submit" className="w-full bg-[#00c28e]">
+          <Button type="submit" className="w-full bg-[#022dbb]">
             Sign Up
           </Button>
         </div>
       </form>
-      <p className="my-4">Already have an account? Click here to  <Link className="font-bold text-[#31d8b9]" href={'/auth/signin'}>Sign in</Link></p>
+      <p className="my-4">Already have an account? Click here to  <Link className="font-bold text-[#022dbb]" href={'/auth/signin'}>Sign in</Link></p>
     </div>
   );
 };

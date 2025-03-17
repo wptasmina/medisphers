@@ -73,12 +73,12 @@ const LoginForm = () => {
           )}
         </div>
 
-        <Button type="submit" className="w-full bg-[#00c28e]">
+        <Button type="submit" className="w-full bg-[#022dbb]">
           Sign In
         </Button>
         <p className="mt-6">
           New to <span className="font-bold">Medisphere</span> ? Click here to 
-          <Link className="text-[#31d8b9] font-bold"  href={"/auth/signup"}> Sign up</Link> now.
+          <Link className="text-[#022dbb] font-bold"  href={"/auth/signup"}> Sign up</Link> now.
         </p>
       </form>
     </div>

@@ -28,7 +28,7 @@ export default function NavBar() {
                         <ul className="menu menu-horizontal px-1">
                             <li><Link href="/" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">Home</Link></li>
                             <li><Link href="/about" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">About</Link></li>
-                            <li><Link href="/doctor" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">All Doctor</Link></li>
+                            <li><Link href="/doctors" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">All Doctor</Link></li>
                             <li><Link href="/contact" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">Contact Us</Link></li>
                         </ul>
                     </div>
