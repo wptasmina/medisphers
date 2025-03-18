@@ -22,7 +22,7 @@
   {
     "id": 3,
     "name": "Dr. Emily Davis",
-    "title": "General Surgery",
+    "title": "Surgery",
     "availability": "Available",
     "year": 5,
     "desc": "Experienced general practitioner specializing in family medicine and preventive care.",
@@ -72,7 +72,7 @@
   {
     "id": 8,
     "name": "Dr. James Anderson",
-    "title": "General surgeon",
+    "title": "Surgeon",
     "availability": "Available",
     "year": 18,
     "desc": "General surgeon with advanced skills in minimally invasive surgery and trauma care.",
