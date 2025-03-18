@@ -88,7 +88,7 @@ const AllDoctors = () => {
                                 className="w-full h-40 object-cover rounded-lg mb-4"
                             />
                             <h3 className="text-xl font-semibold">{doctor.name}</h3>
-                            <p className="text-gray-600">{doctor.title}</p>
+                            <p className="text-blue-600 px-4 bg-blue-50">{doctor.title}</p>
                             <p
                                 className={`text-sm ${doctor.availability === "Available" ? "text-green-500" : "text-red-500"
                                     }`}
