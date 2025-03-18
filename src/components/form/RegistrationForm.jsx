@@ -17,9 +17,18 @@ const RegistrationForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false); 
   const router = useRouter()
 
-  const onSubmit = (data) => {
-    console.log(data); 
-    router.push('/auth/signin')
+  const onSubmit = async (formData) => {
+    console.log(formData); 
+    const res = await fetch("/api/user/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+    if (res.ok) alert(data.message);
+    else alert(data.error);
+    router.push('/signin')
   };
 
   const togglePasswordVisibility = () => {
@@ -139,7 +148,7 @@ const RegistrationForm = () => {
           </Button>
         </div>
       </form>
-      <p className="my-4">Already have an account? Click here to  <Link className="font-bold text-[#022dbb]" href={'/auth/signin'}>Sign in</Link></p>
+      <p className="my-4">Already have an account? Click here to  <Link className="font-bold text-[#022dbb]" href={'/signin'}>Sign in</Link></p>
     </div>
   );
 };

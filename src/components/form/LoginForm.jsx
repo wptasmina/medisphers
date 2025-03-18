@@ -7,21 +7,37 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/authContext";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const {login} = useAuth()
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const router = useRouter()
+  const router = useRouter();
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
-  const onSubmit = (data) => {
-    console.log(data);
-    router.push('/')
+  const onSubmit = async (formData) => {
+    console.log(formData);
+    const response = await fetch("/api/user/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      // Store JWT in localStorage
+      login(data.token)
+      router.push("/"); // Redirect to or home page
+    } else {
+      alert(data.error);
+    }
   };
 
   return (
@@ -77,8 +93,12 @@ const LoginForm = () => {
           Sign In
         </Button>
         <p className="mt-6">
-          New to <span className="font-bold">Medisphere</span> ? Click here to 
-          <Link className="text-[#022dbb] font-bold"  href={"/auth/signup"}> Sign up</Link> now.
+          New to <span className="font-bold">Medisphere</span> ? Click here to
+          <Link className="text-[#022dbb] font-bold" href={"/signup"}>
+            {" "}
+            Sign up
+          </Link>{" "}
+          now.
         </p>
       </form>
     </div>

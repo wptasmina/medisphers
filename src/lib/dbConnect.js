@@ -1,21 +1,22 @@
-// # DB_NAME=medisphere
-// # DB_PUSS=lMAuuWszCYRCUwox
+import { MongoClient } from "mongodb";
 
+const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_DB = process.env.MONGODB_DB;
 
-import { MongoClient, ServerApiVersion } from'mongodb';
+if (!MONGODB_URI) throw new Error("Missing MONGODB_URI");
+if (!MONGODB_DB) throw new Error("Missing MONGODB_DB");
 
-export default function dbConnect(collectionName){
-    const uri = process.env.MONGODB_URI
-    const client = new MongoClient(uri, {
-      serverApi: {
-        version: ServerApiVersion.v1,
-        strict: true,
-        deprecationErrors: true,
-      }
-      
-    });
+let cachedClient = null;
+let cachedDb = null;
 
-    return client.db(process.env.DB_NAME).collection(collectionName)
+export async function connectToDatabase() {
+  if (cachedClient && cachedDb) return { client: cachedClient, db: cachedDb };
+
+  const client = await MongoClient.connect(MONGODB_URI);
+  const db = client.db(MONGODB_DB);
+
+  cachedClient = client;
+  cachedDb = db;
+
+  return { client, db };
 }
-
-
