@@ -4,18 +4,18 @@ import Link from "next/link";
 import { useAuth } from "@/context/authContext";
 import { useRouter } from "next/navigation";
 export default function NavBar() {
-  
   const { user, logout } = useAuth();
-  console.log(user?.name)
+  console.log(user?.name);
   const router = useRouter();
 
   const handleLogout = () => {
     logout();
-    router.push('/signin'); // Redirect to login page after logout
+    router.push("/signin"); // Redirect to login page after logout
   };
+
   return (
     <div className="navbar bg-base-300/90 shadow-sm sticky top-0 z-50 backdrop:blur-lg">
-      <div className="w-11/12 mx-auto ">
+      <div className="w-11/12 mx-auto flex justify-between items-center">
         <div className="navbar-start p-0 h-8">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="mr-2 lg:hidden">
@@ -40,40 +40,6 @@ export default function NavBar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <Link href="/" className="btn btn-ghost">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="btn btn-ghost">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/doctors" className="btn btn-ghost">
-                  All Doctor
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="btn btn-ghost">
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <Link href="/">
-            <img
-              src="/Medisheper-logo.png"
-              alt="Logo"
-              className=" w-32 h-12 object-cover p-1 md:p-0"
-            />
-          </Link>
-        </div>
-
-        <div className="navbar-end">
-          <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
-              <li>
                 <Link
                   href="/"
                   className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
@@ -91,7 +57,7 @@ export default function NavBar() {
               </li>
               <li>
                 <Link
-                  href="/doctors"
+                  href="/doctor"
                   className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
                 >
                   All Doctor
@@ -107,9 +73,57 @@ export default function NavBar() {
               </li>
             </ul>
           </div>
+          <Link href="/">
+            <img
+              src="/Medisheper-logo.png"
+              alt="Logo"
+              className=" w-32 h-12 object-cover p-1 md:p-0"
+            />
+          </Link>
+        </div>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <Link
+                href="/"
+                className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
+                className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/doctor"
+                className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
+              >
+                All Doctor
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
+              >
+                Contact Us
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="navbar-end">
           <div>
             {user && user?.email ? (
-              <button onClick={handleLogout} className="px-4 py-2 font-medium text-lg bg-[#022dbb] text-white rounded-md">
+              <button
+                onClick={handleLogout}
+                className="px-4 py-2 font-medium text-lg bg-[#022dbb] text-white rounded-md"
+              >
                 Sign out
               </button>
             ) : (
