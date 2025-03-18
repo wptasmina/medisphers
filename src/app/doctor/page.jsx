@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 const departments = [
     "Cardiology",
     "Pediatrics",

@@ -13,9 +13,9 @@ export default function NavBar() {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
                             <li><Link href="/" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">Home</Link></li>
-                        <li><Link href="/about" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">About</Link></li>
-                        <li><Link href="/doctor" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">All Doctor</Link></li>
-                        <li><Link href="/contact" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">Contact Us</Link></li>
+                            <li><Link href="/about" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">About</Link></li>
+                            <li><Link href="/doctor" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">All Doctor</Link></li>
+                            <li><Link href="/contact" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">Contact Us</Link></li>
                         </ul>
                     </div>
                     <Link href="/">
@@ -31,14 +31,6 @@ export default function NavBar() {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
-                            <li><Link href="/" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">Home</Link></li>
-                            <li><Link href="/about" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">About</Link></li>
-                            <li><Link href="/doctor" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">All Doctor</Link></li>
-                            <li><Link href="/contact" className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]">Contact Us</Link></li>
-                        </ul>
-                    </div>
                     <div>
                         <button className="px-4 py-2 font-medium text-lg bg-[#022dbb] hover:bg-base-200 hover:text-[#022dbb] text-white rounded-md">
                             <Link href="/auth/signin">Login</Link>
