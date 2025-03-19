@@ -19,7 +19,7 @@ export default function ServiceCard({ item }) {
     <Link href="/details">
       <div data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000" className="p-4 overflow-hidden rounded-lg shadow-sm hover:shadow-2xl transition-all ease-in-out border">
+     data-aos-duration="2000" className="p-4 overflow-hidden rounded-lg shadow-sm hover:shadow-xl transition-all ease-in-out border">
         <img
           alt="image"
           src={img}
