@@ -28,7 +28,6 @@ export default function ServiceCard({ item }) {
         <p className="mt-2 mb-4 line-clamp-3 text-sm/relaxed text-gray-500 ">
           {desc}
         </p>
-
       </div>
     </div>
   );
