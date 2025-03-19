@@ -19,7 +19,7 @@ export default function Service() {
       <h2 className='md:text-5xl text-4xl text-center font-extrabold my-8'>Top <span className='text-[#022dbb] '>Dortor's</span></h2>
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-10'>
         {
-          service.map((item, idx) => (<ServiceCard key={idx} item={item}  />))   
+          service.slice(0, 8).map((item, idx) => (<ServiceCard key={idx} item={item}  />))   
         }
     </div>
       </div>
