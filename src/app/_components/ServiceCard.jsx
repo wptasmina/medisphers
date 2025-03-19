@@ -30,7 +30,7 @@ export default function ServiceCard({ item }) {
         </p>
 
         <div className="flex lg:gap-4 gap-2 justify-center items-center mb-4">
-          <Link href="/doctor">
+          <Link href="/doctor/doctorDetaill">
             <Button className="bg-[#022dbb] md:px-4 cursor-pointer inline-flex gap-1 items-center">
               <LayoutList />
               Details
