@@ -36,12 +36,6 @@ export default function ServiceCard({ item }) {
               Details
             </Button>
           </Link>
-          {/* <Button className="bg-[#022dbb] md:px-4 cursor-pointer">
-            <Link href="/" className="inline-flex gap-1 items-center">
-              <ArrowUpRight />
-              Book Now
-            </Link>
-          </Button> */}
         </div>
       </div>
     </div>
