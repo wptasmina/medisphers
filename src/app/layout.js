@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <AuthProvider>
 
       
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
         <main className="mx-2">
           {children}
         </main>
