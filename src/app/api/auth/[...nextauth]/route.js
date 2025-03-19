@@ -1,6 +1,6 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { connectToDatabase } from "@lib/dbConnect";
+import { connectToDatabase } from "@/lib/dbConnect";
 import bcrypt from "bcryptjs";
 
 export default NextAuth({
