@@ -1,10 +1,12 @@
 import { MongoClient } from "mongodb";
 
+
+
 const MONGODB_URI = process.env.MONGODB_URI;
 const MONGODB_DB = process.env.MONGODB_DB;
 
-if (!MONGODB_URI) throw new Error("Missing MONGODB_URI");
-if (!MONGODB_DB) throw new Error("Missing MONGODB_DB");
+if (!MONGODB_URI)console.log("Missing MONGODB_URI")
+if (!MONGODB_DB) console.log("Missing MONGODB_DB")
 
 let cachedClient = null;
 let cachedDb = null;
