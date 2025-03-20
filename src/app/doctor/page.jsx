@@ -77,7 +77,7 @@ const AllDoctors = () => {
 
                 <div className="col-span-2 sm:col-span-2 md:col-span-3 flex flex-col">
                     {/* Show Selected Department */}
-                    <h2 className="text-3xl font-bold text-start pl-8 text-gray-800 mb-6">
+                    <h2 className="text-3xl font-bold text-start pl-8 text-gray-800 dark:text-white mb-6">
                         {selectedDepartment} Specialists
                     </h2>
                     {/* Doctors Cards */}
