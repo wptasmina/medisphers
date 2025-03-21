@@ -39,7 +39,7 @@ export default function NavBar() {
     };
 
     return (
-        <div className="navbar bg-base-300/90 shadow-sm sticky top-0 z-50 backdrop:blur-lg">
+        <div className="navbar bg-base-300/90 shadow-sm dark:bg-base-600/90 sticky dark:hover:text-white dark:text-blue-600 top-0 z-50 backdrop:blur-lg">
             <div className="w-11/12 mx-auto flex justify-between items-center">
                 <div className="navbar-start p-0 h-8">
                     <div className="dropdown">
@@ -62,7 +62,7 @@ export default function NavBar() {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                            className="menu menu-sm dropdown-content bg-base-100 dark:bg-gray-600 rounded-box z-1 mt-3 w-52 p-2 shadow"
                         >
                             <li>
                                 <Link
@@ -82,7 +82,7 @@ export default function NavBar() {
                             </li>
                             <li>
                                 <Link
-                                    href="/doctor"
+                                    href="/doctors"
                                     className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
                                 >
                                     All Doctor
@@ -126,7 +126,7 @@ export default function NavBar() {
                         </li>
                         <li>
                             <Link
-                                href="/doctor"
+                                href="/doctors"
                                 className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
                             >
                                 All Doctor
