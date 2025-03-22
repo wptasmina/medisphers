@@ -1,802 +1,987 @@
 [
     {
-        "id": 1,
-        "name": "Dr. John Smith",
-        "title": "Cardiology",
-        "availability": "Available",
-        "year": 12,
-        "desc": "Specialist in Cardiology with 12 years of experience in heart diseases and surgeries.",
-        "img": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
-        "datetime": "2025-03-14 10:30 AM"
-    },
-    {
-        "id": 2,
-        "name": "Dr. Emily Johnson",
-        "title": "Cardiology",
-        "availability": "Unavailable",
-        "year": 8,
-        "desc": "Experienced cardiologist with a focus on arrhythmia and heart failure.",
-        "img": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
-        "datetime": "2025-03-15 02:00 PM"
-    },
-    {
-        "id": 3,
-        "name": "Dr. Michael Lee",
-        "title": "Cardiology",
-        "availability": "Available",
-        "year": 15,
-        "desc": "Cardiologist with expertise in preventive cardiology and rehabilitation.",
-        "img": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
-        "datetime": "2025-03-16 11:15 AM"
-    },
-    {
-        "id": 4,
-        "name": "Dr. Sarah Williams",
-        "title": "Cardiology",
-        "availability": "Available",
-        "year": 10,
-        "desc": "Specializes in treating congenital heart defects and heart surgeries.",
-        "img": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
-        "datetime": "2025-03-17 01:45 PM"
-    },
-    {
-        "id": 5,
-        "name": "Dr. Robert Brown",
-        "title": "Cardiology",
-        "availability": "Unavailable",
-        "year": 20,
-        "desc": "A seasoned cardiologist with a focus on coronary artery disease and interventions.",
-        "img": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
-        "datetime": "2025-03-18 09:00 AM"
-    },
-    {
-        "id": 6,
-        "name": "Dr. Jessica Miller",
-        "title": "Cardiology",
-        "availability": "Available",
-        "year": 6,
-        "desc": "Cardiologist specializing in cardiovascular risk management and lifestyle changes.",
-        "img": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
-        "datetime": "2025-03-19 03:30 PM"
-    },
-    {
-        "id": 7,
-        "name": "Dr. David Wilson",
-        "title": "Cardiology",
-        "availability": "Available",
-        "year": 14,
-        "desc": "Expert in heart failure management and cardiac rehabilitation.",
-        "img": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
-        "datetime": "2025-03-20 10:00 AM"
-    },
-    {
-        "id": 8,
-        "name": "Dr. Linda Thomas",
-        "title": "Cardiology",
-        "availability": "Unavailable",
-        "year": 18,
-        "desc": "Specializes in interventional cardiology and minimally invasive heart procedures.",
-        "img": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
-        "datetime": "2025-03-21 04:45 PM"
-    },
-    {
-        "id": 11,
-        "name": "Dr. Sarah Johnson",
-        "title": "Pediatrics",
-        "availability": "Not Available",
-        "year": 8,
-        "desc": "A leading pediatrician with a focus on early childhood development and vaccinations.",
-        "img": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
-        "datetime": "2025-03-14 11:15 AM"
-    },
-    {
-        "id": 12,
-        "name": "Dr. Michael Carter",
-        "title": "Pediatrics",
-        "availability": "Available",
-        "year": 10,
-        "desc": "Specialist in pediatric care with expertise in managing childhood obesity and diabetes.",
-        "img": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
-        "datetime": "2025-03-15 02:30 PM"
-    },
-    {
-        "id": 13,
-        "name": "Dr. Olivia Davis",
-        "title": "Pediatrics",
-        "availability": "Available",
-        "year": 5,
-        "desc": "Experienced pediatrician focusing on nutrition, child growth, and vaccinations.",
-        "img": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
-        "datetime": "2025-03-16 09:00 AM"
-    },
-    {
-        "id": 14,
-        "name": "Dr. James Miller",
-        "title": "Pediatrics",
-        "availability": "Not Available",
-        "year": 12,
-        "desc": "An expert in pediatric emergency care and childhood injuries treatment.",
-        "img": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
-        "datetime": "2025-03-17 01:30 PM"
-    },
-    {
-        "id": 15,
-        "name": "Dr. Emma Wilson",
-        "title": "Pediatrics",
-        "availability": "Available",
-        "year": 6,
-        "desc": "Specializing in immunization schedules and common childhood illnesses.",
-        "img": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
-        "datetime": "2025-03-18 10:45 AM"
-    },
-    {
-        "id": 16,
-        "name": "Dr. Benjamin Moore",
-        "title": "Pediatrics",
-        "availability": "Available",
-        "year": 9,
-        "desc": "Experienced pediatrician with a focus on developmental disorders and special needs care.",
-        "img": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
-        "datetime": "2025-03-19 04:00 PM"
-    },
-    {
-        "id": 17,
-        "name": "Dr. Sophia Taylor",
-        "title": "Pediatrics",
-        "availability": "Not Available",
-        "year": 15,
-        "desc": "A pediatrician with expertise in treating children with chronic conditions and asthma.",
-        "img": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
-        "datetime": "2025-03-20 08:30 AM"
-    },
-    {
-        "id": 18,
-        "name": "Dr. Ethan Jackson",
-        "title": "Pediatrics",
-        "availability": "Available",
-        "year": 7,
-        "desc": "Pediatrician specializing in neonatal care and infant nutrition.",
-        "img": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
-        "datetime": "2025-03-21 12:00 PM"
-    },
-    {
-        "id": 21,
-        "name": "Dr. Emily Davis",
-        "title": "General Surgery",
-        "availability": "Available",
-        "year": 5,
-        "desc": "Experienced general practitioner specializing in family medicine and preventive care.",
-        "img": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
-        "datetime": "2025-03-14 12:00 PM"
-    },
-    {
-        "id": 22,
-        "name": "Dr. Jack Wilson",
-        "title": "General Surgery",
-        "availability": "Not Available",
-        "year": 8,
-        "desc": "Specializes in minimally invasive surgeries and laparoscopic procedures.",
-        "img": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
-        "datetime": "2025-03-15 03:30 PM"
-    },
-    {
-        "id": 23,
-        "name": "Dr. Natalie Brooks",
-        "title": "General Surgery",
-        "availability": "Available",
-        "year": 10,
-        "desc": "Skilled surgeon focused on abdominal and digestive system surgeries.",
-        "img": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
-        "datetime": "2025-03-16 09:15 AM"
-    },
-    {
-        "id": 24,
-        "name": "Dr. Chris Thompson",
-        "title": "General Surgery",
-        "availability": "Available",
-        "year": 6,
-        "desc": "Experienced in trauma surgery and emergency interventions.",
-        "img": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
-        "datetime": "2025-03-17 02:45 PM"
-    },
-    {
-        "id": 25,
-        "name": "Dr. Olivia Mitchell",
-        "title": "General Surgery",
-        "availability": "Not Available",
-        "year": 7,
-        "desc": "Specialist in orthopedic surgery and joint replacements.",
-        "img": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
-        "datetime": "2025-03-18 11:00 AM"
-    },
-    {
-        "id": 26,
-        "name": "Dr. Daniel Scott",
-        "title": "General Surgery",
-        "availability": "Available",
-        "year": 9,
-        "desc": "Expert in cardiac surgery and cardiovascular procedures.",
-        "img": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
-        "datetime": "2025-03-19 04:00 PM"
-    },
-    {
-        "id": 27,
-        "name": "Dr. Sophia Carter",
-        "title": "General Surgery",
-        "availability": "Available",
-        "year": 11,
-        "desc": "Experienced general surgeon specializing in trauma and burn care.",
-        "img": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
-        "datetime": "2025-03-20 10:30 AM"
-    },
-    {
-        "id": 28,
-        "name": "Dr. Lucas Harris",
-        "title": "General Surgery",
-        "availability": "Not Available",
-        "year": 12,
-        "desc": "Specializes in spinal surgery and complex neurological procedures.",
-        "img": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
-        "datetime": "2025-03-21 01:00 PM"
-    },
-    {
-        "id": 31,
-        "name": "Dr. Michael Lee",
-        "title": "Orthopedics",
-        "availability": "Available",
-        "year": 15,
-        "desc": "Renowned orthopedic surgeon with expertise in joint replacements and sports injuries.",
-        "img": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
-        "datetime": "2025-03-14 02:30 PM"
-    },
-    {
-        "id": 32,
-        "name": "Dr. Emma Collins",
-        "title": "Orthopedics",
-        "availability": "Not Available",
-        "year": 12,
-        "desc": "Expert in spinal surgeries and treatment of complex fractures.",
-        "img": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
-        "datetime": "2025-03-15 09:00 AM"
-    },
-    {
-        "id": 33,
-        "name": "Dr. Daniel Foster",
-        "title": "Orthopedics",
-        "availability": "Available",
-        "year": 10,
-        "desc": "Specialist in pediatric orthopedics and congenital bone disorders.",
-        "img": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
-        "datetime": "2025-03-16 03:15 PM"
-    },
-    {
-        "id": 34,
-        "name": "Dr. Sophia Wright",
-        "title": "Orthopedics",
-        "availability": "Available",
-        "year": 8,
-        "desc": "Experienced in sports medicine and rehabilitation therapy.",
-        "img": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
-        "datetime": "2025-03-17 10:45 AM"
-    },
-    {
-        "id": 35,
-        "name": "Dr. William Harris",
-        "title": "Orthopedics",
-        "availability": "Not Available",
-        "year": 14,
-        "desc": "Leading expert in hip and knee replacements with years of surgical success.",
-        "img": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
-        "datetime": "2025-03-18 01:30 PM"
-    },
-    {
-        "id": 36,
-        "name": "Dr. Olivia Bennett",
-        "title": "Orthopedics",
-        "availability": "Available",
-        "year": 7,
-        "desc": "Focuses on non-surgical treatments for musculoskeletal conditions.",
-        "img": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
-        "datetime": "2025-03-19 08:30 AM"
-    },
-    {
-        "id": 37,
-        "name": "Dr. Benjamin Carter",
-        "title": "Orthopedics",
-        "availability": "Not Available",
-        "year": 11,
-        "desc": "Specialist in bone trauma care and post-surgical rehabilitation.",
-        "img": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
-        "datetime": "2025-03-20 04:00 PM"
-    },
-    {
-        "id": 38,
-        "name": "Dr. Ava Richardson",
-        "title": "Orthopedics",
-        "availability": "Available",
-        "year": 9,
-        "desc": "Passionate about regenerative medicine and advanced orthopedic treatments.",
-        "img": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
-        "datetime": "2025-03-21 11:15 AM"
-    },
-    {
-        "id": 41,
-        "name": "Dr. Jessica Taylor",
-        "title": "Dermatology",
-        "availability": "Not Available",
-        "year": 10,
-        "desc": "Dermatologist with a specialization in skin care, acne treatment, and anti-aging therapies.",
-        "img": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
-        "datetime": "2025-03-14 03:45 PM"
-    },
-    {
-        "id": 42,
-        "name": "Dr. Ethan Walker",
-        "title": "Dermatology",
-        "availability": "Available",
-        "year": 12,
-        "desc": "Expert in laser treatments, pigmentation issues, and cosmetic dermatology.",
-        "img": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
-        "datetime": "2025-03-15 10:00 AM"
-    },
-    {
-        "id": 43,
-        "name": "Dr. Mia Anderson",
-        "title": "Dermatology",
-        "availability": "Not Available",
-        "year": 8,
-        "desc": "Skilled in treating eczema, psoriasis, and other chronic skin conditions.",
-        "img": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
-        "datetime": "2025-03-16 02:30 PM"
-    },
-    {
-        "id": 44,
-        "name": "Dr. Noah Martinez",
-        "title": "Dermatology",
-        "availability": "Available",
-        "year": 15,
-        "desc": "Specializes in mole removal, skin cancer diagnosis, and advanced dermatological procedures.",
-        "img": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
-        "datetime": "2025-03-17 09:15 AM"
-    },
-    {
-        "id": 45,
-        "name": "Dr. Sophia Adams",
-        "title": "Dermatology",
-        "availability": "Available",
-        "year": 9,
-        "desc": "Focuses on pediatric dermatology and treating skin conditions in children.",
-        "img": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
-        "datetime": "2025-03-18 11:45 AM"
-    },
-    {
-        "id": 46,
-        "name": "Dr. Lucas Bennett",
-        "title": "Dermatology",
-        "availability": "Not Available",
-        "year": 14,
-        "desc": "Experienced in botox, fillers, and other aesthetic dermatology procedures.",
-        "img": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
-        "datetime": "2025-03-19 04:00 PM"
-    },
-    {
-        "id": 47,
-        "name": "Dr. Emma Robinson",
-        "title": "Dermatology",
-        "availability": "Available",
-        "year": 11,
-        "desc": "Specialist in acne scar treatments, chemical peels, and skincare solutions.",
-        "img": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
-        "datetime": "2025-03-20 01:30 PM"
-    },
-    {
-        "id": 48,
-        "name": "Dr. William Cooper",
-        "title": "Dermatology",
-        "availability": "Available",
-        "year": 7,
-        "desc": "Passionate about holistic dermatology and natural skin treatments.",
-        "img": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
-        "datetime": "2025-03-21 08:00 AM"
-    },
-    {
-        "id": 51,
-        "name": "Dr. David Wilson",
-        "title": "Neurology",
-        "availability": "Available",
-        "year": 20,
-        "desc": "Experienced neurologist, focusing on brain disorders and neurological rehabilitation.",
-        "img": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
-        "datetime": "2025-03-14 04:00 PM"
-    },
-    {
-        "id": 52,
-        "name": "Dr. Laura Mitchell",
-        "title": "Neurology",
-        "availability": "Not Available",
-        "year": 18,
-        "desc": "Specialist in multiple sclerosis and neurodegenerative diseases.",
-        "img": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
-        "datetime": "2025-03-15 09:30 AM"
-    },
-    {
-        "id": 53,
-        "name": "Dr. Samuel Carter",
-        "title": "Neurology",
-        "availability": "Available",
-        "year": 15,
-        "desc": "Expert in epilepsy management and stroke rehabilitation.",
-        "img": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
-        "datetime": "2025-03-16 02:00 PM"
-    },
-    {
-        "id": 54,
-        "name": "Dr. Olivia Parker",
-        "title": "Neurology",
-        "availability": "Available",
-        "year": 12,
-        "desc": "Focused on pediatric neurology and childhood neurological disorders.",
-        "img": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
-        "datetime": "2025-03-17 11:45 AM"
-    },
-    {
-        "id": 55,
-        "name": "Dr. Ethan Sanders",
-        "title": "Neurology",
-        "availability": "Not Available",
-        "year": 22,
-        "desc": "Renowned researcher in Alzheimer's disease and memory disorders.",
-        "img": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
-        "datetime": "2025-03-18 03:15 PM"
-    },
-    {
-        "id": 56,
-        "name": "Dr. Sophia Brooks",
-        "title": "Neurology",
-        "availability": "Available",
-        "year": 10,
-        "desc": "Specialist in headache and migraine management.",
-        "img": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
-        "datetime": "2025-03-19 08:30 AM"
-    },
-    {
-        "id": 57,
-        "name": "Dr. Daniel Cooper",
-        "title": "Neurology",
-        "availability": "Not Available",
-        "year": 14,
-        "desc": "Expert in movement disorders, including Parkinson’s disease.",
-        "img": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
-        "datetime": "2025-03-20 01:00 PM"
-    },
-    {
-        "id": 58,
-        "name": "Dr. Emily Scott",
-        "title": "Neurology",
-        "availability": "Available",
-        "year": 17,
-        "desc": "Passionate about sleep disorders and neurological sleep research.",
-        "img": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
-        "datetime": "2025-03-21 10:15 AM"
-    },
-    {
-        "id": 61,
-        "name": "Dr. Laura Martinez",
-        "title": "Gynecology",
-        "availability": "Not Available",
-        "year": 6,
-        "desc": "Obstetrician-gynecologist, specializing in women's health and pregnancy care.",
-        "img": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
-        "datetime": "2025-03-14 05:10 PM"
-    },
-    {
-        "id": 62,
-        "name": "Dr. Emily Rodriguez",
-        "title": "Gynecology",
-        "availability": "Available",
-        "year": 10,
-        "desc": "Expert in high-risk pregnancies and reproductive endocrinology.",
-        "img": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
-        "datetime": "2025-03-15 09:00 AM"
-    },
-    {
-        "id": 63,
-        "name": "Dr. Sophia Bennett",
-        "title": "Gynecology",
-        "availability": "Available",
-        "year": 8,
-        "desc": "Specialist in minimally invasive gynecologic surgeries and PCOS treatment.",
-        "img": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
-        "datetime": "2025-03-16 02:30 PM"
-    },
-    {
-        "id": 64,
-        "name": "Dr. Olivia Carter",
-        "title": "Gynecology",
-        "availability": "Not Available",
-        "year": 12,
-        "desc": "Experienced in menopause management and hormonal therapies.",
-        "img": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
-        "datetime": "2025-03-17 11:45 AM"
-    },
-    {
-        "id": 65,
-        "name": "Dr. Mia Walker",
-        "title": "Gynecology",
-        "availability": "Available",
-        "year": 15,
-        "desc": "Renowned gynecologist with a focus on fertility treatments and IVF.",
-        "img": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
-        "datetime": "2025-03-18 03:15 PM"
-    },
-    {
-        "id": 66,
-        "name": "Dr. Isabella Adams",
-        "title": "Gynecology",
-        "availability": "Not Available",
-        "year": 9,
-        "desc": "Specializes in adolescent gynecology and reproductive health.",
-        "img": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
-        "datetime": "2025-03-19 08:30 AM"
-    },
-    {
-        "id": 67,
-        "name": "Dr. Hannah Scott",
-        "title": "Gynecology",
-        "availability": "Available",
-        "year": 14,
-        "desc": "Expert in uterine fibroids, endometriosis, and pelvic pain management.",
-        "img": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
-        "datetime": "2025-03-20 01:00 PM"
-    },
-    {
-        "id": 68,
-        "name": "Dr. Ava Thompson",
-        "title": "Gynecology",
-        "availability": "Available",
-        "year": 11,
-        "desc": "Passionate about holistic women’s health and preventative care.",
-        "img": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
-        "datetime": "2025-03-21 10:15 AM"
-    },
-    {
-        "id": 71,
-        "name": "Dr. Olivia Moore",
-        "title": "Psychiatry",
-        "availability": "Not Available",
-        "year": 4,
-        "desc": "Psychiatrist focused on mental health, anxiety disorders, and therapy-based treatments.",
-        "img": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
-        "datetime": "2025-03-14 07:30 PM"
-    },
-    {
-        "id": 72,
-        "name": "Dr. Ethan Brown",
-        "title": "Psychiatry",
-        "availability": "Available",
-        "year": 10,
-        "desc": "Expert in depression, PTSD, and cognitive behavioral therapy.",
-        "img": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
-        "datetime": "2025-03-15 09:15 AM"
-    },
-    {
-        "id": 73,
-        "name": "Dr. Ava Thompson",
-        "title": "Psychiatry",
-        "availability": "Not Available",
-        "year": 7,
-        "desc": "Specialist in addiction recovery and rehabilitation programs.",
-        "img": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
-        "datetime": "2025-03-16 02:45 PM"
-    },
-    {
-        "id": 74,
-        "name": "Dr. William Carter",
-        "title": "Psychiatry",
-        "availability": "Available",
-        "year": 15,
-        "desc": "Renowned psychiatrist with experience in child and adolescent mental health.",
-        "img": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
-        "datetime": "2025-03-17 10:30 AM"
-    },
-    {
-        "id": 75,
-        "name": "Dr. Sophia White",
-        "title": "Psychiatry",
-        "availability": "Available",
-        "year": 12,
-        "desc": "Leading psychiatrist in bipolar disorder management and mindfulness therapy.",
-        "img": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
-        "datetime": "2025-03-18 03:00 PM"
-    },
-    {
-        "id": 76,
-        "name": "Dr. Lucas Anderson",
-        "title": "Psychiatry",
-        "availability": "Not Available",
-        "year": 8,
-        "desc": "Focused on schizophrenia, anxiety disorders, and holistic mental health approaches.",
-        "img": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
-        "datetime": "2025-03-19 08:45 AM"
-    },
-    {
-        "id": 77,
-        "name": "Dr. Emma Harris",
-        "title": "Psychiatry",
-        "availability": "Available",
-        "year": 9,
-        "desc": "Specializes in trauma therapy and personality disorders.",
-        "img": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
-        "datetime": "2025-03-20 01:20 PM"
-    },
-    {
-        "id": 78,
-        "name": "Dr. Benjamin Scott",
-        "title": "Psychiatry",
-        "availability": "Available",
-        "year": 14,
-        "desc": "Expert in behavioral therapy, mood disorders, and clinical psychology.",
-        "img": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
-        "datetime": "2025-03-21 10:10 AM"
-    },
-    {
-        "id": 81,
-        "name": "Dr. James Anderson",
-        "title": "Urology",
-        "availability": "Available",
-        "year": 18,
-        "desc": "Urologist with advanced skills in minimally invasive surgery and trauma care.",
-        "img": "https://i.ibb.co.com/FL30C93s/dr-8.png",
-        "datetime": "2025-03-14 06:25 PM"
-    },
-    {
-        "id": 82,
-        "name": "Dr. Robert Williams",
-        "title": "Urology",
-        "availability": "Not Available",
-        "year": 10,
-        "desc": "Expert in gastrointestinal surgeries and post-operative care.",
-        "img": "https://i.ibb.co.com/FL30C93s/dr-8.png",
-        "datetime": "2025-03-15 08:45 AM"
-    },
-    {
-        "id": 83,
-        "name": "Dr. Emily Brown",
-        "title": "Urology",
-        "availability": "Available",
-        "year": 12,
-        "desc": "Specialist in emergency surgeries and trauma response.",
-        "img": "https://i.ibb.co.com/FL30C93s/dr-8.png",
-        "datetime": "2025-03-16 10:30 AM"
-    },
-    {
-        "id": 84,
-        "name": "Dr. Daniel Clark",
-        "title": "Urology",
-        "availability": "Not Available",
-        "year": 15,
-        "desc": "Renowned for advanced laparoscopic and robotic-assisted surgeries.",
-        "img": "https://i.ibb.co.com/FL30C93s/dr-8.png",
-        "datetime": "2025-03-17 01:15 PM"
-    },
-    {
-        "id": 85,
-        "name": "Dr. Olivia Miller",
-        "title": "Urology",
-        "availability": "Available",
-        "year": 9,
-        "desc": "Surgeon specializing in hernia repairs and endocrine surgery.",
-        "img": "https://i.ibb.co.com/FL30C93s/dr-8.png",
-        "datetime": "2025-03-18 03:20 PM"
-    },
-    {
-        "id": 86,
-        "name": "Dr. Michael Scott",
-        "title": "Urology",
-        "availability": "Available",
-        "year": 14,
-        "desc": "Leading expert in colorectal and pancreatic surgery.",
-        "img": "https://i.ibb.co.com/FL30C93s/dr-8.png",
-        "datetime": "2025-03-19 09:40 AM"
-    },
-    {
-        "id": 87,
-        "name": "Dr. Sophia Wilson",
-        "title": "Urology",
-        "availability": "Not Available",
-        "year": 7,
-        "desc": "Focuses on minimally invasive gallbladder and appendix surgeries.",
-        "img": "https://i.ibb.co.com/FL30C93s/dr-8.png",
-        "datetime": "2025-03-20 12:10 PM"
-    },
-    {
-        "id": 88,
-        "name": "Dr. Benjamin Harris",
-        "title": "Urology",
-        "availability": "Available",
-        "year": 11,
-        "desc": "Expert in trauma surgery and emergency laparotomy procedures.",
-        "img": "https://i.ibb.co.com/FL30C93s/dr-8.png",
-        "datetime": "2025-03-21 04:50 PM"
-    },
-    {
-        "id": 91,
-        "name": "Dr. William Clark",
-        "availability": "Available",
-        "year": 22,
-        "title": "Ophthalmology",
-        "desc": "Experienced ophthalmologist specializing in cataract surgery and vision correction.",
-        "img": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
-        "datetime": "2025-03-14 08:45 PM"
-    },
-    {
-        "id": 92,
-        "name": "Dr. Linda Harris",
-        "availability": "Not Available",
-        "year": 16,
-        "title": "Ophthalmology",
-        "desc": "Specializes in laser eye surgery and treatment for retinal diseases.",
-        "img": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
-        "datetime": "2025-03-15 09:30 AM"
-    },
-    {
-        "id": 93,
-        "name": "Dr. George Taylor",
-        "availability": "Available",
-        "year": 18,
-        "title": "Ophthalmology",
-        "desc": "Expert in glaucoma management and advanced eye care.",
-        "img": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
-        "datetime": "2025-03-16 10:00 AM"
-    },
-    {
-        "id": 94,
-        "name": "Dr. Emma Martinez",
-        "availability": "Not Available",
-        "year": 12,
-        "title": "Ophthalmology",
-        "desc": "Focused on pediatric ophthalmology and eye disease prevention.",
-        "img": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
-        "datetime": "2025-03-17 02:15 PM"
-    },
-    {
-        "id": 95,
-        "name": "Dr. Michael Wilson",
-        "availability": "Available",
-        "year": 20,
-        "title": "Ophthalmology",
-        "desc": "Experienced in retinal surgery and treating age-related macular degeneration.",
-        "img": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
-        "datetime": "2025-03-18 11:00 AM"
-    },
-    {
-        "id": 96,
-        "name": "Dr. Sophia Lee",
-        "availability": "Available",
-        "year": 14,
-        "title": "Ophthalmology",
-        "desc": "Specializing in corneal transplants and vision restoration surgeries.",
-        "img": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
-        "datetime": "2025-03-19 12:00 PM"
-    },
-    {
-        "id": 97,
-        "name": "Dr. James Robinson",
-        "availability": "Not Available",
-        "year": 9,
-        "title": "Ophthalmology",
-        "desc": "A skilled ophthalmologist focused on advanced cataract and LASIK surgery.",
-        "img": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
-        "datetime": "2025-03-20 03:30 PM"
-    },
-    {
-        "id": 98,
-        "name": "Dr. Olivia Davis",
-        "availability": "Available",
-        "year": 25,
-        "title": "Ophthalmology",
-        "desc": "Veteran eye surgeon specializing in ocular reconstruction and laser treatments.",
-        "img": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
-        "datetime": "2025-03-21 04:45 PM"
+      "doctor_id": "DOC00001",
+      "name": "Dr. Mizanur Rahman",
+      "age": 35,
+      "department": "Gastroenterology",
+      "availableStatus": true,
+      "speciality": "Gastroenterologist",
+      "about": "Dr. Mizanur Rahman is an experienced Gastroenterologist with over 8 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345678",
+        "email": "doctor1@example.com",
+        "chamberAddress": "Gastroenterologist Clinic, 10 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 8,
+      "workExperience": [
+        {
+          "hospital": "Square Hospital, Dhaka",
+          "position": "Senior Gastroenterologist",
+          "years": "2017 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Gastroenterologist",
+          "years": "2012 - 2017"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2007"
+        },
+        {
+          "degree": "MD in Gastroenterologist",
+          "university": "BSMMU",
+          "year": "2012"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00002",
+      "name": "Dr. Arif Hossain",
+      "age": 40,
+      "department": "Dentistry",
+      "availableStatus": true,
+      "speciality": "Orthodontist",
+      "about": "Dr. Arif Hossain is a highly skilled Orthodontist with over 12 years of experience.",
+      "contact": {
+        "phone": "+880-1712345679",
+        "email": "doctor2@example.com",
+        "chamberAddress": "Dental Care Clinic, 12 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Tuesday": "10:00 AM - 3:00 PM",
+        "Thursday": "2:00 PM - 6:00 PM",
+        "Saturday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 12,
+      "workExperience": [
+        {
+          "hospital": "United Hospital, Dhaka",
+          "position": "Senior Orthodontist",
+          "years": "2015 - Present"
+        },
+        {
+          "hospital": "Apollo Hospital, Dhaka",
+          "position": "Orthodontist",
+          "years": "2010 - 2015"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "BDS",
+          "university": "Dhaka Dental College",
+          "year": "2005"
+        },
+        {
+          "degree": "MDS in Orthodontics",
+          "university": "BSMMU",
+          "year": "2010"
+        }
+      ],
+      "photo": "https://i.ibb.co/xGzxw9P/dr-20.png"
+    },
+    {
+      "doctor_id": "DOC00003",
+      "name": "Dr. Sumaiya Akter",
+      "age": 38,
+      "department": "Dentistry",
+      "availableStatus": true,
+      "speciality": "Periodontist",
+      "about": "Dr. Sumaiya Akter specializes in gum diseases and dental implants with 10 years of experience.",
+      "contact": {
+        "phone": "+880-1712345680",
+        "email": "doctor3@example.com",
+        "chamberAddress": "Healthy Smiles Dental, 15 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "9:00 AM - 1:00 PM",
+        "Wednesday": "3:00 PM - 7:00 PM",
+        "Friday": "11:00 AM - 3:00 PM"
+      },
+      "workExperienceYears": 10,
+      "workExperience": [
+        {
+          "hospital": "Labaid Hospital, Dhaka",
+          "position": "Periodontist",
+          "years": "2013 - Present"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "BDS",
+          "university": "Bangabandhu Sheikh Mujib Medical University",
+          "year": "2006"
+        },
+        {
+          "degree": "MDS in Periodontology",
+          "university": "BSMMU",
+          "year": "2012"
+        }
+      ],
+      "photo": "https://i.ibb.co/PcHmrSx/dr-30.png"
+    },
+    {
+      "doctor_id": "DOC00002",
+      "name": "Dr. Fahim Ahmed",
+      "age": 36,
+      "department": "Cardiology",
+      "availableStatus": false,
+      "speciality": "Cardiologist",
+      "about": "Dr. Fahim Ahmed is an experienced Cardiologist with over 9 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345679",
+        "email": "doctor2@example.com",
+        "chamberAddress": "Cardiologist Clinic, 11 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 9,
+      "workExperience": [
+        {
+          "hospital": "United Hospital, Dhaka",
+          "position": "Senior Cardiologist",
+          "years": "2016 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Cardiologist",
+          "years": "2011 - 2016"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2006"
+        },
+        {
+          "degree": "MD in Cardiologist",
+          "university": "BSMMU",
+          "year": "2011"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00003",
+      "name": "Dr. Nasrin Akter",
+      "age": 37,
+      "department": "Neurology",
+      "availableStatus": true,
+      "speciality": "Neurologist",
+      "about": "Dr. Nasrin Akter is an experienced Neurologist with over 10 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345680",
+        "email": "doctor3@example.com",
+        "chamberAddress": "Neurologist Clinic, 12 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 10,
+      "workExperience": [
+        {
+          "hospital": "Apollo Hospitals, Dhaka",
+          "position": "Senior Neurologist",
+          "years": "2015 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Neurologist",
+          "years": "2010 - 2015"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2005"
+        },
+        {
+          "degree": "MD in Neurologist",
+          "university": "BSMMU",
+          "year": "2010"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00004",
+      "name": "Dr. Anisur Karim",
+      "age": 38,
+      "department": "Orthopedics",
+      "availableStatus": false,
+      "speciality": "Orthopedic Surgeon",
+      "about": "Dr. Anisur Karim is an experienced Orthopedic Surgeon with over 11 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345681",
+        "email": "doctor4@example.com",
+        "chamberAddress": "Orthopedic Surgeon Clinic, 13 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 11,
+      "workExperience": [
+        {
+          "hospital": "Labaid Hospital, Dhaka",
+          "position": "Senior Orthopedic Surgeon",
+          "years": "2014 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Orthopedic Surgeon",
+          "years": "2009 - 2014"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2004"
+        },
+        {
+          "degree": "MD in Orthopedic Surgeon",
+          "university": "BSMMU",
+          "year": "2009"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00005",
+      "name": "Dr. Farzana Haque",
+      "age": 39,
+      "department": "Dermatology",
+      "availableStatus": true,
+      "speciality": "Dermatologist",
+      "about": "Dr. Farzana Haque is an experienced Dermatologist with over 12 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345682",
+        "email": "doctor5@example.com",
+        "chamberAddress": "Dermatologist Clinic, 14 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 12,
+      "workExperience": [
+        {
+          "hospital": "Ibn Sina Hospital, Dhaka",
+          "position": "Senior Dermatologist",
+          "years": "2013 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Dermatologist",
+          "years": "2008 - 2013"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2003"
+        },
+        {
+          "degree": "MD in Dermatologist",
+          "university": "BSMMU",
+          "year": "2008"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00006",
+      "name": "Dr. Asif Mahmud",
+      "age": 40,
+      "department": "Pediatrics",
+      "availableStatus": false,
+      "speciality": "Pediatrician",
+      "about": "Dr. Asif Mahmud is an experienced Pediatrician with over 13 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345683",
+        "email": "doctor6@example.com",
+        "chamberAddress": "Pediatrician Clinic, 15 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 13,
+      "workExperience": [
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Senior Pediatrician",
+          "years": "2012 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Pediatrician",
+          "years": "2007 - 2012"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2002"
+        },
+        {
+          "degree": "MD in Pediatrician",
+          "university": "BSMMU",
+          "year": "2007"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00007",
+      "name": "Dr. Rashedul Islam",
+      "age": 41,
+      "department": "Oncology",
+      "availableStatus": true,
+      "speciality": "Oncologist",
+      "about": "Dr. Rashedul Islam is an experienced Oncologist with over 14 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345684",
+        "email": "doctor7@example.com",
+        "chamberAddress": "Oncologist Clinic, 16 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 14,
+      "workExperience": [
+        {
+          "hospital": "Square Hospital, Dhaka",
+          "position": "Senior Oncologist",
+          "years": "2011 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Oncologist",
+          "years": "2006 - 2011"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2001"
+        },
+        {
+          "degree": "MD in Oncologist",
+          "university": "BSMMU",
+          "year": "2006"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00008",
+      "name": "Dr. Tania Sultana",
+      "age": 42,
+      "department": "Nephrology",
+      "availableStatus": false,
+      "speciality": "Nephrologist",
+      "about": "Dr. Tania Sultana is an experienced Nephrologist with over 15 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345685",
+        "email": "doctor8@example.com",
+        "chamberAddress": "Nephrologist Clinic, 17 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 15,
+      "workExperience": [
+        {
+          "hospital": "United Hospital, Dhaka",
+          "position": "Senior Nephrologist",
+          "years": "2010 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Nephrologist",
+          "years": "2005 - 2010"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2000"
+        },
+        {
+          "degree": "MD in Nephrologist",
+          "university": "BSMMU",
+          "year": "2005"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00009",
+      "name": "Dr. Kamrul Hasan",
+      "age": 43,
+      "department": "Psychiatry",
+      "availableStatus": true,
+      "speciality": "Psychiatrist",
+      "about": "Dr. Kamrul Hasan is an experienced Psychiatrist with over 16 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345686",
+        "email": "doctor9@example.com",
+        "chamberAddress": "Psychiatrist Clinic, 18 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 16,
+      "workExperience": [
+        {
+          "hospital": "Apollo Hospitals, Dhaka",
+          "position": "Senior Psychiatrist",
+          "years": "2009 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Psychiatrist",
+          "years": "2004 - 2009"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "1999"
+        },
+        {
+          "degree": "MD in Psychiatrist",
+          "university": "BSMMU",
+          "year": "2004"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00010",
+      "name": "Dr. Shamsunnahar Begum",
+      "age": 44,
+      "department": "Ophthalmology",
+      "availableStatus": false,
+      "speciality": "Ophthalmologist",
+      "about": "Dr. Shamsunnahar Begum is an experienced Ophthalmologist with over 17 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345687",
+        "email": "doctor10@example.com",
+        "chamberAddress": "Ophthalmologist Clinic, 19 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 17,
+      "workExperience": [
+        {
+          "hospital": "Labaid Hospital, Dhaka",
+          "position": "Senior Ophthalmologist",
+          "years": "2008 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Ophthalmologist",
+          "years": "2003 - 2008"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "1998"
+        },
+        {
+          "degree": "MD in Ophthalmologist",
+          "university": "BSMMU",
+          "year": "2003"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00011",
+      "name": "Dr. Mohammad Ali",
+      "age": 45,
+      "department": "Gastroenterology",
+      "availableStatus": true,
+      "speciality": "Gastroenterologist",
+      "about": "Dr. Mohammad Ali is an experienced Gastroenterologist with over 18 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345688",
+        "email": "doctor11@example.com",
+        "chamberAddress": "Gastroenterologist Clinic, 20 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 18,
+      "workExperience": [
+        {
+          "hospital": "Ibn Sina Hospital, Dhaka",
+          "position": "Senior Gastroenterologist",
+          "years": "2007 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Gastroenterologist",
+          "years": "2002 - 2007"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "1997"
+        },
+        {
+          "degree": "MD in Gastroenterologist",
+          "university": "BSMMU",
+          "year": "2002"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00012",
+      "name": "Dr. Jannatul Ferdous",
+      "age": 46,
+      "department": "Cardiology",
+      "availableStatus": false,
+      "speciality": "Cardiologist",
+      "about": "Dr. Jannatul Ferdous is an experienced Cardiologist with over 19 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345689",
+        "email": "doctor12@example.com",
+        "chamberAddress": "Cardiologist Clinic, 21 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 19,
+      "workExperience": [
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Senior Cardiologist",
+          "years": "2006 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Cardiologist",
+          "years": "2001 - 2006"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "1996"
+        },
+        {
+          "degree": "MD in Cardiologist",
+          "university": "BSMMU",
+          "year": "2001"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00013",
+      "name": "Dr. Zahirul Islam",
+      "age": 47,
+      "department": "Neurology",
+      "availableStatus": true,
+      "speciality": "Neurologist",
+      "about": "Dr. Zahirul Islam is an experienced Neurologist with over 20 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345690",
+        "email": "doctor13@example.com",
+        "chamberAddress": "Neurologist Clinic, 22 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 20,
+      "workExperience": [
+        {
+          "hospital": "Square Hospital, Dhaka",
+          "position": "Senior Neurologist",
+          "years": "2005 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Neurologist",
+          "years": "2000 - 2005"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "1995"
+        },
+        {
+          "degree": "MD in Neurologist",
+          "university": "BSMMU",
+          "year": "2000"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00014",
+      "name": "Dr. Mahbub Alam",
+      "age": 48,
+      "department": "Orthopedics",
+      "availableStatus": false,
+      "speciality": "Orthopedic Surgeon",
+      "about": "Dr. Mahbub Alam is an experienced Orthopedic Surgeon with over 21 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345691",
+        "email": "doctor14@example.com",
+        "chamberAddress": "Orthopedic Surgeon Clinic, 23 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 21,
+      "workExperience": [
+        {
+          "hospital": "United Hospital, Dhaka",
+          "position": "Senior Orthopedic Surgeon",
+          "years": "2004 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Orthopedic Surgeon",
+          "years": "1999 - 2004"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "1994"
+        },
+        {
+          "degree": "MD in Orthopedic Surgeon",
+          "university": "BSMMU",
+          "year": "1999"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00015",
+      "name": "Dr. Sharmin Akhter",
+      "age": 49,
+      "department": "Dermatology",
+      "availableStatus": true,
+      "speciality": "Dermatologist",
+      "about": "Dr. Sharmin Akhter is an experienced Dermatologist with over 22 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345692",
+        "email": "doctor15@example.com",
+        "chamberAddress": "Dermatologist Clinic, 24 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 22,
+      "workExperience": [
+        {
+          "hospital": "Apollo Hospitals, Dhaka",
+          "position": "Senior Dermatologist",
+          "years": "2003 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Dermatologist",
+          "years": "1998 - 2003"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "1993"
+        },
+        {
+          "degree": "MD in Dermatologist",
+          "university": "BSMMU",
+          "year": "1998"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00016",
+      "name": "Dr. Habibur Rahman",
+      "age": 35,
+      "department": "Pediatrics",
+      "availableStatus": false,
+      "speciality": "Pediatrician",
+      "about": "Dr. Habibur Rahman is an experienced Pediatrician with over 8 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345693",
+        "email": "doctor16@example.com",
+        "chamberAddress": "Pediatrician Clinic, 25 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 8,
+      "workExperience": [
+        {
+          "hospital": "Labaid Hospital, Dhaka",
+          "position": "Senior Pediatrician",
+          "years": "2017 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Pediatrician",
+          "years": "2012 - 2017"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2007"
+        },
+        {
+          "degree": "MD in Pediatrician",
+          "university": "BSMMU",
+          "year": "2012"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00017",
+      "name": "Dr. Nusrat Jahan",
+      "age": 36,
+      "department": "Oncology",
+      "availableStatus": true,
+      "speciality": "Oncologist",
+      "about": "Dr. Nusrat Jahan is an experienced Oncologist with over 9 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345694",
+        "email": "doctor17@example.com",
+        "chamberAddress": "Oncologist Clinic, 26 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 9,
+      "workExperience": [
+        {
+          "hospital": "Ibn Sina Hospital, Dhaka",
+          "position": "Senior Oncologist",
+          "years": "2016 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Oncologist",
+          "years": "2011 - 2016"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2006"
+        },
+        {
+          "degree": "MD in Oncologist",
+          "university": "BSMMU",
+          "year": "2011"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00018",
+      "name": "Dr. Saiful Islam",
+      "age": 37,
+      "department": "Nephrology",
+      "availableStatus": false,
+      "speciality": "Nephrologist",
+      "about": "Dr. Saiful Islam is an experienced Nephrologist with over 10 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345695",
+        "email": "doctor18@example.com",
+        "chamberAddress": "Nephrologist Clinic, 27 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 10,
+      "workExperience": [
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Senior Nephrologist",
+          "years": "2015 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Nephrologist",
+          "years": "2010 - 2015"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2005"
+        },
+        {
+          "degree": "MD in Nephrologist",
+          "university": "BSMMU",
+          "year": "2010"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00019",
+      "name": "Dr. Khaleda Zaman",
+      "age": 38,
+      "department": "Psychiatry",
+      "availableStatus": true,
+      "speciality": "Psychiatrist",
+      "about": "Dr. Khaleda Zaman is an experienced Psychiatrist with over 11 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345696",
+        "email": "doctor19@example.com",
+        "chamberAddress": "Psychiatrist Clinic, 28 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 11,
+      "workExperience": [
+        {
+          "hospital": "Square Hospital, Dhaka",
+          "position": "Senior Psychiatrist",
+          "years": "2014 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Psychiatrist",
+          "years": "2009 - 2014"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2004"
+        },
+        {
+          "degree": "MD in Psychiatrist",
+          "university": "BSMMU",
+          "year": "2009"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+    },
+    {
+      "doctor_id": "DOC00020",
+      "name": "Dr. Tanvir Hossain",
+      "age": 39,
+      "department": "Ophthalmology",
+      "availableStatus": false,
+      "speciality": "Ophthalmologist",
+      "about": "Dr. Tanvir Hossain is an experienced Ophthalmologist with over 12 years of expertise.",
+      "contact": {
+        "phone": "+880-1712345697",
+        "email": "doctor20@example.com",
+        "chamberAddress": "Ophthalmologist Clinic, 29 Road, Dhaka, Bangladesh"
+      },
+      "appointmentTime": {
+        "Monday": "10:00 AM - 2:00 PM",
+        "Wednesday": "2:00 PM - 6:00 PM",
+        "Friday": "10:00 AM - 2:00 PM"
+      },
+      "workExperienceYears": 12,
+      "workExperience": [
+        {
+          "hospital": "United Hospital, Dhaka",
+          "position": "Senior Ophthalmologist",
+          "years": "2013 - Present"
+        },
+        {
+          "hospital": "BSMMU, Dhaka",
+          "position": "Ophthalmologist",
+          "years": "2008 - 2013"
+        }
+      ],
+      "educations": [
+        {
+          "degree": "MBBS",
+          "university": "Dhaka Medical College",
+          "year": "2003"
+        },
+        {
+          "degree": "MD in Ophthalmologist",
+          "university": "BSMMU",
+          "year": "2008"
+        }
+      ],
+      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
     }
-]
+  ]
