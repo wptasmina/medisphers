@@ -1,25 +1,23 @@
-import { useEffect } from "react";
-// import AOS from "aos";
+
 
 import Link from "next/link";
 import React from "react";
-// import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 export default function ServiceCard({ item }) {
-  const { img, name, year, title, desc } = item;
-
+  const { photo, name, year, title, desc } = item;
+  console.log(item);
+  
 
 
   return (
     <Link href="/details">
-      <div data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000" className="p-4 overflow-hidden rounded-lg shadow-sm hover:shadow-xl transition-all ease-in-out border">
-        <img
-          alt="image"
-          src={img}
+      <div className="p-4 overflow-hidden rounded-lg shadow-sm hover:shadow-xl transition-all ease-in-out border">
+        <Image
+           alt={name} 
+           width={300} 
+           height={300}
+          src={photo}
           className="h-56 w-full object-cover object-right-top bg-slate-50 rounded-t-xl"
         />
 
