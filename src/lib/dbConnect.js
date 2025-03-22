@@ -3,6 +3,7 @@ import { MongoClient } from "mongodb";
 
 
 const MONGODB_URI = process.env.MONGODB_URI;
+// console.log(process.env.MONGODB_URI); 
 const MONGODB_DB = process.env.MONGODB_DB;
 
 if (!MONGODB_URI) console.log("Missing MONGODB_URI")
