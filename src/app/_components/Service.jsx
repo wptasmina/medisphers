@@ -7,8 +7,8 @@ export default async function Service() {
 
 
   const { db } = await connectToDatabase();
-  const servicesCollection = db.collection(collectionName.servicesCollection); // এখানে আপনার collection নাম দিন
-       // ডাটাবেজ থেকে ডাটা ফেচ করুন
+  const servicesCollection = db.collection(collectionName.servicesCollection); 
+       
   const doctors = await servicesCollection.find({}).limit(8).toArray();
   // console.log(doctors);
   

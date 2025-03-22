@@ -1,22 +1,14 @@
-// import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Image from "next/image";
+
+
 import Link from "next/link";
 import React from "react";
+
 
 export default function ServiceCard({ item }) {
   const { photo, name, year, title, desc } = item;
   console.log(item);
   
 
-  // Initialize AOS only on client-side
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 1000, // Set default duration
-  //     once: true, // Animation runs only once
-  //   });
-  // }, []);
 
   return (
     <Link href="/details">
