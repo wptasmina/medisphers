@@ -1,5 +1,3 @@
-
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,19 +5,20 @@ import React from "react";
 
 export default function ServiceCard({ item }) {
   const { photo, name, year,workExperienceYears,department, about} = item;
- 
- 
+  console.log(item);
+  
+
 
   return (
     <Link href="/details">
-      <div
-       
-        className="p-4 overflow-hidden rounded-lg shadow-sm hover:shadow-xl transition-all ease-in-out border"
-      >
-        <img
-          alt="image"
-          src={img}
-          className="h-56 w-full object-cover object-right-top bg-slate-50 rounded-t-xl"
+      <div className="p-4 bg-white dark:bg-gray-950 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all ease-in-out border">
+        <Image
+           alt={name} 
+           width={300} 
+           height={300}
+          src={photo}
+          unoptimized={true}
+          className="h-56 w-full object-cover object-right-top bg-slate-50 dark:bg-gray-950 rounded-t-xl"
         />
 
         <div className="bg-white dark:bg-gray-950 md:px-4 px-2 py-6">
