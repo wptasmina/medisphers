@@ -1,11 +1,12 @@
 [
     {
-      "doctor_id": "DOC00001",
+      "doctor_id": "DOC0001",
       "name": "Dr. Mizanur Rahman",
       "age": 35,
       "department": "Gastroenterology",
       "availableStatus": true,
       "speciality": "Gastroenterologist",
+      "photo": "https://i.ibb.co.com/2X8xYGk/dr-1.webp",
       "about": "Dr. Mizanur Rahman is an experienced Gastroenterologist with over 8 years of expertise.",
       "contact": {
         "phone": "+880-1712345678",
@@ -41,16 +42,17 @@
           "university": "BSMMU",
           "year": "2012"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00002",
+      "doctor_id": "DOC0002",
       "name": "Dr. Arif Hossain",
       "age": 40,
       "department": "Dentistry",
       "availableStatus": true,
       "speciality": "Orthodontist",
+      "photo": "https://i.ibb.co.com/wZtPw2kP/dr-2.png",
       "about": "Dr. Arif Hossain is a highly skilled Orthodontist with over 12 years of experience.",
       "contact": {
         "phone": "+880-1712345679",
@@ -86,16 +88,17 @@
           "university": "BSMMU",
           "year": "2010"
         }
-      ],
-      "photo": "https://i.ibb.co/xGzxw9P/dr-20.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00003",
+      "doctor_id": "DOC0003",
       "name": "Dr. Sumaiya Akter",
       "age": 38,
       "department": "Dentistry",
       "availableStatus": true,
       "speciality": "Periodontist",
+      "photo": "https://i.ibb.co.com/PsF9J0zy/dr-3.png",
       "about": "Dr. Sumaiya Akter specializes in gum diseases and dental implants with 10 years of experience.",
       "contact": {
         "phone": "+880-1712345680",
@@ -126,16 +129,17 @@
           "university": "BSMMU",
           "year": "2012"
         }
-      ],
-      "photo": "https://i.ibb.co/PcHmrSx/dr-30.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00002",
+      "doctor_id": "DOC0004",
       "name": "Dr. Fahim Ahmed",
       "age": 36,
       "department": "Cardiology",
       "availableStatus": false,
       "speciality": "Cardiologist",
+       "photo": "https://i.ibb.co.com/HT1njswQ/dr-4.png",
       "about": "Dr. Fahim Ahmed is an experienced Cardiologist with over 9 years of expertise.",
       "contact": {
         "phone": "+880-1712345679",
@@ -171,16 +175,17 @@
           "university": "BSMMU",
           "year": "2011"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+     
     },
     {
-      "doctor_id": "DOC00003",
+      "doctor_id": "DOC0005",
       "name": "Dr. Nasrin Akter",
       "age": 37,
       "department": "Neurology",
       "availableStatus": true,
       "speciality": "Neurologist",
+      "photo": "https://i.ibb.co.com/hFSZ07nj/dr-5.png",
       "about": "Dr. Nasrin Akter is an experienced Neurologist with over 10 years of expertise.",
       "contact": {
         "phone": "+880-1712345680",
@@ -216,16 +221,17 @@
           "university": "BSMMU",
           "year": "2010"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00004",
+      "doctor_id": "DOC0006",
       "name": "Dr. Anisur Karim",
       "age": 38,
       "department": "Orthopedics",
       "availableStatus": false,
       "speciality": "Orthopedic Surgeon",
+      "photo": "https://i.ibb.co.com/GvTT2tg2/dr-6.png",
       "about": "Dr. Anisur Karim is an experienced Orthopedic Surgeon with over 11 years of expertise.",
       "contact": {
         "phone": "+880-1712345681",
@@ -261,16 +267,17 @@
           "university": "BSMMU",
           "year": "2009"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00005",
+      "doctor_id": "DOC0007",
       "name": "Dr. Farzana Haque",
       "age": 39,
       "department": "Dermatology",
       "availableStatus": true,
       "speciality": "Dermatologist",
+      "photo": "https://i.ibb.co.com/VWRkXzVh/dr-7.png",
       "about": "Dr. Farzana Haque is an experienced Dermatologist with over 12 years of expertise.",
       "contact": {
         "phone": "+880-1712345682",
@@ -306,16 +313,17 @@
           "university": "BSMMU",
           "year": "2008"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00006",
+      "doctor_id": "DOC0008",
       "name": "Dr. Asif Mahmud",
       "age": 40,
       "department": "Pediatrics",
       "availableStatus": false,
       "speciality": "Pediatrician",
+      "photo": "https://i.ibb.co.com/FL30C93s/dr-8.png",
       "about": "Dr. Asif Mahmud is an experienced Pediatrician with over 13 years of expertise.",
       "contact": {
         "phone": "+880-1712345683",
@@ -351,16 +359,17 @@
           "university": "BSMMU",
           "year": "2007"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00007",
+      "doctor_id": "DOC0009",
       "name": "Dr. Rashedul Islam",
       "age": 41,
       "department": "Oncology",
       "availableStatus": true,
       "speciality": "Oncologist",
+      "photo": "https://i.ibb.co.com/gZFyDRCv/dr-10.png",
       "about": "Dr. Rashedul Islam is an experienced Oncologist with over 14 years of expertise.",
       "contact": {
         "phone": "+880-1712345684",
@@ -396,16 +405,17 @@
           "university": "BSMMU",
           "year": "2006"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00008",
+      "doctor_id": "DOC00010",
       "name": "Dr. Tania Sultana",
       "age": 42,
       "department": "Nephrology",
       "availableStatus": false,
       "speciality": "Nephrologist",
+      "photo": "https://i.ibb.co.com/VcwrvGj9/dr-9.jpg",
       "about": "Dr. Tania Sultana is an experienced Nephrologist with over 15 years of expertise.",
       "contact": {
         "phone": "+880-1712345685",
@@ -441,16 +451,17 @@
           "university": "BSMMU",
           "year": "2005"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00009",
+      "doctor_id": "DOC00011",
       "name": "Dr. Kamrul Hasan",
       "age": 43,
       "department": "Psychiatry",
       "availableStatus": true,
       "speciality": "Psychiatrist",
+       "photo": "https://i.ibb.co.com/kgJxwtL1/dr-11.png",
       "about": "Dr. Kamrul Hasan is an experienced Psychiatrist with over 16 years of expertise.",
       "contact": {
         "phone": "+880-1712345686",
@@ -486,16 +497,17 @@
           "university": "BSMMU",
           "year": "2004"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+     
     },
     {
-      "doctor_id": "DOC00010",
+      "doctor_id": "DOC00012",
       "name": "Dr. Shamsunnahar Begum",
       "age": 44,
       "department": "Ophthalmology",
       "availableStatus": false,
       "speciality": "Ophthalmologist",
+      "photo": "https://i.ibb.co.com/B5wmSxSk/dr-12.png",
       "about": "Dr. Shamsunnahar Begum is an experienced Ophthalmologist with over 17 years of expertise.",
       "contact": {
         "phone": "+880-1712345687",
@@ -531,16 +543,17 @@
           "university": "BSMMU",
           "year": "2003"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00011",
+      "doctor_id": "DOC00013",
       "name": "Dr. Mohammad Ali",
       "age": 45,
       "department": "Gastroenterology",
       "availableStatus": true,
       "speciality": "Gastroenterologist",
+      "photo": "https://i.ibb.co.com/tT2Y9PSY/dr-14.png",
       "about": "Dr. Mohammad Ali is an experienced Gastroenterologist with over 18 years of expertise.",
       "contact": {
         "phone": "+880-1712345688",
@@ -576,16 +589,17 @@
           "university": "BSMMU",
           "year": "2002"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00012",
+      "doctor_id": "DOC00014",
       "name": "Dr. Jannatul Ferdous",
       "age": 46,
       "department": "Cardiology",
       "availableStatus": false,
       "speciality": "Cardiologist",
+      "photo": "https://i.ibb.co.com/sJ68Xz91/dr-14.png",
       "about": "Dr. Jannatul Ferdous is an experienced Cardiologist with over 19 years of expertise.",
       "contact": {
         "phone": "+880-1712345689",
@@ -621,16 +635,17 @@
           "university": "BSMMU",
           "year": "2001"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00013",
+      "doctor_id": "DOC00015",
       "name": "Dr. Zahirul Islam",
       "age": 47,
       "department": "Neurology",
       "availableStatus": true,
       "speciality": "Neurologist",
+      "photo": "https://i.ibb.co.com/d4DWKHb9/dr-15.png",
       "about": "Dr. Zahirul Islam is an experienced Neurologist with over 20 years of expertise.",
       "contact": {
         "phone": "+880-1712345690",
@@ -666,16 +681,17 @@
           "university": "BSMMU",
           "year": "2000"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00014",
+      "doctor_id": "DOC00016",
       "name": "Dr. Mahbub Alam",
       "age": 48,
       "department": "Orthopedics",
       "availableStatus": false,
       "speciality": "Orthopedic Surgeon",
+      "photo": "https://i.ibb.co.com/nsKcsns0/dr-16.png",
       "about": "Dr. Mahbub Alam is an experienced Orthopedic Surgeon with over 21 years of expertise.",
       "contact": {
         "phone": "+880-1712345691",
@@ -711,16 +727,17 @@
           "university": "BSMMU",
           "year": "1999"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00015",
+      "doctor_id": "DOC00017",
       "name": "Dr. Sharmin Akhter",
       "age": 49,
       "department": "Dermatology",
       "availableStatus": true,
       "speciality": "Dermatologist",
+      "photo": "https://i.ibb.co.com/wZmfqZwm/dr-17.png",
       "about": "Dr. Sharmin Akhter is an experienced Dermatologist with over 22 years of expertise.",
       "contact": {
         "phone": "+880-1712345692",
@@ -756,16 +773,17 @@
           "university": "BSMMU",
           "year": "1998"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00016",
+      "doctor_id": "DOC00018",
       "name": "Dr. Habibur Rahman",
       "age": 35,
       "department": "Pediatrics",
       "availableStatus": false,
       "speciality": "Pediatrician",
+      "photo": "https://i.ibb.co.com/B2qV8RWr/dr-18.png",
       "about": "Dr. Habibur Rahman is an experienced Pediatrician with over 8 years of expertise.",
       "contact": {
         "phone": "+880-1712345693",
@@ -801,16 +819,17 @@
           "university": "BSMMU",
           "year": "2012"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00017",
+      "doctor_id": "DOC00019",
       "name": "Dr. Nusrat Jahan",
       "age": 36,
       "department": "Oncology",
       "availableStatus": true,
       "speciality": "Oncologist",
+       "photo": "https://i.ibb.co.com/JRX1tKvT/dr-19.png",
       "about": "Dr. Nusrat Jahan is an experienced Oncologist with over 9 years of expertise.",
       "contact": {
         "phone": "+880-1712345694",
@@ -846,16 +865,17 @@
           "university": "BSMMU",
           "year": "2011"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+     
     },
     {
-      "doctor_id": "DOC00018",
+      "doctor_id": "DOC00020",
       "name": "Dr. Saiful Islam",
       "age": 37,
       "department": "Nephrology",
       "availableStatus": false,
       "speciality": "Nephrologist",
+      "photo": "https://i.ibb.co.com/S43pnDf5/dr-20.png",
       "about": "Dr. Saiful Islam is an experienced Nephrologist with over 10 years of expertise.",
       "contact": {
         "phone": "+880-1712345695",
@@ -891,16 +911,17 @@
           "university": "BSMMU",
           "year": "2010"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00019",
+      "doctor_id": "DOC00021",
       "name": "Dr. Khaleda Zaman",
       "age": 38,
       "department": "Psychiatry",
       "availableStatus": true,
       "speciality": "Psychiatrist",
+      "photo": "https://i.ibb.co.com/mF46cYvc/dr-21.png",
       "about": "Dr. Khaleda Zaman is an experienced Psychiatrist with over 11 years of expertise.",
       "contact": {
         "phone": "+880-1712345696",
@@ -936,16 +957,17 @@
           "university": "BSMMU",
           "year": "2009"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     },
     {
-      "doctor_id": "DOC00020",
+      "doctor_id": "DOC00022",
       "name": "Dr. Tanvir Hossain",
       "age": 39,
       "department": "Ophthalmology",
       "availableStatus": false,
       "speciality": "Ophthalmologist",
+      "photo": "https://i.ibb.co.com/PZjDvLj8/dr-22.png",
       "about": "Dr. Tanvir Hossain is an experienced Ophthalmologist with over 12 years of expertise.",
       "contact": {
         "phone": "+880-1712345697",
@@ -981,7 +1003,7 @@
           "university": "BSMMU",
           "year": "2008"
         }
-      ],
-      "photo": "https://i.ibb.co/gZFyDRCv/dr-10.png"
+      ]
+      
     }
   ]

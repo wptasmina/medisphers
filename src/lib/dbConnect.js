@@ -19,10 +19,11 @@ export const collectionName = {
 export async function connectToDatabase() {
   if (cachedClient && cachedDb) return { client: cachedClient, db: cachedDb };
 
-  // const client = await MongoClient.connect(MONGODB_URI);
-  const client = new MongoClient(MONGODB_URI);
-  await client.connect();
+  const client = await MongoClient.connect(MONGODB_URI);
+  // const client = new MongoClient(MONGODB_URI);
+  // await client.connect();
   const db = client.db(MONGODB_DB);
+  // const db = await client.connect().then(client => client.db(MONGODB_DB));
 
   cachedClient = client;
   cachedDb = db;

@@ -1,5 +1,6 @@
 
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -18,6 +19,7 @@ export default function ServiceCard({ item }) {
            width={300} 
            height={300}
           src={photo}
+          unoptimized={true}
           className="h-56 w-full object-cover object-right-top bg-slate-50 rounded-t-xl"
         />
 
