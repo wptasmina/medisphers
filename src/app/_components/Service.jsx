@@ -15,9 +15,9 @@ export default async function Service() {
       
   return (
      <>
-    <div className=' w-11/12 mx-auto md:px-4 px-3'>
+    <div className=' w-11/12 mx-auto px-2'>
       <h2 className='md:text-5xl text-4xl text-center font-extrabold my-8'>Top <span className='text-[#022dbb] '>Doctor's</span></h2>
-    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-10'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-10'>
         {
           doctors.map((item, idx) => (<ServiceCard key={idx} item={item}  />))   
         }
