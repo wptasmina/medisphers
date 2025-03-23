@@ -57,7 +57,7 @@ export default function NavBar() {
               </li>
               <li>
                 <Link
-                  href="/doctor"
+                  href="/doctors"
                   className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
                 >
                   All Doctor
@@ -101,7 +101,7 @@ export default function NavBar() {
             </li>
             <li>
               <Link
-                href="/doctor"
+                href="/doctors"
                 className="hover:text-[#022dbb] font-medium text-lg focus:text-[#022dbb]"
               >
                 All Doctor
