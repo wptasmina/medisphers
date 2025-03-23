@@ -27,13 +27,13 @@ export default function RootLayout({ children }) {
         className={`dark:bg-gray-900 bg-white min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AuthProvider>
-
       
         <NavBar></NavBar>
         <main className="mx-2">
           {children}
         </main>
        <Footer/>
+       
        </AuthProvider>
       </body>
     </html>

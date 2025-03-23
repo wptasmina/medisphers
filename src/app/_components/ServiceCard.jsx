@@ -20,7 +20,7 @@ export default function ServiceCard({ item }) {
            height={300}
           src={photo}
           unoptimized={true}
-          className="h-56 w-full object-cover object-right-top bg-slate-50 dark:bg-gray-950 rounded-t-xl"
+          className="h-56 w-full object-cover object-right-top bg-slate-50 rounded-t-xl"
         />
 
         <div className="bg-white dark:bg-gray-950 md:px-4 px-2 py-6">
