@@ -22,14 +22,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" className="dark:bg-gray-900 bg-white text-black dark:text-white">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`dark:bg-gray-900 bg-white min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AuthProvider>
 
       
-        {/* <NavBar></NavBar> */}
+        <NavBar></NavBar>
         <main className="mx-2">
           {children}
         </main>
