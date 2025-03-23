@@ -12,7 +12,7 @@ export default function Hero() {
             <div className="max-w-lg md:max-w-none self-start  px-3 md:px-0">
             <h2 className='pt-3 lg:text-6xl text-4xl font-extrabold'> Your <span className='text-[#022dbb]'>Health</span>,<br/>Our <span className='text-[#022dbb]'>Priority</span></h2>
             <p className='py-4 lg:w-[550px]'>MediSheper helps hospitals perform their daily operations quickly, accurately, and efficiently with the help of advanced technology.</p>
-            <Link href="/" >
+            <Link href="/book-appointment">
             <Button className="bg-[#022dbb] px-4 py-2 inline-flex cursor-pointer " >
               Book appointment<ArrowUpRight />
             </Button>
