@@ -1,11 +1,11 @@
-// import BookingModal from '@/components/bookingModal/BookingModal'
+import BookingModal from '@/components/bookingModal/BookingModal'
 
 
 export default function page() {
   return (
     <>
         BookingModal 
-        {/* <BookingModal  /> */}
+        <BookingModal  />
     </>
   )
 }
