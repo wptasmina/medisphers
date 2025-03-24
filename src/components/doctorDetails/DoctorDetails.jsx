@@ -9,57 +9,48 @@ import { FaAddressBook } from "react-icons/fa6";
 import { FaUserDoctor } from "react-icons/fa6";
 import { FaUserGraduate } from "react-icons/fa";
 import { RiCalendarScheduleLine } from "react-icons/ri";
-import { useState } from "react";
 import BookingModal from "../bookingModal/BookingModal";
 
-//dummy data
-const doctorProfile = {
-  id: "DOC12345",
-  name: "Dr. Aryan Mehta",
-  availableStatus: true,
-  speciality: "Cardiologist",
-  about:
-    "Dr. Aryan Mehta is a highly experienced cardiologist with over 15 years of practice in treating heart-related ailments. He is known for his patient-centric approach and dedication to excellence.",
-  contact: {
-    phone: "+91-9876543210",
-    email: "dr.aryanmehta@example.com",
-    chamberAddress: "Heart Care Clinic, 123 MG Road, Mumbai, India",
-  },
-  appointmentTime: {
-    Monday: "10:00 AM - 2:00 PM",
-    Wednesday: "2:00 PM - 6:00 PM",
-    Friday: "10:00 AM - 2:00 PM",
-  },
-  workExperience: [
-    {
-      hospital: "Apollo Hospital, Mumbai",
-      position: "Senior Cardiologist",
-      years: "2015 - Present",
-    },
-    {
-      hospital: "Fortis Hospital, Delhi",
-      position: "Cardiologist",
-      years: "2010 - 2015",
-    },
-  ],
-  educations: [
-    {
-      degree: "MBBS",
-      university: "AIIMS, Delhi",
-      year: "2005",
-    },
-    {
-      degree: "MD in Cardiology",
-      university: "AIIMS, Delhi",
-      year: "2010",
-    },
-  ],
-  photo: "https://i.ibb.co/gZFyDRCv/dr-10.png",
-};
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+
+
 
 export default function DoctorDetails() {
+  const { id } = useParams(); // ✅ Get doctor ID from URL
+  console.log(id)
+  const [doctor, setDoctor] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const user = { name: "Joy Chy", email: "joychy@gmail.com" };
+
+  useEffect(() => {
+    async function fetchDoctorDetails() {
+      try {
+        const response = await fetch(`/api/doctors/${id}`); // ✅ Fetch doctor by ID
+        const data = await response.json();
+        console.log(data)
+        setDoctor(data);
+      } catch (error) {
+        console.error("Error fetching doctor details:", error);
+        setError("Error fetching doctor details");
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchDoctorDetails();
+  }, [id]);
+
+  if (loading) {
+    return <div className="text-center">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center text-red-500">{error}</div>;
+  }
+
   return (
     <>
       <motion.div
@@ -71,45 +62,45 @@ export default function DoctorDetails() {
         <Card className="px-2 pb-4 shadow-lg rounded-2xl lg:p-6">
           <div className="flex flex-col items-center gap-6 lg:flex-row">
             <Image
-              src={doctorProfile.photo}
-              alt={doctorProfile.name}
+              src={doctor.photo}
+              alt={doctor.name}
               width={120}
               height={120}
               className="rounded-full border shadow-md"
             />
             <div>
-              <h2 className="text-2xl font-bold">{doctorProfile.name}</h2>
-              <p className="text-gray-600">{doctorProfile.id}</p>
+              <h2 className="text-2xl font-bold">{doctor.name}</h2>
+              <p className="text-gray-600">{doctor.doctor_id}</p>
               <p className="text-sm text-green-600">
-                {doctorProfile.availableStatus ? "Available" : "Unavailable"}
+                {doctor.availableStatus ? "Available" : "Unavailable"}
               </p>
             </div>
           </div>
 
           <CardContent className="mt-4">
             <h3 className="text-md font-semibold mb-2">Specialist</h3>
-            <p className="text-gray-600 mb-2">{doctorProfile.speciality}</p>
+            <p className="text-gray-600 mb-2">{doctor.speciality}</p>
             <hr />
-            <p className="text-gray-700 my-4">{doctorProfile.about}</p>
+            <p className="text-gray-700 my-4">{doctor.about}</p>
             <hr />
 
             <p className="flex items-center gap-2  text-gray-700 my-4">
               <MdLocalPhone className="font-semibold text-green-300" />{" "}
-              {doctorProfile.contact.phone}
+              {doctor.contact.phone}
             </p>
 
             <p className="flex items-center gap-2  text-gray-700 mb-4">
               <MdEmail className="font-semibold text-green-300" />{" "}
-              {doctorProfile.contact.email}
+              {doctor.contact.email}
             </p>
 
             <p className="flex items-center gap-2  text-gray-700 mb-4">
               <FaAddressBook className="font-semibold text-green-300" />{" "}
-              {doctorProfile.contact.chamberAddress}
+              {doctor.contact.chamberAddress}
             </p>
             <hr />
             <h3 className="text-md font-semibold mt-4">Work Experience</h3>
-            {doctorProfile.workExperience.map((exp, index) => (
+            {doctor.workExperience.map((exp, index) => (
               <div key={index} className="my-6">
                 <p className="flex items-center text-lg font-bold text-gray-800">
                   <FaUserDoctor className="text-2xl mr-4 text-green-300" />{" "}
@@ -124,7 +115,7 @@ export default function DoctorDetails() {
             <hr />
             <h3 className="text-md font-semibold mt-4">Education</h3>
 
-            {doctorProfile.educations.map((edu, index) => (
+            {doctor.educations.map((edu, index) => (
               <div key={index} className="my-6">
                 <p className="flex items-center text-lg font-bold text-gray-800">
                   <FaUserGraduate className="text-2xl mr-4 text-green-300" />{" "}
@@ -140,7 +131,7 @@ export default function DoctorDetails() {
             <h3 className="text-md font-semibold my-6">Appointments</h3>
 
             <ul className="list-none p-0 lg:pl-4">
-              {Object.entries(doctorProfile.appointmentTime).map(
+              {Object.entries(doctor.appointmentTime).map(
                 ([day, time]) => (
                   <li
                     key={day}
@@ -161,7 +152,7 @@ export default function DoctorDetails() {
         </Card>
       </motion.div>
       <BookingModal
-        doctor={doctorProfile}
+        doctor={doctor}
         user={user}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

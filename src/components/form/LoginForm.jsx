@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/authContext";
+import Swal from "sweetalert2";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -34,9 +35,19 @@ const LoginForm = () => {
     if (response.ok) {
       // Store JWT in localStorage
       login(data.token)
-      router.push("/"); // Redirect to or home page
+      Swal.fire({
+        icon: "success",
+        title: "Success",
+        text: "Signin Successfull!",
+      });
+      router.push("/");
     } else {
-      alert(data.error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: `${data.error}`,
+        
+      });
     }
   };
 
