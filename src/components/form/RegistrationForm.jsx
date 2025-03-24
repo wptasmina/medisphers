@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import Link from "next/link";
-import { FaEye, FaEyeSlash } from 'react-icons/fa'; 
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import Swal from "sweetalert2";
 
 const RegistrationForm = () => {
   const {
@@ -14,11 +15,11 @@ const RegistrationForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const [passwordVisible, setPasswordVisible] = useState(false); 
-  const router = useRouter()
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const router = useRouter();
 
   const onSubmit = async (formData) => {
-    console.log(formData); 
+    console.log(formData);
     const res = await fetch("/api/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -26,9 +27,20 @@ const RegistrationForm = () => {
     });
 
     const data = await res.json();
-    if (res.ok) alert(data.message);
-    else alert(data.error);
-    router.push('/signin')
+    if (res.ok) {
+      Swal.fire({
+        icon: "success",
+        title: "Welcome!",
+        text: "Signup Successfull!",
+      });
+      router.push("/signin");
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: `${data.error}`,
+      });
+    }
   };
 
   const togglePasswordVisibility = () => {
@@ -60,7 +72,7 @@ const RegistrationForm = () => {
             </span>
           )}
         </div>
-   
+
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="firstName">
             First Name
@@ -77,7 +89,6 @@ const RegistrationForm = () => {
           )}
         </div>
 
-   
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="lastName">
             Last Name
@@ -141,14 +152,18 @@ const RegistrationForm = () => {
           )}
         </div>
 
-       
         <div className="mt-6">
           <Button type="submit" className="w-full bg-[#022dbb]">
             Sign Up
           </Button>
         </div>
       </form>
-      <p className="my-4">Already have an account? Click here to  <Link className="font-bold text-[#022dbb]" href={'/signin'}>Sign in</Link></p>
+      <p className="my-4">
+        Already have an account? Click here to{" "}
+        <Link className="font-bold text-[#022dbb]" href={"/signin"}>
+          Sign in
+        </Link>
+      </p>
     </div>
   );
 };

@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 export default function NavBar() {
   const { user, logout } = useAuth();
@@ -14,6 +15,12 @@ export default function NavBar() {
 
   const handleLogout = () => {
     logout();
+    Swal.fire({
+      icon: "success",
+      title: "Success",
+      text: "Signout Successfull!",
+    });
+
     router.push("/signin");
   };
 
