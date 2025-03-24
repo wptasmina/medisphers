@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from 'react'
 import SearchCard from "../SearchCard/SearchCard";
 
 
@@ -37,6 +38,7 @@ export default function SearchResults() {
     };
 
     return (
+        <Suspense>
         <div className="w-11/12 mx-auto my-8">
             <h2 className="text-center md:text-3xl text-2xl font-bold">
                 Search Results for <span className="text-[#022dbb]">"{query}"</span> in {category}
@@ -58,5 +60,6 @@ export default function SearchResults() {
                 </div>
             )}
         </div>
+        </Suspense>
     );
 }
