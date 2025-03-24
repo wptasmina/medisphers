@@ -4,13 +4,13 @@ import React from "react";
 
 
 export default function ServiceCard({ item }) {
-  const { photo, name, year,workExperienceYears,department, about} = item;
+  const { _id, photo, name, year,workExperienceYears,department, about} = item;
   console.log(item);
   
 
 
   return (
-    <Link href="/details">
+    <Link href={`/doctors/${_id}`}>
       <div className="p-4 bg-white dark:bg-gray-950 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all ease-in-out border">
         <Image
            alt={name} 
