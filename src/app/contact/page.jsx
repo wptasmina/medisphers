@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { toast } from "react-toastify"; // For notifications
 import emailjs from '@emailjs/browser';
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 
 
 const ContactUs = () => {
@@ -50,28 +52,28 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex items-center justify-center md:p-6">
-            <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg lg:p-6 flex flex-col md:flex-row">
+        <div className="min-h-screen mt-8 bg-gray-100 dark:bg-gray-900 flex items-center justify-center md:p-6">
+            <div className="max-w-4xl py-4 px-2 w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg lg:p-6 flex flex-col md:flex-row gap-4">
 
                 {/* Left Side - Contact Information */}
-                <div className="w-full md:w-1/3 p-4 md:text-left text-center flex flex-col justify-center border ">
-                    <h3 className="text-xl font-bold text-gray-700 ">Hospital Contact</h3>
-                    <p className="text-gray-600 ">📍 Medisphere, Bangladesh</p>
-                    <p className="text-gray-600">📧 contact@medisphers.com</p>
-                    <p className="text-gray-600">📞 +123 456 7890</p>
+                <div className="w-full md:w-1/3 p-4 md:text-left text-center dark:text-gray-900 flex flex-col justify-center ">
+                    <h3 className="text-2xl pb-4 font-bold text-gray-700 dark:text-gray-300">Hospital Contact</h3>
+                    <p className="text-gray-600 pb-2  dark:text-gray-300">📍 Medisphere, Bangladesh</p>
+                    <p className="text-gray-600 pb-2 dark:text-gray-300">📧 contact@medisphers.com</p>
+                    <p className="text-gray-600 pb-2 dark:text-gray-300">📞 +123 456 7890</p>
                 </div>
 
                 {/* Right Side - Contact Form */}
-                <div className="w-full md:w-2/3 p-2">
+                <div className="w-full md:w-2/3 p-2 dark:text-gray-600">
                     <h2 className="text-3xl font-bold text-center text-blue-600">Contact Us</h2>
-                    <p className="text-center text-gray-600 mt-2">We'd love to hear from you!</p>
+                    <p className="text-center text-gray-600 mt-2 dark:text-gray-300">We'd love to hear from you!</p>
 
                     <form onSubmit={handleSubmit} className="mt-6 space-y-4">
                         <input
                             type="text"
                             name="name"
                             placeholder="Your Name"
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300"
+                            className="w-full p-3 border dark:border-gray-400 rounded-lg dark:text-gray-300 focus:ring focus:ring-blue-300"
                             value={userInput.name}
                             onChange={handleChange}
                             required
@@ -80,7 +82,7 @@ const ContactUs = () => {
                             type="email"
                             name="email"
                             placeholder="Your Email"
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300"
+                            className="w-full p-3 border dark:border-gray-400 rounded-lg dark:text-gray-300 focus:ring focus:ring-blue-300"
                             value={userInput.email}
                             onChange={handleChange}
                             required
@@ -89,17 +91,17 @@ const ContactUs = () => {
                             name="message"
                             rows="4"
                             placeholder="Your Message"
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300"
+                            className="w-full p-3 border dark:border-gray-400  rounded-lg dark:text-gray-300 focus:ring focus:ring-blue-300"
                             value={userInput.message}
                             onChange={handleChange}
                             required
                         ></textarea>
-                        <button
+                        <Button
                             type="submit"
-                            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition"
+                            className="w-full bg-[#022dbb] text-white py-3 rounded-lg hover:bg-blue-700 transition"
                         >
-                            Send Message
-                        </button>
+                            Send Message<ArrowUpRight />
+                        </Button>
                     </form>
                 </div>
 
