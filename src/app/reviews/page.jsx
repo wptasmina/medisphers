@@ -19,7 +19,7 @@ const PrevArrow = ({ onClick }) => (
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute right-[-30px] top-1/2 transform -translate-y-1/2 text-gray-700 text-3xl dark:bg-gray-950 bg-white rounded-full shadow-md p-2 hover:bg-gray-200 transition"
+    className="absolute right-[-30px] top-1/2 transform -translate-y-1/2 text-gray-700 text-3xl  bg-white rounded-full shadow-md p-2 hover:bg-gray-200 transition"
   >
     &gt;
   </button>
