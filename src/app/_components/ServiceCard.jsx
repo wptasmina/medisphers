@@ -1,12 +1,12 @@
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+
+
 
 
 export default function ServiceCard({ item }) {
   const { _id, photo, name, year,workExperienceYears,department, about} = item;
-  console.log(item);
-  
 
 
   return (
@@ -32,7 +32,7 @@ export default function ServiceCard({ item }) {
           </div>
           <h3 className="mt-2 text-lg text-gray-900 dark:text-white font-bold">{name}</h3>
           <p className="mt-2 mb-4 line-clamp-3 text-sm/relaxed text-gray-500 dark:text-white">
-            {about}
+          {about}
           </p>
         </div>
       </div>
