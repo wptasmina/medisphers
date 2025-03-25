@@ -7,6 +7,7 @@ import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { Button } from "./ui/button";
 
 export default function NavBar() {
   const { user, logout } = useAuth();
@@ -48,7 +49,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className="navbar bg-base-300/90 shadow-sm dark:bg-base-600/90 sticky dark:hover:text-white dark:text-blue-600 top-0 z-50 backdrop:blur-lg">
+    <div className="navbar bg-base-300/90 shadow-sm dark:bg-base-600/90 sticky dark:text-[#022dbb] top-0 z-50 backdrop:blur-lg">
       <div className="w-11/12 mx-auto flex justify-between items-center">
         <div className="navbar-start p-0 h-8">
           <div className="dropdown">
@@ -152,7 +153,7 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="navbar-end flex gap-4">
-          <div className="border rounded-full p-1 bg-blue-50 dark:bg-gray-900 hover:bg-gray-400">
+          <div className="border rounded-full p-1 bg-blue-50 dark:bg-gray-700 hover:bg-gray-400">
             <label className="swap swap-rotate">
               <input
                 type="checkbox"
@@ -166,16 +167,16 @@ export default function NavBar() {
           </div>
           <div>
             {user && user?.email ? (
-              <button
+              <Button
                 onClick={handleLogout}
                 className="px-4 py-2 font-medium text-lg bg-[#022dbb] text-white rounded-md"
               >
                 Sign out
-              </button>
+              </Button>
             ) : (
-              <button className="px-4 py-2 font-medium md:text-lg text-sm bg-[#022dbb] text-white rounded-md">
+              <Button className="px-4 py-2 font-medium md:text-lg text-sm bg-[#022dbb] text-white rounded-md">
                 <Link href="/signin">Sign In</Link>
-              </button>
+              </Button>
             )}
           </div>
         </div>
