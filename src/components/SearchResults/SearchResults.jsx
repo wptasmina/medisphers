@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import SearchCard from "../SearchCard/SearchCard";
 
 
-
-export default function SearchResults() {
+function SearchResultsContent() {
     const searchParams = useSearchParams();
     const category = searchParams.get("category") || "doctors";
     const query = searchParams.get("query") || "";
@@ -25,9 +24,7 @@ export default function SearchResults() {
         try {
             const res = await fetch(`/api/search?category=${category}&query=${query}`);
             const data = await res.json();
-            console.log("API Response Data:", data);
             setResults(data);
-
         } catch (error) {
             console.error("Failed to fetch results:", error);
         } finally {
@@ -39,7 +36,7 @@ export default function SearchResults() {
         
         <div className="w-11/12 mx-auto my-8">
             <h2 className="text-center md:text-3xl text-2xl font-bold">
-                Search Results for <span className="text-[#022dbb]">"{query}"</span> in {category}
+                Search Results for <span className="text-blue-600">"{query}"</span> in {category}
             </h2>
 
             {loading && (
@@ -53,11 +50,19 @@ export default function SearchResults() {
             {results.length > 0 && (
                 <div className="flex justify-center items-center my-10">
                     {results.map((item) => (
-                        <SearchCard key={item._id} item={item} /> 
+                        <SearchCard key={item._id} item={item} />
                     ))}
                 </div>
             )}
         </div>
 
+    );
+}
+
+export default function SearchResults() {
+    return (
+        <Suspense fallback={<p className="text-center"><span className="loading loading-bars loading-xl"></span></p>}>
+            <SearchResultsContent />
+        </Suspense>
     );
 }
