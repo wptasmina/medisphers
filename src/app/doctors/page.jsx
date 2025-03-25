@@ -1,5 +1,8 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { useEffect, useState } from "react";
@@ -44,7 +47,9 @@ const AllDoctors = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <div className="spinner"></div> {/* Add your spinner component here */}
+        <div className="spinner">
+          <span className="loading loading-bars loading-xl"></span>
+        </div>
       </div>
     );
   }
@@ -69,7 +74,7 @@ const AllDoctors = () => {
             {departments.map((department, index) => (
               <button
                 key={index}
-                className={`px-6 py-3 rounded-lg font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105 ${
+                className={`px-6 py-3 w-full rounded-lg font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105 ${
                   selectedDepartment === department
                     ? "bg-[#022dbb] text-white shadow-xl"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
@@ -94,17 +99,24 @@ const AllDoctors = () => {
               .map((doctor) => (
                 <div
                   key={doctor._id}
-                  className="bg-white border rounded-lg p-6 shadow-lg hover:shadow-xl transition transform hover:scale-105"
+                  className="bg-blue-50 space-y-2 border rounded-lg p-6 shadow-lg hover:shadow-xl transition transform hover:scale-105"
                 >
                   <img
-                    src={doctor.photo}
+                    src={doctor?.photo}
                     alt={doctor.name}
-                    className="w-full h-40 object-cover rounded-lg mb-4"
+                    width={300}
+                    height={400}
+                    className="w-full h-56 rounded-lg mb-4"
                   />
-                  <h3 className="text-xl font-semibold">{doctor.name}</h3>
-                  <p className="text-blue-600 bg-blue-50 p-1">
-                    {doctor.department}
+                  <h3 className="text-xl font-semibold dark:text-gray-800 pb-2">{doctor?.name}</h3>
+                  <div className="flex justify-between items-center">
+                  <p className="text-blue-600 border border-gray-200 bg-blue-50 rounded-full px-2 py-1">
+                    {doctor?.department}
                   </p>
+                  <p className="text-sm text-gray-500 border border-gray-200 bg-blue-50 rounded-full px-2 py-1">
+                  Years: {doctor?.workExperienceYears}
+                  </p>
+                  </div>
                   <p
                     className={`text-sm ${
                       doctor.availableStatus === true
@@ -112,20 +124,18 @@ const AllDoctors = () => {
                         : "text-red-500"
                     }`}
                   >
-                    {doctor.availableStatus}
+                    {doctor?.availableStatus}
                   </p>
                   <p className="text-sm text-gray-500">
-                    Age: {doctor.age} years
+                    Age: {doctor.age} 
                   </p>
-                  <p className="text-sm text-gray-500">
-                    Experience: {doctor.workExperienceYears} years
-                  </p>
-                  <p className="text-sm text-gray-700 mt-2">{doctor.about}</p>
+                 
+                  <p className="text-sm text-gray-700 mt-2">{doctor?.contact?.chamberAddress}</p>
                   {/* Book Appointment Button */}
                   <Link href={`/doctors/${doctor._id}`}>
-                    <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition">
-                      Details
-                    </button>
+                    <Button className="mt-4 w-full bg-[#022dbb] hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+                      Book Appointment<ArrowUpRight />
+                    </Button>
                   </Link>
                 </div>
               ))}
