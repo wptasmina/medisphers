@@ -152,14 +152,14 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="navbar-end flex gap-4">
-          <div className="border rounded-lg p-1 bg-white dark:bg-gray-900 hover:bg-gray-400">
+          <div className="border rounded-full p-1 bg-blue-50 dark:bg-gray-900 hover:bg-gray-400">
             <label className="swap swap-rotate">
               <input
                 type="checkbox"
                 checked={isDarkMode}
                 onChange={toggleDarkMode}
               />
-              <div className="text-4xl">
+              <div className="text-2xl">
                 {isDarkMode ? <CiLight /> : <MdDarkMode />}
               </div>
             </label>
@@ -173,7 +173,7 @@ export default function NavBar() {
                 Sign out
               </button>
             ) : (
-              <button className="px-4 py-2 font-medium text-lg bg-[#022dbb] text-white rounded-md">
+              <button className="px-4 py-2 font-medium md:text-lg text-sm bg-[#022dbb] text-white rounded-md">
                 <Link href="/signin">Sign In</Link>
               </button>
             )}
