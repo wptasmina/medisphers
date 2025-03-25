@@ -11,17 +11,17 @@ export default function ServiceCard({ item }) {
 
   return (
     <Link href={`/doctors/${_id}`}>
-      <div className="p-4 bg-white dark:bg-gray-950 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all ease-in-out border">
+      <div className="p-4 bg-white dark:bg-gray-900 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all ease-in-out border">
         <Image
            alt={name} 
            width={300} 
            height={300}
           src={photo}
           unoptimized={true}
-          className="w-full h-56 object-cover object-right-top bg-slate-50 dark:bg-gray-950 rounded-t-xl"
+          className="w-full h-56 object-cover object-right-top bg-slate-50 dark:bg-gray-900 rounded-t-xl"
         />
 
-        <div className="bg-white dark:bg-gray-950 md:px-4 px-2 py-6">
+        <div className="bg-white dark:bg-gray-900 md:px-4 px-2 py-6">
           <div className="flex justify-between items-center gap-4 ">
             <p className="bg-blue-50 rounded-full px-4 py-1 text-sm font-normal text-blue-600 shadow-2xl">
               {department}
