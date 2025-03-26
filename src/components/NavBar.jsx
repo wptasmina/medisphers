@@ -153,7 +153,7 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="navbar-end flex gap-4">
-          <div className="border rounded-full p-1 bg-blue-50 dark:bg-gray-700 hover:bg-gray-400">
+          <div className="border border-blue-100 rounded-full p-1 bg-blue-50  hover:bg-gray-200">
             <label className="swap swap-rotate">
               <input
                 type="checkbox"
