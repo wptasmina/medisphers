@@ -11,7 +11,7 @@ export default function ServiceCard({ item }) {
 
   return (
     <Link href={`/doctors/${_id}`}>
-      <div className="p-4 bg-white dark:bg-gray-900 overflow-hidden rounded-lg shadow-lg hover:shadow-xl border dark:border-gray-600 flex flex-col h-full">
+      <div className="p-4 bg-white dark:bg-gray-900 overflow-hidden rounded-lg hover:shadow-xl border dark:border-gray-600 flex flex-col h-full">
         <div className="w-full sm:aspect-[4/4] aspect-[5/3] overflow-hidden">
           <Image
             alt={name}
