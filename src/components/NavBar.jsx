@@ -11,7 +11,7 @@ import { Button } from "./ui/button";
 
 export default function NavBar() {
   const { user, logout } = useAuth();
-  console.log(user?.name);
+  // console.log(user?.name);
   const router = useRouter();
 
   const handleLogout = () => {
