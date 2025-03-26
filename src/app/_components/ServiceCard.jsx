@@ -15,7 +15,7 @@ export default function ServiceCard({ item }) {
         <Image
            alt={name} 
            width={300} 
-           height={300}
+           height={400}
           src={photo}
           unoptimized={true}
           className="w-full h-56 object-cover object-right-top bg-slate-50 dark:bg-gray-900 rounded-t-xl"
