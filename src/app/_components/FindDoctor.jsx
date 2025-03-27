@@ -24,8 +24,8 @@ export default function FindDoctor() {
                     <h2 className="text-center md:text-5xl text-4xl text-black dark:text-white font-extrabold pb-4">
                         Find By<br /> <span className="text-[#022dbb] text-3xl">Doctor's, Patients & Appointments</span>
                     </h2>
-                    <p className="text-center text-md md:w-[800px]">
-                        Search for doctors, patients, or appointments using keywords.
+                    <p className="text-center text-md md:w-[800px] text-gray-500 dark:text-gray-300">
+                        Search for doctors, patients, or appointments using keywords.🔍
                     </p>
                 </div>
 
