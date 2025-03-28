@@ -13,8 +13,8 @@ export default function ReviewsClient({ reviews }) {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 3000,
+    speed: 5000,
+    autoplaySpeed: 5000,
     cssEase: "linear",
 
     responsive: [
@@ -55,7 +55,7 @@ export default function ReviewsClient({ reviews }) {
   };
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-950 px-6 lg:px-20 border">
+    <section className="py-16 bg-gray-50 dark:bg-gray-950 px-6 lg:px-20">
       <div className="w-11/12 mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-6">
           What People Say About MediSpheres
