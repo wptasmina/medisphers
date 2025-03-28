@@ -5,7 +5,6 @@ import ServiceCard from './ServiceCard'
 
 export default async function Service() {
 
-
   const { db } = await connectToDatabase();
   const servicesCollection = db.collection(collectionName.servicesCollection);
 
