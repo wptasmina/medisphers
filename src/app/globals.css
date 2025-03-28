@@ -128,3 +128,12 @@
     @apply bg-background text-foreground;
   }
 }
+.slick-prev:before, .slick-next:before {
+  background: #000;
+  border-radius: 100%;
+  color: #b3b1b1;
+}
+.slick-dots{
+
+  color: #fff;
+}
