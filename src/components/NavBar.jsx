@@ -6,8 +6,10 @@ import { useRouter } from "next/navigation";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
 import { useEffect, useState } from "react";
-import Swal from "sweetalert2";
+
 import { Button } from "./ui/button";
+import { toast, ToastContainer } from "react-toastify";
+
 
 export default function NavBar() {
   const { user, logout } = useAuth();
@@ -16,11 +18,7 @@ export default function NavBar() {
 
   const handleLogout = () => {
     logout();
-    Swal.fire({
-      icon: "success",
-      title: "Success",
-      text: "Signout Successfull!",
-    });
+    toast.success("Successfully logged out!", { position: "top-right" });
 
     router.push("/signin");
   };
@@ -49,6 +47,8 @@ export default function NavBar() {
   };
 
   return (
+  <div>
+  <ToastContainer />
     <div className="navbar bg-base-300/90 shadow-sm dark:bg-base-600/90 sticky dark:text-[#022dbb] top-0 z-50 backdrop:blur-lg">
       <div className="w-11/12 mx-auto flex justify-between items-center">
         <div className="navbar-start p-0 h-8">
@@ -181,6 +181,7 @@ export default function NavBar() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
