@@ -22,6 +22,7 @@
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-tooltip": "^1.1.8",
+    "@smastrom/react-rating": "^1.5.0",
     "@tailwindcss/postcss": "^4.0.13",
     "aos": "^2.3.4",
     "axios": "^1.8.3",
