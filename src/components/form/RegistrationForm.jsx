@@ -7,7 +7,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import Swal from "sweetalert2";
+import { toast, ToastContainer } from "react-toastify";
+
 
 const RegistrationForm = () => {
   const {
@@ -28,18 +29,10 @@ const RegistrationForm = () => {
 
     const data = await res.json();
     if (res.ok) {
-      Swal.fire({
-        icon: "success",
-        title: "Welcome!",
-        text: "Signup Successfull!",
-      });
+       toast.success("Register successful!", { position: "top-right" }); 
       router.push("/signin");
     } else {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: `${data.error}`,
-      });
+      toast.error(data.message || "Register failed!", { position: "top-right" });
     }
   };
 
@@ -48,7 +41,9 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 border rounded-lg shadow-lg">
+    <div>
+      <ToastContainer />
+    <div className="max-w-md mx-auto mt-10 p-6 border dark:bg-gray-900 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-center mb-4">Sign Up</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
@@ -153,17 +148,18 @@ const RegistrationForm = () => {
         </div>
 
         <div className="mt-6">
-          <Button type="submit" className="w-full bg-[#022dbb]">
+          <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300">
             Sign Up
           </Button>
         </div>
       </form>
-      <p className="my-4">
-        Already have an account? Click here to{" "}
-        <Link className="font-bold text-[#022dbb]" href={"/signin"}>
+      <p className="my-4 dark:text-gray-300">
+        Already have an account? Click here to 
+        <Link className="ml-1 font-bold dark:text-[#022dbb] text-[#022dbb]" href={"/signin"}>
           Sign in
         </Link>
       </p>
+    </div>
     </div>
   );
 };
