@@ -50,7 +50,7 @@ const LoginForm = () => {
   <ToastContainer />
   <form
     onSubmit={handleSubmit(onSubmit)}
-    className="w-full max-w-sm mx-auto p-4 bg-white shadow-md rounded-lg"
+    className="w-full max-w-sm mx-auto p-4 bg-white dark:bg-gray-900 shadow-md rounded-lg"
   >
     <h2 className="text-2xl font-bold text-center mb-6">Sign in</h2>
 
@@ -89,13 +89,13 @@ const LoginForm = () => {
       {errors.password && <FormMessage>{errors.password?.message}</FormMessage>}
     </div>
 
-    <Button type="submit" className="w-full bg-[#022dbb]">Sign In</Button>
+    <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300 dark:hover:text-gray-950 cursor-pointer">Sign In</Button>
     
     <p className="mt-6">
       New to <span className="font-bold">Medisphere</span> ? Click here to
-      <Link className="text-[#022dbb] font-bold" href={"/signup"}>
-        {" "}Sign up
-      </Link>{" "} now.
+      <Link className="text-[#022dbb] font-bold ml-2" href={"/signup"}>
+      Sign up
+      </Link> now.
     </p>
   </form>
 </div>
