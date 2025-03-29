@@ -13,36 +13,36 @@ export default function ReviewCard({ review }) {
 
   return (
 
-    <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md mx-4 min-h-[250px] flex flex-col justify-between">
-      {/* Rating Section */}
-      <div className='flex justify-between items-center'>
-        <p className="text-gray-500 dark:text-gray-300 font-bold md:text-3xl not-first:text-lg text-center">
-          $ {rating}.5
-        </p>
-        <Rating
-          style={{ maxWidth: 80 }}
-          value={rating}
-          readOnly
-        />
-      </div>
+    <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md mx-4 flex flex-col justify-between flex-grow min-h-[250px] h-full">
 
-      {/* Quote & Description */}
-      <p className="mt-3 text-gray-700 italic dark:text-gray-300 text-center line-clamp-3">
-        <span className="inline-block rotate-180 text-lg"><Quote /></span>
-        {desc}
-        <span className="inline-block"><Quote /></span>
+    {/* Rating Section */}
+    <div className='flex justify-between items-center'>
+      <p className="text-gray-500 dark:text-gray-300 font-bold md:text-2xl text-lg text-center">
+        $ {rating}.5
       </p>
-
-      {/* User Info Section */}
-      <div className="flex items-center justify-between gap-1 pt-4">
-        <div>
-          <h3 className="md:text-lg text-sm font-semibold text-gray-900 dark:text-white">{name}</h3>
-          <p className="text-gray-500 text-sm">{role}</p>
-        </div>
-        <img src={img} alt={name} className="w-14 h-14 rounded-full object-cover" />
-      </div>
+      <Rating
+        style={{ maxWidth: 80 }}
+        value={rating}
+        readOnly
+      />
     </div>
 
+    {/* Quote & Description */}
+    <p className="text-gray-700 italic dark:text-gray-300 line-clamp-3 ">
+      <span className="inline-block rotate-180 text-lg"><Quote /></span>
+      {desc}
+      <span className="inline-block"><Quote /></span>
+    </p>
+
+    {/* User Info Section */}
+    <div className="flex items-center justify-between gap-1 pt-4">
+      <div>
+        <h3 className="md:text-lg text-sm font-semibold text-gray-900 dark:text-white">{name}</h3>
+        <p className="text-gray-500 text-sm">{role}</p>
+      </div>
+      <img src={img} alt={name} className="md:w-14 w-10 md:h-14 h-10 rounded-full object-cover" />
+    </div>
+  </div>
 
   );
 }

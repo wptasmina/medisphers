@@ -11,11 +11,12 @@ export default function ReviewsClient({ reviews }) {
     dots: true,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     autoplay: true,
     speed: 5000,
     autoplaySpeed: 5000,
     cssEase: "linear",
+    adaptiveHeight: false,
 
     responsive: [
       {
@@ -73,8 +74,8 @@ export default function ReviewsClient({ reviews }) {
             </p>
           ) : (
             reviews.map((review, index) => (
-              <div key={index} className="px-2">
-                <div className="border rounded-md shadow-md py-4  dark:bg-gray-950">
+              <div key={index} className="px-2 h-full">
+                <div className="border rounded-md shadow-md py-4 flex flex-col h-full w-full dark:bg-gray-950">
                   <ReviewCard review={review} />
                 </div>
               </div>
