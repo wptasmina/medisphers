@@ -16,7 +16,7 @@ export default function ReviewCard({ review }) {
     <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-md mx-4 min-h-[250px] flex flex-col justify-between">
       {/* Rating Section */}
       <div className='flex justify-between items-center'>
-        <p className="text-gray-500 dark:text-gray-300 font-bold text-3xl text-center">
+        <p className="text-gray-500 dark:text-gray-300 font-bold md:text-3xl not-first:text-lg text-center">
           $ {rating}.5
         </p>
         <Rating
@@ -34,9 +34,9 @@ export default function ReviewCard({ review }) {
       </p>
 
       {/* User Info Section */}
-      <div className="flex items-center justify-between pt-4">
+      <div className="flex items-center justify-between gap-1 pt-4">
         <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{name}</h3>
+          <h3 className="md:text-lg text-sm font-semibold text-gray-900 dark:text-white">{name}</h3>
           <p className="text-gray-500 text-sm">{role}</p>
         </div>
         <img src={img} alt={name} className="w-14 h-14 rounded-full object-cover" />
