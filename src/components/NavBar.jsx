@@ -49,7 +49,7 @@ export default function NavBar() {
   return (
   <div>
   <ToastContainer />
-    <div className="navbar bg-base-300/90 shadow-sm dark:bg-base-600/90 sticky dark:text-[#022dbb] top-0 z-50 backdrop:blur-lg">
+    <div className="navbar bg-base-300/90 shadow-md dark:bg-base-600/90 dark:text-[#022dbb] sticky top-0 z-50 backdrop:blur-lg">
       <div className="w-11/12 mx-auto flex justify-between items-center">
         <div className="navbar-start p-0 h-8">
           <div className="dropdown">
@@ -61,13 +61,12 @@ export default function NavBar() {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
