@@ -1,112 +1,91 @@
-
-import Link from "next/link"
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#010104] text-gray-300 my-6 py-12 md:py-16 lg:py-20">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold">Company</h4>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Our Team
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Careers
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                News
-              </a>
-            </li>
-          </ul>
+    <footer className="bg-gray-900 text-gray-300 py-10">
+      <div className="w-11/12 mx-auto">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-6 text-left">
+          {/* Logo & Description */}
+          <div className="md:col-span-1">
+            <img
+              src="/Medisheper-logo.png"
+              alt="Medishepere Logo"
+              className="md:w-40 w-32 mx-auto md:mx-0 mb-4"
+            />
+            <p className="text-xs sm:text-sm">
+              Medishepere – Your trusted hospital management system for seamless healthcare.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h2 className="text-lg font-semibold text-white mb-3">Quick Links</h2>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li><Link href="/" className="hover:text-blue-600">Home</Link></li>
+              <li><Link href="/about" className="hover:text-blue-600">About Us</Link></li>
+              <li><Link href="/doctors" className="hover:text-blue-600">Services</Link></li>
+              <li><Link href="/contact" className="hover:text-blue-600 duration-300">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Resources Links */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-3">Resources</h4>
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li><a href="#" className="hover:text-blue-600 duration-300">Blog</a></li>
+              <li><a href="#" className="hover:text-blue-600 duration-300">Community</a></li>
+              <li><a href="#" className="hover:text-blue-600 duration-300">Support</a></li>
+              <li><a href="#" className="hover:text-blue-600 duration-300">FAQs</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Details */}
+          <div className="min-w-68 md:min-w-0">
+            <h2 className="text-lg font-semibold text-white mb-3">Contact Us</h2>
+            <p className="text-xs sm:text-sm inline-flex gap-1 items-center"><MapPin className="text-blue-600 text-sm" /> 123, Medishepere Street, Dhaka, Bangladesh</p>
+            <p className="text-xs sm:text-sm inline-flex gap-1 items-center"><Phone className="text-blue-600 text-sm" /> +880 1234 567 890</p>
+            <p className="text-xs sm:text-sm inline-flex gap-1 items-center"><Mail className="text-blue-600 text-sm" /> support@medishepere.com</p>
+            <div className="flex justify-start mt-4 space-x-4">
+              <Link href="https://www.facebook.com" className="text-blue-600 text-2xl">
+                <Facebook />
+              </Link>
+              <Link href="https://x.com/login?" className="text-blue-600 text-2xl">
+                <Twitter />
+              </Link>
+              <Link href="https://www.linkedin.com" className="text-blue-600 text-2xl">
+                <Linkedin />
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold">Services</h4>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Health Tests
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                E-Phrama
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Consult
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Facilities
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold">Resources</h4>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Community
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Support
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                FAQs
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="space-y-4">
-          <h4 className="text-lg font-semibold">Legal</h4>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Terms of Service
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-gray-100">
-                Cookie Policy
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-1 sm:col-span-2 md:col-span-1 lg:col-span-1 flex justify-start">
-          <Link href="/" className="flex items-start space-x-2" prefetch={false}>      
-            <span className="text-lg font-semibold">Medispheres Inc</span>
-          </Link>
+
+        {/* Bottom Section */}
+        <div className="flex flex-col gap-4">
+          <div className="text-center border-t border-gray-700 mt-8 pt-4 text-xs sm:text-sm">
+            <p>© {new Date().getFullYear()} Medishepere. All Rights Reserved.</p>
+          </div>
+
+          <div className="text-center">
+            <ul className="text-xs sm:text-sm flex justify-center md:gap-4 gap-2">
+              <li>
+                <Link href="#" className="text-blue-600 hover:text-gray-300">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link href="#" className="text-blue-600 hover:text-gray-300 border-l-2 md:pl-4 pl-2 border-blue-600">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/" className="text-blue-600 hover:text-gray-300 border-l-2 md:pl-4 pl-2 border-blue-600">
+                  Cookie Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
