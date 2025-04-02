@@ -120,6 +120,8 @@
   --sidebar-ring: oklch(0.442 0.017 285.786);
 }
 
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -128,6 +130,7 @@
     @apply bg-background text-foreground;
   }
 }
+
 .slick-prev:before, .slick-next:before {
   background: #000;
   border-radius: 100%;
