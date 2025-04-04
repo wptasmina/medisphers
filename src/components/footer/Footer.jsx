@@ -22,10 +22,10 @@ export default function Footer() {
           <div>
             <h2 className="text-lg font-bold text-gray-400 mb-3">Quick Links</h2>
             <ul className="space-y-2 text-xs sm:text-sm">
-              <li><Link href="/" className="hover:text-blue-600 font-medium">Home</Link></li>
-              <li><Link href="/about" className="hover:text-blue-600 font-medium">About Us</Link></li>
-              <li><Link href="/doctors" className="hover:text-blue-600 font-medium">Services</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-600 font-medium duration-300">Contact</Link></li>
+              <li><Link href="/" className="hover:text-[#022dbb] font-medium">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#022dbb] font-medium">About Us</Link></li>
+              <li><Link href="/doctors" className="hover:text-[#022dbb] font-medium">Services</Link></li>
+              <li><Link href="/contact" className="hover:text-[#022dbb] font-medium duration-300">Contact</Link></li>
             </ul>
           </div>
 
@@ -33,10 +33,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold text-gray-400 mb-3">Resources</h4>
             <ul className="space-y-2 text-xs sm:text-sm font-medium">
-              <li><a href="#" className="hover:text-blue-600 duration-300">Blog</a></li>
-              <li><a href="#" className="hover:text-blue-600 duration-300">Community</a></li>
-              <li><a href="#" className="hover:text-blue-600 duration-300">Support</a></li>
-              <li><a href="#" className="hover:text-blue-600 duration-300">FAQs</a></li>
+              <li><a href="#" className="hover:text-[#022dbb] duration-300">Blog</a></li>
+              <li><a href="#" className="hover:text-[#022dbb] duration-300">Community</a></li>
+              <li><a href="#" className="hover:text-[#022dbb] duration-300">Support</a></li>
+              <li><a href="#" className="hover:text-[#022dbb] duration-300">FAQs</a></li>
             </ul>
           </div>
 

@@ -1,5 +1,5 @@
 import { connectToDatabase } from '@/lib/dbConnect'; // MongoDB Connection
-import ReviewsClient from './../_components/ReviewsClient';
+import ReviewsClient from '../ReviewsClient';
 
 export default async function Reviews() {
   const { db } = await connectToDatabase();
