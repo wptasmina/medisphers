@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button'
-import { ArrowUpRight, Icon } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -24,7 +24,7 @@ export default function Hero() {
           {/* ✅ Regular img tag for React */}
           <div>
             <img
-              src="/banner.png"
+              src="/banner1.png"
               width={600}
 
               className="rounded"
