@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "daisyui";
 
 @plugin "tailwindcss-animate";
 
@@ -137,10 +136,8 @@
   color: #b3b1b1;
 }
 .slick-dots{
-
   color: #fff;
 }
-
 .slick-slide > div {
   height: 100% !important;
   display: flex !important;
@@ -148,4 +145,7 @@
 }
 .slick-track {
   display: flex !important;
+}
+.slick-list {
+  overflow: visible;
 }

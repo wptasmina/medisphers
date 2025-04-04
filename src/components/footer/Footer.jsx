@@ -43,7 +43,7 @@ export default function Footer() {
           {/* Contact Details */}
           <div className="min-w-68 md:min-w-0 font-medium">
             <h2 className="text-lg font-bold text-gray-400 mb-3">Contact Us</h2>
-            <p className="text-xs sm:text-sm inline-flex gap-1 items-center"><MapPin className="text-[#022dbb] dark:text-gray-400 text-sm" /> 123, Medishepere Street, Dhaka, Bangladesh</p>
+            <p className="text-xs sm:text-sm inline-flex gap-1 items-center"><MapPin className="text-[#022dbb] dark:text-gray-400 text-sm" /> 123, Medishepere, Dhaka Bangladesh</p>
             <p className="text-xs sm:text-sm inline-flex gap-1 items-center"><Phone className="text-[#022dbb] dark:text-gray-400 text-sm" /> +880 1234 567 890</p>
             <p className="text-xs sm:text-sm inline-flex gap-1 items-center"><Mail className="text-[#022dbb] dark:text-gray-400 text-sm" /> support@medishepere.com</p>
             <div className="flex justify-start mt-4 space-x-4">
