@@ -71,7 +71,7 @@ export default function DoctorDetails() {
             <div>
               <h2 className="text-2xl font-bold">{doctor.name}</h2>
               <p className="text-gray-600">{doctor.doctor_id}</p>
-              <p className="text-sm text-green-600">
+              <p className="text-sm text-green-400">
                 {doctor.availableStatus ? "Available" : "Unavailable"}
               </p>
             </div>
@@ -85,17 +85,17 @@ export default function DoctorDetails() {
             <hr />
 
             <p className="flex items-center gap-2  text-gray-700 my-4">
-              <MdLocalPhone className="font-semibold text-green-300" />{" "}
+              <MdLocalPhone className="font-semibold text-[#022dbb]" />{" "}
               {doctor.contact.phone}
             </p>
 
             <p className="flex items-center gap-2  text-gray-700 mb-4">
-              <MdEmail className="font-semibold text-green-300" />{" "}
+              <MdEmail className="font-semibold text-[#022dbb]" />{" "}
               {doctor.contact.email}
             </p>
 
             <p className="flex items-center gap-2  text-gray-700 mb-4">
-              <FaAddressBook className="font-semibold text-green-300" />{" "}
+              <FaAddressBook className="font-semibold text-[#022dbb]" />{" "}
               {doctor.contact.chamberAddress}
             </p>
             <hr />
@@ -103,7 +103,7 @@ export default function DoctorDetails() {
             {doctor.workExperience.map((exp, index) => (
               <div key={index} className="my-6">
                 <p className="flex items-center text-lg font-bold text-gray-800">
-                  <FaUserDoctor className="text-2xl mr-4 text-green-300" />{" "}
+                  <FaUserDoctor className="text-2xl mr-4 text-[#022dbb]" />{" "}
                   {exp.position}
                 </p>
                 <h6 className="ml-10 text-sm font-semibold text-gray-600">
@@ -118,7 +118,7 @@ export default function DoctorDetails() {
             {doctor.educations.map((edu, index) => (
               <div key={index} className="my-6">
                 <p className="flex items-center text-lg font-bold text-gray-800">
-                  <FaUserGraduate className="text-2xl mr-4 text-green-300" />{" "}
+                  <FaUserGraduate className="text-2xl mr-4 text-[#022dbb]" />{" "}
                   {edu.degree}
                 </p>
                 <h6 className="ml-10 text-sm font-semibold text-gray-600">
@@ -143,7 +143,7 @@ export default function DoctorDetails() {
               )}
             </ul>
             <Button
-              className="mt-6 w-full bg-blue-700"
+              className="mt-6 w-full bg-[#022dbb]"
               onClick={() => setIsModalOpen(true)}
             >
               Book an Appointment
