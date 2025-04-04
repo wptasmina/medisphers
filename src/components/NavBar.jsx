@@ -50,17 +50,17 @@ export default function NavBar() {
         </Link>
 
         {/* Navigation Links */}
-        <div className="hidden lg:flex space-x-6">
-          <Link href="/" className="text-gray-800 dark:text-white hover:text-blue-600">
+        <div className="hidden md:flex space-x-6">
+          <Link href="/" className="text-gray-800 font-semibold dark:text-white hover:text-[#022dbb]">
             Home
           </Link>
-          <Link href="/about" className="text-gray-800 dark:text-white hover:text-blue-600">
+          <Link href="/about" className="text-gray-800 font-semibold dark:text-white hover:text-[#022dbb]">
             About
           </Link>
-          <Link href="/doctors" className="text-gray-800 dark:text-white hover:text-blue-600">
+          <Link href="/doctors" className="text-gray-800 font-semibold dark:text-white hover:text-[#022dbb]">
             All Doctors
           </Link>
-          <Link href="/contact" className="text-gray-800 dark:text-white hover:text-blue-600">
+          <Link href="/contact" className="text-gray-800 font-semibold dark:text-white hover:text-[#022dbb]">
             Contact Us
           </Link>
         </div>
@@ -70,19 +70,19 @@ export default function NavBar() {
           {/* Dark Mode Toggle */}
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700"
+            className="p-2 rounded-full bg-blue-50 dark:bg-blue-50 hover:bg-blue-100 dark:hover:bg-blue-100"
           >
-            {isDarkMode ? <CiLight className="text-xl text-yellow-500" /> : <MdDarkMode className="text-xl text-gray-900 dark:text-white" />}
+            {isDarkMode ? <CiLight className="text-xl text-[#02228a]" /> : <MdDarkMode className="text-xl text-gray-900 dark:text-white" />}
           </button>
 
           {/* Authentication */}
           {user?.email ? (
-            <Button onClick={handleLogout} className="bg-blue-600 text-white px-4 py-2 rounded-md">
+            <Button onClick={handleLogout} className="bg-[#022dbb] text-white px-4 py-2 rounded-md cursor-pointer">
               Sign out
             </Button>
           ) : (
             <Link href="/signin">
-              <Button className="bg-blue-600 text-white px-4 py-2 rounded-md">Sign In</Button>
+              <Button className="bg-[#022dbb] hover:text-gray-200 dark:hover:text-[#022dbb] duration-300 dark:duration-500 dark:hover:bg-blue-50 text-white px-4 py-2 rounded-md cursor-pointer">Sign In</Button>
             </Link>
           )}
         </div>
