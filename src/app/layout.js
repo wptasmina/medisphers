@@ -1,7 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/footer/Footer";
 import { AuthProvider } from "@/context/authContext";
 import { ToastContainer } from "react-toastify";
 
@@ -28,12 +26,10 @@ export default function RootLayout({ children }) {
         className={`dark:bg-gray-950 bg-white min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AuthProvider>
-      
-        <NavBar></NavBar>
-        <main className="mx-2">
+
+        <main>
           {children}
         </main>
-       <Footer/>
        <ToastContainer />
        </AuthProvider>
       </body>
