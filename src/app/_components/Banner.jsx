@@ -4,7 +4,7 @@ export default function Banner() {
   return (
     <>
     <div className='w-11/12 mx-auto'> 
-    <BannerSlider />
+     <BannerSlider />
     </div>
     </>
   )

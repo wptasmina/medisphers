@@ -113,8 +113,8 @@ const data = {
           url: "/dashboard/add-doctor",
         },
         {
-          title: "Explorer",
-          url: "#",
+          title: "profile",
+          url: "/dashboard/profile",
         },
       ],
     },

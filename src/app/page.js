@@ -10,13 +10,10 @@ export default function Home() {
   return (
     
    <div className="dark:bg-gray-900 bg-white text-black dark:text-white min-h-screen">
-    {/* <Hero/> */}
-    <Banner />
+    <Hero/>
     <FindDoctor />
     <Service/>
     <Reviews/>
-    
-
    </div>
   )
 }
