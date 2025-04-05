@@ -61,13 +61,13 @@ const AllDoctors = () => {
   }
 
   return (
-    <div className="w-11/12 mx-auto pt-32">
-      <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-[#022dbb] mb-8">
+    <div className="w-11/12 mx-auto py-28">
+      <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text  bg-[#022dbb] mb-8">
         Our MediSphere Specialists
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         {/* Fancy Title Card */}
-        <div className="container mx-auto p-6 col-span-2 md:col-span-1 border rounded-lg">
+        <div className="container mx-auto p-6 col-span-2 md:col-span-1 dark:bg-gray-900  border rounded-lg">
           <div className="flex justify-center gap-4 mb-6 flex-wrap">
             {departments.map((department, index) => (
               <button
@@ -87,7 +87,7 @@ const AllDoctors = () => {
 
         <div className="col-span-2 sm:col-span-2 md:col-span-3 flex flex-col">
           {/* Show Selected Department */}
-          <h2 className="text-3xl font-bold text-start pl-8 text-gray-800 dark:text-white mb-6">
+          <h2 className="md:text-3xl text-xl font-bold text-start md:pl-8 text-gray-800 dark:text-white mb-6">
             {selectedDepartment} Specialists
           </h2>
           {/* Doctors Cards */}
@@ -131,7 +131,7 @@ const AllDoctors = () => {
                   <p className="text-sm text-gray-700 mt-2">{doctor?.contact?.chamberAddress}</p>
                   {/* Book Appointment Button */}
                   <Link href={`/doctors/${doctor._id}`}>
-                    <Button className="mt-4 w-full bg-[#022dbb] hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition">
+                    <Button className="mt-4 w-full bg-[#022dbb] hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition cursor-pointer ">
                       Book Appointment<ArrowUpRight />
                     </Button>
                   </Link>
