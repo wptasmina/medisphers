@@ -52,7 +52,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="min-h-screen mt-8 bg-gray-100 dark:bg-gray-900 flex items-center justify-center md:p-6">
+        <div className="min-h-screen pt-8 bg-gray-100 dark:bg-gray-950 flex items-center justify-center md:p-6">
             <div className="max-w-4xl py-4 px-2 w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg lg:p-6 flex flex-col md:flex-row gap-4">
 
                 {/* Left Side - Contact Information */}
