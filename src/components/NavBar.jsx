@@ -42,11 +42,11 @@ export default function NavBar() {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-md z-50">
+    <div className="fixed top-0 left-0 w-full bg-base-300 backdrop-blur dark:bg-gray-900/70 shadow-md z-50 border-b">
       <div className="w-11/12 mx-auto py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <img src="/Medisheper-logo.png" alt="Logo" className="w-36 h-10 object-contain" />
+          <img src="/Medisheper-logo.png" alt="Logo" className="w-28 h-12 p-1 object-cover" />
         </Link>
 
         {/* Navigation Links */}
