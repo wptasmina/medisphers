@@ -7,7 +7,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import { toast, ToastContainer } from "react-toastify";
+import { toast} from "react-toastify";
 
 
 const RegistrationForm = () => {
@@ -41,9 +41,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div>
-      <ToastContainer />
-    <div className="max-w-md mx-auto mt-10 p-6 border dark:bg-gray-900 rounded-lg shadow-lg">
+    <div className="max-w-md mx-auto p-6 border dark:bg-gray-900 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-center mb-4">Sign Up</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
@@ -159,7 +157,6 @@ const RegistrationForm = () => {
           Sign in
         </Link>
       </p>
-    </div>
     </div>
   );
 };
