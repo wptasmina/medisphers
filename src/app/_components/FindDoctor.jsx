@@ -18,7 +18,7 @@ export default function FindDoctor() {
     };
 
     return (
-        <div className="dark:bg-gray-950 py-6">
+        <div className="dark:bg-gray-950 py-6 ">
             <div className="w-11/12 mx-auto md:px-4 mt-8">
                 <div className="flex flex-col items-center justify-center">
                     <h2 className="text-center md:text-5xl text-4xl text-black dark:text-white font-extrabold pb-4">

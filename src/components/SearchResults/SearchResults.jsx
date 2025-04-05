@@ -34,9 +34,9 @@ function SearchResultsContent() {
 
     return (
         
-        <div className="w-11/12 mx-auto my-8">
+        <div className="w-11/12 mx-auto py-32">
             <h2 className="text-center md:text-3xl text-2xl font-bold">
-                Search Results for <span className="text-blue-600">"{query}"</span> in {category}
+                Search Results for <span className="text-[#022dbb]">"{query}"</span> in {category}
             </h2>
 
             {loading && (
@@ -49,7 +49,7 @@ function SearchResultsContent() {
 
             {results.length > 0 && (
                 <div className="flex justify-center items-center my-10">
-                    {results.map((item) => (
+                    {results?.map((item) => (
                         <SearchCard key={item._id} item={item} />
                     ))}
                 </div>
