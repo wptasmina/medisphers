@@ -34,7 +34,7 @@ function SearchResultsContent() {
 
     return (
         
-        <div className="w-11/12 mx-auto my-8">
+        <div className="w-11/12 mx-auto py-32">
             <h2 className="text-center md:text-3xl text-2xl font-bold">
                 Search Results for <span className="text-[#022dbb]">"{query}"</span> in {category}
             </h2>
