@@ -78,38 +78,38 @@ export default function DoctorDetails() {
           </div>
 
           <CardContent className="mt-4">
-            <h3 className="text-md font-semibold mb-2">Specialist</h3>
-            <p className="text-gray-600 mb-2">{doctor.speciality}</p>
+            <h3 className="text-md font-semibold mb-2 dark:text-gray-400">Specialist</h3>
+            <p className="text-gray-600 mb-2 dark:text-gray-400">{doctor.speciality}</p>
             <hr />
-            <p className="text-gray-700 my-4">{doctor.about}</p>
+            <p className="text-gray-700 my-4 dark:text-gray-400">{doctor.about}</p>
             <hr />
 
-            <p className="flex items-center gap-2  text-gray-700 my-4">
-              <MdLocalPhone className="font-semibold text-[#022dbb]" />{" "}
+            <p className="flex items-center gap-2  text-gray-700 my-4 dark:text-gray-400">
+              <MdLocalPhone className="font-semibold text-[#022dbb]" />
               {doctor.contact.phone}
             </p>
 
-            <p className="flex items-center gap-2  text-gray-700 mb-4">
-              <MdEmail className="font-semibold text-[#022dbb]" />{" "}
+            <p className="flex items-center gap-2  text-gray-700 mb-4 dark:text-gray-400">
+              <MdEmail className="font-semibold text-[#022dbb]" />
               {doctor.contact.email}
             </p>
 
-            <p className="flex items-center gap-2  text-gray-700 mb-4">
-              <FaAddressBook className="font-semibold text-[#022dbb]" />{" "}
+            <p className="flex items-center gap-2  text-gray-700 mb-4 dark:text-gray-400">
+              <FaAddressBook className="font-semibold text-[#022dbb]" />
               {doctor.contact.chamberAddress}
             </p>
             <hr />
             <h3 className="text-md font-semibold mt-4">Work Experience</h3>
             {doctor.workExperience.map((exp, index) => (
               <div key={index} className="my-6">
-                <p className="flex items-center text-lg font-bold text-gray-800">
-                  <FaUserDoctor className="text-2xl mr-4 text-[#022dbb]" />{" "}
+                <p className="flex items-center text-lg font-bold text-gray-800 dark:text-gray-400">
+                  <FaUserDoctor className="text-2xl mr-4 text-[#022dbb]" />
                   {exp.position}
                 </p>
-                <h6 className="ml-10 text-sm font-semibold text-gray-600">
+                <h6 className="ml-10 text-sm font-semibold text-gray-600 dark:text-gray-400">
                   {exp.hospital}
                 </h6>
-                <h6 className="ml-10 text-sm text-gray-600">{exp.years}</h6>
+                <h6 className="ml-10 text-sm text-gray-600 dark:text-gray-300">{exp.years}</h6>
               </div>
             ))}
             <hr />
@@ -117,14 +117,14 @@ export default function DoctorDetails() {
 
             {doctor.educations.map((edu, index) => (
               <div key={index} className="my-6">
-                <p className="flex items-center text-lg font-bold text-gray-800">
-                  <FaUserGraduate className="text-2xl mr-4 text-[#022dbb]" />{" "}
+                <p className="flex items-center text-lg font-bold text-gray-800 dark:text-gray-400">
+                  <FaUserGraduate className="text-2xl mr-4 text-[#022dbb]" />
                   {edu.degree}
                 </p>
-                <h6 className="ml-10 text-sm font-semibold text-gray-600">
+                <h6 className="ml-10 text-sm font-semibold text-gray-600 dark:text-gray-400">
                   {edu.university}
                 </h6>
-                <h6 className="ml-10 text-sm text-gray-600">{edu.year}</h6>
+                <h6 className="ml-10 text-sm text-gray-600 dark:text-gray-300">{edu.year}</h6>
               </div>
             ))}
             <hr />
