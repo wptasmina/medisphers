@@ -24,7 +24,6 @@ const AllDoctors = () => {
   const [selectedDepartment, setSelectedDepartment] = useState("Cardiology");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  // console.log(doctorsData);
 
   useEffect(() => {
     async function fetchDoctors() {
@@ -62,7 +61,7 @@ const AllDoctors = () => {
   }
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="w-11/12 mx-auto pt-32">
       <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-[#022dbb] mb-8">
         Our MediSphere Specialists
       </h1>
