@@ -23,15 +23,8 @@ export default function GreetingModal() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-md bg-gradient-to-r from-purple-600 to-gray-800 text-white hover:shadow-cyan-500 rounded-2xl shadow-2xl border-none">
+      <DialogContent className="max-w-md bg-gradient-to-r from-purple-600 to-gray-800 text-white py-10 hover:shadow-[#022bbd] rounded-2xl shadow-2xl border-none">
         <DialogHeader className="relative">
-          {/* Close Icon */}
-          {/* <DialogClose asChild>
-            <button className="absolute top-3 right-3 text-white/80 hover:text-white transition">
-              <X className="h-5 w-5" />
-            </button>
-          </DialogClose> */}
-
           <DialogTitle className="text-2xl font-bold text-center">{greeting}</DialogTitle>
           <DialogDescription className="text-white/90 mt-2 text-base text-center">
             Empowering your health management with modern tools.
