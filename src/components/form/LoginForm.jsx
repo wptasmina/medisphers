@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/authContext";
 
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 
@@ -47,7 +47,6 @@ const LoginForm = () => {
 
   return (
   <div>
-  <ToastContainer />
   <form
     onSubmit={handleSubmit(onSubmit)}
     className="w-full max-w-sm mx-auto p-4 bg-white dark:bg-gray-900 shadow-md rounded-lg"
