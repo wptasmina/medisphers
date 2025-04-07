@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function SearchCard({ item }) {
   console.log(item);
-  
+
   const {
     photo,
     name,
@@ -21,37 +21,41 @@ export default function SearchCard({ item }) {
   } = item;
 
   return (
-    <div className="p-4 w-[550px] flex flex-row gap-6 rounded-lg shadow-lg border bg-white dark:bg-gray-800">
-      {/* Image */}
-      <div className="flex justify-center items-center w-[30%]">
+
+<div className="flex items-center justify-center gap-6 p-4 rounded-lg shadow-lg bg-gray-100 dark:bg-gray-900">
+      {/* Image Section */}
+      <div className="flex justify-center items-center">
         <Image
           alt={name || "Profile"}
           width={100}
           height={100}
           src={photo || "/default-profile.png"}
           unoptimized={true}
-          className="w-full h-auto object-cover bg-slate-50 dark:bg-gray-950 rounded-xl"
+          className="w-24 h-24 object-top object-cover bg-slate-50 dark:bg-gray-950 rounded-xl"
         />
       </div>
 
-      {/* Content */}
-      <div className="w-[70%]">
-        <h3 className="text-xl font-bold text-gray-900 dark:text-white pt-4">{name || "No Name"}</h3>
+      {/* Content Section */}
+      <div className="flex flex-col justify-start md:text-xl text-xs flex-grow  [16/9]">
+        <h3 className="md:text-xl text-md font-bold text-gray-900 dark:text-white">{name || "No Name"}</h3>
 
         {/* Doctor Info */}
         {department && (
           <>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600  md:text-[16px] text-xs dark:text-gray-300">
               <strong>Department:</strong> {department}
             </p>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600 md:text-[16px] text-xs dark:text-gray-300">
               <strong>Age:</strong> {age || "N/A"}
             </p>
-            <p className="text-gray-600 dark:text-gray-300">
-              <strong>Status:</strong> {availableStatus || "N/A"}
+            <p className="text-gray-600 md:text-[16px] text-xs dark:text-gray-300">
+              <strong>Status:</strong>{" "}
+              <span className={availableStatus ? "text-green-600 font-semibold" : "text-red-500 font-semibold"}>
+                {availableStatus ? "Available" : "Unavailable"}
+              </span>
             </p>
-            <p className="text-gray-600 dark:text-gray-300">
-              <strong>Experience:</strong> {workExperienceYears || "N/A"}
+            <p className="text-gray-600 md:text-[16px] text-xs dark:text-gray-300">
+              <strong>Experience:</strong> {workExperienceYears || "N/A"} years
             </p>
           </>
         )}
@@ -92,6 +96,6 @@ export default function SearchCard({ item }) {
           </>
         )}
       </div>
-    </div>
-  );
+</div>
+  )
 }

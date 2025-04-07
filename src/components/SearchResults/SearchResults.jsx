@@ -48,7 +48,7 @@ function SearchResultsContent() {
             {!loading && results.length === 0 && <p className="text-center text-red-500">No results found.</p>}
 
             {results.length > 0 && (
-                <div className="flex justify-center items-center my-10">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
                     {results?.map((item) => (
                         <SearchCard key={item._id} item={item} />
                     ))}
