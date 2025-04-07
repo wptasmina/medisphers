@@ -22,8 +22,7 @@ export default function SearchCard({ item }) {
 
   return (
 
-<div className="flex items-center justify-center  gap-6 p-4 rounded-lg shadow-lg bg-gray-100 dark:bg-gray-900">
-  {/* <div className=" md:max-w-[350px] flex-grow p-4 flex flex-row justify-center gap-6 rounded-lg shadow-lg border bg-white dark:bg-gray-800"> */}
+<div className="flex items-center justify-center gap-6 p-4 rounded-lg shadow-lg bg-gray-100 dark:bg-gray-900">
       {/* Image Section */}
       <div className="flex justify-center items-center">
         <Image
@@ -97,7 +96,6 @@ export default function SearchCard({ item }) {
           </>
         )}
       </div>
-    {/* </div> */}
 </div>
   )
 }
