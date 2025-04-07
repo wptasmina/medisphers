@@ -11,7 +11,6 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { getFancyGreeting } from '@/lib/greetingGenerator';
-import { X } from 'lucide-react';
 
 export default function GreetingModal() {
   const [open, setOpen] = useState(true);
@@ -23,7 +22,7 @@ export default function GreetingModal() {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogContent className="max-w-md bg-gradient-to-r from-purple-600 to-gray-800 text-white py-10 hover:shadow-[#022bbd] rounded-2xl shadow-2xl border-none">
+      <DialogContent className="max-w-md bg-gradient-to-r from-purple-600 to-gray-950 text-white py-10 hover:shadow-[#022bbd] rounded-2xl shadow-2xl border-none">
         <DialogHeader className="relative">
           <DialogTitle className="text-2xl font-bold text-center">{greeting}</DialogTitle>
           <DialogDescription className="text-white/90 mt-2 text-base text-center">
@@ -33,7 +32,7 @@ export default function GreetingModal() {
 
         <div className="flex justify-center mt-6">
           <DialogClose asChild>
-            <Button variant="secondary" className="bg-white text-sky-700 hover:bg-gray-300">
+            <Button variant="secondary" className="bg-white text-[#022bbd] hover:bg-gray-300 cursor-pointer">
               Got it
             </Button>
           </DialogClose>

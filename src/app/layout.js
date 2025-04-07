@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
         className={`dark:bg-gray-950 bg-white min-h-screen ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AuthProvider>
-
         <main>
           {children}
         </main>
