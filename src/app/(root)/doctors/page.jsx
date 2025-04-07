@@ -72,11 +72,10 @@ const AllDoctors = () => {
             {departments.map((department, index) => (
               <button
                 key={index}
-                className={`px-6 py-3 w-full rounded-lg font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105 ${
-                  selectedDepartment === department
+                className={`px-6 py-3 w-full rounded-lg font-semibold text-lg transition duration-300 ease-in-out transform hover:scale-105 ${selectedDepartment === department
                     ? "bg-[#022dbb] text-white shadow-xl"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
-                }`}
+                  }`}
                 onClick={() => setSelectedDepartment(department)}
               >
                 {department}
@@ -97,37 +96,36 @@ const AllDoctors = () => {
               .map((doctor) => (
                 <div
                   key={doctor._id}
-                  className="bg-blue-50 space-y-2 border rounded-lg p-6 shadow-lg hover:shadow-xl transition transform hover:scale-105"
+                  className="bg-blue-50 md:aspect-[4/3] space-y-2 border rounded-lg p-6 shadow-lg hover:shadow-xl transition transform hover:scale-105"
                 >
-                  <img
-                    src={doctor?.photo}
-                    alt={doctor.name}
-                    width={300}
-                    height={400}
-                    className="w-full h-56 rounded-lg mb-4"
-                  />
+                  <div className="aspect-[4/3] w-full rounded-md overflow-hidden bg-slate-200">
+                    <img
+                      src={doctor?.photo || "/default-profile.png"}
+                      alt={doctor.name}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
                   <h3 className="text-xl font-semibold dark:text-gray-800 pb-2">{doctor?.name}</h3>
                   <div className="flex justify-between items-center">
-                  <p className="text-blue-600 border border-gray-200 bg-blue-50 rounded-full px-2 py-1">
-                    {doctor?.department}
-                  </p>
-                  <p className="text-sm text-gray-500 border border-gray-200 bg-blue-50 rounded-full px-2 py-1">
-                  Years: {doctor?.workExperienceYears}
-                  </p>
+                    <p className="text-blue-600 border border-gray-200 bg-blue-50 rounded-full px-2 py-1">
+                      {doctor?.department}
+                    </p>
+                    <p className="text-sm text-gray-500 border border-gray-200 bg-blue-50 rounded-full px-2 py-1">
+                      Years: {doctor?.workExperienceYears}
+                    </p>
                   </div>
                   <p
-                    className={`text-sm ${
-                      doctor.availableStatus === true
+                    className={`text-sm ${doctor.availableStatus === true
                         ? "text-green-500"
                         : "text-red-500"
-                    }`}
+                      }`}
                   >
                     {doctor?.availableStatus}
                   </p>
                   <p className="text-sm text-gray-500">
-                    Age: {doctor.age} 
+                    Age: {doctor.age}
                   </p>
-                 
+
                   <p className="text-sm text-gray-700 mt-2">{doctor?.contact?.chamberAddress}</p>
                   {/* Book Appointment Button */}
                   <Link href={`/doctors/${doctor._id}`}>
