@@ -55,15 +55,16 @@ const PatientForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 border dark:bg-gray-900 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-center mb-4">Sign Up</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="sm:max-w-md mx-3 sm:mx-auto p-6 border dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+      <h2 className="text-2xl font-bold text-center mb-4">Patient Sign Up</h2>
+      <form onSubmit={handleSubmit(onSubmit)} >
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="photoUrl">
             Photo URL (Optional)
           </label>
           <Input
             id="photoUrl"
+            placeholder="PhotoUrl"
             {...register("photoUrl", {
               pattern: {
                 value: /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif))$/i,
@@ -88,6 +89,7 @@ const PatientForm = () => {
             </label>
             <Input
               id="firstName"
+              placeholder="First Name"
               {...register("firstName", { required: "First name is required" })}
               className="w-full"
             />
@@ -104,6 +106,7 @@ const PatientForm = () => {
             </label>
             <Input
               id="lastName"
+              placeholder="Last Name"
               {...register("lastName", { required: "Last name is required" })}
               className="w-full"
             />
@@ -122,6 +125,7 @@ const PatientForm = () => {
           <Input
             id="email"
             type="email"
+            placeholder="Enter Your Email"
             {...register("email", {
               required: "Email is required",
               pattern: {
@@ -130,7 +134,7 @@ const PatientForm = () => {
               },
             })}
             className="w-full"
-          />
+            />
           {errors.email && (
             <span className="text-red-500 text-sm">{errors.email.message}</span>
           )}
@@ -144,6 +148,7 @@ const PatientForm = () => {
             <Input
               id="password"
               type={passwordVisible ? "text" : "password"}
+              placeholder="Enter Your Password"
               {...register("password", { required: "Password is required" })}
               className="w-full"
             />
@@ -163,14 +168,14 @@ const PatientForm = () => {
         </div>
 
         {/* Appointment Date and Time */}
-        <div className="flex gap-4 mb-4">
+        <div className="md:flex flex-1 gap-4 ">
           {/* Date  */}
-          <div className="w-full">
+          <div className="w-full mb-4">
             <Label htmlFor="appointmentDate" className="mb-2">Appointment Date</Label>
             <Input
               id="appointmentDate"
               type="date"
-              className="text-center px-10"
+              className="text-center sm:px-8 lg:px-10"
               {...register("appointmentDate", {
                 required: "Appointment date is required",
               })}
@@ -181,12 +186,12 @@ const PatientForm = () => {
           </div>
 
           {/* Time  */}
-          <div className="w-full">
+          <div className="w-full mb-4">
             <Label htmlFor="appointmentTime" className="mb-2">Time</Label>
             <Input
               id="appointmentTime"
               type="time"
-              className="text-center px-10"
+              className="text-center sm:px-10"
               {...register("appointmentTime", {
                 required: "Appointment time is required",
               })}
