@@ -92,8 +92,11 @@ const LoginForm = () => {
     
     <p className="mt-6">
       New to <span className="font-bold">Medisphere</span> ? Click here to
-      <Link className="text-[#022dbb] font-bold ml-2" href={"/signup"}>
-      Sign up
+      <Link className="text-[#022dbb] font-bold ml-2" href={"/signup/doctor"}>
+      Join as a doctor 
+      </Link> OR
+      <Link className="text-[#022dbb] font-bold ml-2" href={"/signup/patient"}>
+      Register a patient
       </Link> now.
     </p>
   </form>

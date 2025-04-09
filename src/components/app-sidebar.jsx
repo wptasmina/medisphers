@@ -102,7 +102,7 @@ const data = {
       items: [
         {
           title: "All Doctors",
-          url: "/doctor",
+          url: "/dashboard/all-doctors",
         },
         {
           title: "Edit Doctor",

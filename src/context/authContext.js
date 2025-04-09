@@ -11,6 +11,8 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null); // State to hold user information
   const [loading, setLoading] = useState(true); // To handle loading state
 
+  console.log(user);
+  
   // Check for JWT token in localStorage and verify it
   useEffect(() => {
     const token = localStorage.getItem("token");
