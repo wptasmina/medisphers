@@ -56,12 +56,12 @@ export default function About() {
             ].map((card, i) => (
               <div
                 key={i}
-                className={`flex flex-col items-center justify-center bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all ${card.bg}`}
+                className={`flex flex-col items-center justify-center bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 ${card.bg}`}
               >
                 <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
                   {card.icon}
                 </div>
-                <h3 className="text-center text-sm font-semibold tracking-wide text-black dark:text-white">
+                <h3 className="text-center text-sm  font-semibold tracking-wide text-black dark:text-gray-800">
                   {card.label}
                 </h3>
               </div>
