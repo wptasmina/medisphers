@@ -1,36 +1,49 @@
 "use client";
+import * as React from "react"
 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { useState } from "react";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import { toast} from "react-toastify";
+import { toast } from "react-toastify";
+import { Controller } from "react-hook-form";
 
 
-const DoctorsForm = () => {
+const DoctorForm = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm();
   const [passwordVisible, setPasswordVisible] = useState(false);
   const router = useRouter();
 
   const onSubmit = async (formData) => {
-    // console.log(formData);
-    const doctor = {...formData, role:`doctor`}
+    console.log(formData);
+    const patient = { ...formData, role: `doctor` }
     const res = await fetch("/api/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(doctor),
+      body: JSON.stringify(patient),
     });
 
     const data = await res.json();
     if (res.ok) {
-       toast.success("Register successful!", { position: "top-right" }); 
+      toast.success("Register successful!", { position: "top-right" });
       router.push("/signin");
     } else {
       toast.error(data.message || "Register failed!", { position: "top-right" });
@@ -42,15 +55,16 @@ const DoctorsForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 border dark:bg-gray-900 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-center mb-4">Sign Up</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="sm:max-w-md mx-3 sm:mx-auto p-6 border dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+      <h2 className="text-2xl font-bold text-center mb-4">Patient Sign Up</h2>
+      <form onSubmit={handleSubmit(onSubmit)} >
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="photoUrl">
-            Photo URL (Optional)
+            Photo URL
           </label>
           <Input
             id="photoUrl"
+            placeholder="PhotoUrl"
             {...register("photoUrl", {
               pattern: {
                 value: /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif))$/i,
@@ -67,37 +81,65 @@ const DoctorsForm = () => {
           )}
         </div>
 
+        {/* First name and Last Name  */}
+        <div className="flex gap-4">
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2" htmlFor="firstName">
+              First Name
+            </label>
+            <Input
+              id="firstName"
+              placeholder="First Name"
+              {...register("firstName", { required: "First name is required" })}
+              className="w-full"
+            />
+            {errors.firstName && (
+              <span className="text-red-500 text-sm">
+                {errors.firstName.message}
+              </span>
+            )}
+          </div>
+
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2" htmlFor="lastName">
+              Last Name
+            </label>
+            <Input
+              id="lastName"
+              placeholder="Last Name"
+              {...register("lastName", { required: "Last name is required" })}
+              className="w-full"
+            />
+            {errors.lastName && (
+              <span className="text-red-500 text-sm">
+                {errors.lastName.message}
+              </span>
+            )}
+          </div>
+        </div>
+        {/* Phone Number  */}
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="firstName">
-            First Name
+          <label className="block text-sm font-medium mb-2" htmlFor="phone">
+            Phone Number
           </label>
           <Input
-            id="firstName"
-            {...register("firstName", { required: "First name is required" })}
+            id="phone"
+            type="tel"
+            placeholder="Enter Your Phone Number"
+            {...register("phone", {
+              required: "Phone number is required",
+              pattern: {
+                value: /^[0-9]{10,15}$/,
+                message: "Please enter a valid phone number",
+              },
+            })}
             className="w-full"
           />
-          {errors.firstName && (
-            <span className="text-red-500 text-sm">
-              {errors.firstName.message}
-            </span>
+          {errors.phone && (
+            <span className="text-red-500 text-sm">{errors.phone.message}</span>
           )}
         </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="lastName">
-            Last Name
-          </label>
-          <Input
-            id="lastName"
-            {...register("lastName", { required: "Last name is required" })}
-            className="w-full"
-          />
-          {errors.lastName && (
-            <span className="text-red-500 text-sm">
-              {errors.lastName.message}
-            </span>
-          )}
-        </div>
 
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="email">
@@ -106,6 +148,7 @@ const DoctorsForm = () => {
           <Input
             id="email"
             type="email"
+            placeholder="Enter Your Email"
             {...register("email", {
               required: "Email is required",
               pattern: {
@@ -119,7 +162,7 @@ const DoctorsForm = () => {
             <span className="text-red-500 text-sm">{errors.email.message}</span>
           )}
         </div>
-
+        {/* Password  */}
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="password">
             Password
@@ -128,6 +171,7 @@ const DoctorsForm = () => {
             <Input
               id="password"
               type={passwordVisible ? "text" : "password"}
+              placeholder="Enter Your Password"
               {...register("password", { required: "Password is required" })}
               className="w-full"
             />
@@ -145,23 +189,51 @@ const DoctorsForm = () => {
             </span>
           )}
         </div>
-        <div>
+
+        {/* seclect Gander  */}
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-2">Gender</label>
+          <Controller
+            id="gender"
+            name="gender"
+            control={control}
+            rules={{ required: "Gender is required" }}
+            render={({ field }) => (
+              <Select onValueChange={field.onChange} value={field.value}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a Gender" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Gender</SelectLabel>
+                    <SelectItem value="male">Male</SelectItem>
+                    <SelectItem value="female">Female</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            )}
+          />
+          {errors.gender && (
+            <span className="text-red-500 text-sm">{errors.gender.message}</span>
+          )}
         </div>
 
+        {/* sign up button  */}
         <div className="mt-6">
           <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300 dark:hover:text-[#022dbb] transition-colors duration-300 cursor-pointer">
             Sign Up
           </Button>
         </div>
-      </form>
+      </form >
       <p className="my-4 dark:text-gray-300">
-        Already have an account? Click here to 
+        Already have an account? Click here to
         <Link className="ml-1 font-bold dark:text-[#022dbb] text-[#022dbb]" href={"/signin"}>
           Sign in
         </Link>
       </p>
-    </div>
+    </div >
   );
 };
 
-export default DoctorsForm;
+export default DoctorForm;

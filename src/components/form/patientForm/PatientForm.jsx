@@ -117,7 +117,30 @@ const PatientForm = () => {
             )}
           </div>
         </div>
+        {/* phone Number */}
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-2" htmlFor="phone">
+            Phone Number
+          </label>
+          <Input
+            id="phone"
+            type="tel"
+            placeholder="Enter Your Phone Number"
+            {...register("phone", {
+              required: "Phone number is required",
+              pattern: {
+                value: /^[0-9]{10,15}$/,
+                message: "Please enter a valid phone number",
+              },
+            })}
+            className="w-full"
+          />
+          {errors.phone && (
+            <span className="text-red-500 text-sm">{errors.phone.message}</span>
+          )}
+        </div>
 
+          {/* Email  */}
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="email">
             Email Address
@@ -134,12 +157,12 @@ const PatientForm = () => {
               },
             })}
             className="w-full"
-            />
+          />
           {errors.email && (
             <span className="text-red-500 text-sm">{errors.email.message}</span>
           )}
         </div>
-          {/* Password  */}
+        {/* Password  */}
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="password">
             Password
@@ -165,41 +188,6 @@ const PatientForm = () => {
               {errors.password.message}
             </span>
           )}
-        </div>
-
-        {/* Appointment Date and Time */}
-        <div className="md:flex flex-1 gap-4 ">
-          {/* Date  */}
-          <div className="w-full mb-4">
-            <Label htmlFor="appointmentDate" className="mb-2">Appointment Date</Label>
-            <Input
-              id="appointmentDate"
-              type="date"
-              className="text-center sm:px-8 lg:px-10"
-              {...register("appointmentDate", {
-                required: "Appointment date is required",
-              })}
-            />
-            {errors.appointmentDate && (
-              <span className="text-red-500 text-sm">{errors.appointmentDate.message}</span>
-            )}
-          </div>
-
-          {/* Time  */}
-          <div className="w-full mb-4">
-            <Label htmlFor="appointmentTime" className="mb-2">Time</Label>
-            <Input
-              id="appointmentTime"
-              type="time"
-              className="text-center sm:px-10"
-              {...register("appointmentTime", {
-                required: "Appointment time is required",
-              })}
-            />
-            {errors.appointmentTime && (
-              <span className="text-red-500 text-sm">{errors.appointmentTime.message}</span>
-            )}
-          </div>
         </div>
 
         {/* seclect Gander  */}
