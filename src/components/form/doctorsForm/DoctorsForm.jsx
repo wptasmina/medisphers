@@ -149,7 +149,7 @@ const DoctorsForm = () => {
         </div>
 
         <div className="mt-6">
-          <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300 dark:hover:text-gray-950 cursor-pointer ">
+          <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300 dark:hover:text-[#022dbb] transition-colors duration-300 cursor-pointer">
             Sign Up
           </Button>
         </div>

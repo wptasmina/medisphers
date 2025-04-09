@@ -12,7 +12,8 @@ import {
 } from "@/components/ui/select"
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { useState } from "react";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -134,7 +135,7 @@ const PatientForm = () => {
             <span className="text-red-500 text-sm">{errors.email.message}</span>
           )}
         </div>
-
+          {/* Password  */}
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="password">
             Password
@@ -160,103 +161,88 @@ const PatientForm = () => {
             </span>
           )}
         </div>
-        {/* Preferred Appointment Date and Time */}
-        <div className="flex gap-4">
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-2" htmlFor="firstName">
-              Preferred Appointment Date
-            </label>
+
+        {/* Appointment Date and Time */}
+        <div className="flex gap-4 mb-4">
+          {/* Date  */}
+          <div className="w-full">
+            <Label htmlFor="appointmentDate" className="mb-2">Appointment Date</Label>
             <Input
               id="appointmentDate"
               type="date"
-              {...register("appointmentDate", { required: "Appointment Date is required" })}
-              className="w-full"
+              className="text-center px-10"
+              {...register("appointmentDate", {
+                required: "Appointment date is required",
+              })}
             />
-            {errors.firstName && (
-              <span className="text-red-500 text-sm">
-                {errors.firstName.message}
-              </span>
+            {errors.appointmentDate && (
+              <span className="text-red-500 text-sm">{errors.appointmentDate.message}</span>
             )}
           </div>
 
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-2" htmlFor="lastName">
-              Time
-            </label>
+          {/* Time  */}
+          <div className="w-full">
+            <Label htmlFor="appointmentTime" className="mb-2">Time</Label>
             <Input
               id="appointmentTime"
               type="time"
-              {...register("appointmentTime", { required: "Appointment Time is required" })}
-              className="w-full"
+              className="text-center px-10"
+              {...register("appointmentTime", {
+                required: "Appointment time is required",
+              })}
             />
-            {errors.lastName && (
-              <span className="text-red-500 text-sm">
-                {errors.lastName.message}
-              </span>
+            {errors.appointmentTime && (
+              <span className="text-red-500 text-sm">{errors.appointmentTime.message}</span>
             )}
           </div>
         </div>
+
+
+
+
         {/* seclect Gander  */}
-        {/* <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="gender">
-            Gender
-          </label>
-          <select
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-2">Gender</label>
+          <Controller
             id="gender"
-            {...register("gender", { required: "Gender is required" })}
-            className="w-full p-2 border rounded-md bg-white dark:bg-gray-800 dark:text-white"
-          >
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
+            name="gender"
+            control={control}
+            rules={{ required: "Gender is required" }}
+            render={({ field }) => (
+              <Select onValueChange={field.onChange} value={field.value}>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a Gender" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Gender</SelectLabel>
+                    <SelectItem value="male">Male</SelectItem>
+                    <SelectItem value="female">Female</SelectItem>
+                    <SelectItem value="other">Other</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            )}
+          />
           {errors.gender && (
             <span className="text-red-500 text-sm">{errors.gender.message}</span>
           )}
-        </div> */}
-        <div className="mb-4">
-  <label className="block text-sm font-medium mb-2">Gender</label>
-  <Controller
-    id="gender"
-    name="gender"
-    control={control}
-    rules={{ required: "Gender is required" }}
-    render={({ field }) => (
-      <Select onValueChange={field.onChange} value={field.value}>
-        <SelectTrigger className="w-full">
-          <SelectValue placeholder="Select a Gender" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectGroup>
-            <SelectLabel>Gender</SelectLabel>
-            <SelectItem value="male">Male</SelectItem>
-            <SelectItem value="female">Female</SelectItem>
-            <SelectItem value="other">Other</SelectItem>
-          </SelectGroup>
-        </SelectContent>
-      </Select>
-    )}
-  />
-  {errors.gender && (
-    <span className="text-red-500 text-sm">{errors.gender.message}</span>
-  )}
-</div>
+        </div>
 
         {/* sign up button  */}
         <div className="mt-6">
-          <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300 dark:hover:text-gray-950 cursor-pointer ">
+          <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300 dark:hover:text-[#022dbb] transition-colors duration-300 cursor-pointer">
             Sign Up
           </Button>
         </div>
-      </form>
+      </form >
       <p className="my-4 dark:text-gray-300">
         Already have an account? Click here to
         <Link className="ml-1 font-bold dark:text-[#022dbb] text-[#022dbb]" href={"/signin"}>
           Sign in
         </Link>
       </p>
-    </div>
+    </div >
   );
 };
 
