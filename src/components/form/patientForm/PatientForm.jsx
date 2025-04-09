@@ -56,7 +56,7 @@ const PatientForm = () => {
 
   return (
     <div className="sm:max-w-md mx-3 sm:mx-auto p-6 border dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
-      <h2 className="text-2xl font-bold text-center mb-4">Patient Sign Up</h2>
+      <h2 className="text-2xl font-bold text-center mb-4"><span className="text-[#022dbb]"> Patient</span> Sign Up</h2>
       <form onSubmit={handleSubmit(onSubmit)} >
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="photoUrl">
@@ -117,30 +117,8 @@ const PatientForm = () => {
             )}
           </div>
         </div>
-        {/* phone Number */}
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="phone">
-            Phone Number
-          </label>
-          <Input
-            id="phone"
-            type="tel"
-            placeholder="Enter Your Phone Number"
-            {...register("phone", {
-              required: "Phone number is required",
-              pattern: {
-                value: /^[0-9]{10,15}$/,
-                message: "Please enter a valid phone number",
-              },
-            })}
-            className="w-full"
-          />
-          {errors.phone && (
-            <span className="text-red-500 text-sm">{errors.phone.message}</span>
-          )}
-        </div>
 
-          {/* Email  */}
+        {/* Email  */}
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="email">
             Email Address
@@ -189,7 +167,28 @@ const PatientForm = () => {
             </span>
           )}
         </div>
-
+        {/* phone Number */}
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-2" htmlFor="phone">
+            Phone Number
+          </label>
+          <Input
+            id="phone"
+            type="tel"
+            placeholder="Enter Your Phone Number"
+            {...register("phone", {
+              required: "Phone number is required",
+              pattern: {
+                value: /^[0-9]{10,15}$/,
+                message: "Please enter a valid phone number",
+              },
+            })}
+            className="w-full"
+          />
+          {errors.phone && (
+            <span className="text-red-500 text-sm">{errors.phone.message}</span>
+          )}
+        </div>
         {/* seclect Gander  */}
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2">Gender</label>
