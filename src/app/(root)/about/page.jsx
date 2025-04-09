@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { FaUserMd, FaHeartbeat, FaPills, FaStore } from 'react-icons/fa';
+import { FaUserMd, FaHeartbeat, FaPills, FaStore, FaBullseye, FaCheckCircle } from 'react-icons/fa';
 
 export default function About() {
   return (
@@ -29,29 +29,45 @@ export default function About() {
           <p className="text-lg text-gray-600 dark:text-gray-300">
             MediSphere is a comprehensive AI-driven hospital management system that streamlines patient records, optimizes clinical operations, and empowers healthcare providers with smart decision-making tools.
           </p>
-        
-        {/* Specialty Cards */}
-      <div className="py-12 grid grid-cols-2 gap-6 dark:text-gray-800">
-        {[{
-          icon: <FaUserMd className="text-4xl text-[#022dbb" />, label: "FAMILY MEDICINE", bg: "hover:bg-[#022dbb]"
-        }, {
-          icon: <FaHeartbeat className="text-4xl text-red-500" />, label: "CARDIOLOGY & DIABETES", bg: "hover:bg-red-500"
-        }, {
-          icon: <FaPills className="text-4xl text-orange-500" />, label: "HEALTH & WELLNESS", bg: "hover:bg-orange-500"
-        }, {
-          icon: <FaStore className="text-4xl text-sky-500" />, label: "MEDISPHERE PHARMACY", bg: "hover:bg-sky-500"
-        }].map((card, i) => (
-          <div key={i} className={`flex flex-col items-center justify-center bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all ${card.bg}`}>
-            <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
-              {card.icon}
-            </div>
-            <h3 className="text-center text-sm font-semibold tracking-wide text-black dark:text-white">
-              {card.label}
-            </h3>
+
+          {/* Specialty Cards */}
+          <div className="py-8 grid grid-cols-2 gap-6 dark:text-gray-800">
+            {[
+              {
+                icon: <FaUserMd className="text-4xl text-[#022dbb]" />,
+                label: "FAMILY MEDICINE",
+                bg: "hover:bg-[#022dbb]",
+              },
+              {
+                icon: <FaHeartbeat className="text-4xl text-red-500" />,
+                label: "CARDIOLOGY & DIABETES",
+                bg: "hover:bg-red-500",
+              },
+              {
+                icon: <FaPills className="text-4xl text-orange-500" />,
+                label: "HEALTH & WELLNESS",
+                bg: "hover:bg-orange-500",
+              },
+              {
+                icon: <FaStore className="text-4xl text-sky-500" />,
+                label: "MEDISPHERE PHARMACY",
+                bg: "hover:bg-sky-500",
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className={`flex flex-col items-center justify-center bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all ${card.bg}`}
+              >
+                <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
+                  {card.icon}
+                </div>
+                <h3 className="text-center text-sm font-semibold tracking-wide text-black dark:text-white">
+                  {card.label}
+                </h3>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      </div>
+        </div>
       </section>
 
       {/* Features Grid */}
@@ -78,18 +94,23 @@ export default function About() {
         </ul>
       </section>
 
-
-
-      {/* Mission & Value */}
+      {/* Mission & Value Section */}
       <section className="grid md:grid-cols-2 gap-6 py-12">
-        <div className="p-6 bg-base-200 dark:bg-gray-900 rounded-2xl shadow-lg">
-          <h2 className="text-2xl font-semibold text-[#022dbb] dark:text-gray-300">Our Mission</h2>
+        {/* Mission Card */}
+        <div className="transition-transform hover:-translate-y-1 hover:shadow-xl bg-base-200 dark:bg-gray-900 border-l-4 border-[#022dbb] p-6 rounded-2xl shadow-md">
+          <h2 className="text-2xl font-semibold flex items-center gap-2 text-[#022dbb] dark:text-gray-300">
+            <FaBullseye /> Our Mission
+          </h2>
           <p className="mt-3 text-gray-600 dark:text-gray-400">
             Our mission is to revolutionize healthcare management by providing a seamless, efficient, and secure platform for hospitals, clinics, and individual practitioners.
           </p>
         </div>
-        <div className="p-6 bg-base-200 dark:bg-gray-900 rounded-2xl shadow-lg">
-          <h2 className="text-2xl font-semibold text-[#022dbb] dark:text-gray-300">Why Choose MediSphere?</h2>
+
+        {/* Why Choose Card */}
+        <div className="transition-transform hover:-translate-y-1 hover:shadow-xl bg-base-200 dark:bg-gray-900 border-l-4 border-[#022dbb] p-6 rounded-2xl shadow-md">
+          <h2 className="text-2xl font-semibold flex items-center gap-2 text-[#022dbb] dark:text-gray-300">
+            <FaCheckCircle /> Why Choose MediSphere?
+          </h2>
           <ul className="mt-3 list-disc list-inside text-gray-600 dark:text-gray-400">
             <li>Secure cloud-based medical record management</li>
             <li>Efficient appointment scheduling & patient tracking</li>
@@ -107,12 +128,17 @@ export default function About() {
             <div key={i} className="p-6 bg-white dark:bg-gray-900 shadow rounded-xl">
               <h3 className="text-xl dark:text-gray-200 font-semibold text-[#022dbb]">{title}</h3>
               <p className="text-gray-600 dark:text-gray-400 mt-2">
-                {title === "Cardiology" ? "Expert heart care and surgery." :
-                  title === "Pediatrics" ? "Comprehensive child healthcare." :
-                  title === "Orthopedics" ? "Bone & joint treatments." :
-                  title === "Neurology" ? "Brain and nerve health." :
-                  title === "Dermatology" ? "Skin care and treatments." :
-                  "Minimally invasive procedures."}
+                {title === "Cardiology"
+                  ? "Expert heart care and surgery."
+                  : title === "Pediatrics"
+                  ? "Comprehensive child healthcare."
+                  : title === "Orthopedics"
+                  ? "Bone & joint treatments."
+                  : title === "Neurology"
+                  ? "Brain and nerve health."
+                  : title === "Dermatology"
+                  ? "Skin care and treatments."
+                  : "Minimally invasive procedures."}
               </p>
             </div>
           ))}
@@ -120,9 +146,9 @@ export default function About() {
       </section>
 
       {/* Contact CTA */}
-      <div className="text-center py-10">
+      <div className="text-center pb-10">
         <Link href="/contact">
-          <Button className="bg-[#022dbb] text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">
+          <Button className="bg-[#022dbb] text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition cursor-pointer">
             Get in Touch
           </Button>
         </Link>
