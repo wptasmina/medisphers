@@ -97,7 +97,7 @@ const data = {
     },
     {
       title: "Doctor",
-      url: "#",
+      url: "/dashboard/doctor",
       icon: UserRoundPlus,
       items: [
         {
