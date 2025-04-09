@@ -1,5 +1,15 @@
 "use client";
+import * as React from "react"
 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,13 +17,15 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
-import { toast} from "react-toastify";
+import { toast } from "react-toastify";
+import { Controller } from "react-hook-form";
 
 
 const PatientForm = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm();
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -21,7 +33,7 @@ const PatientForm = () => {
 
   const onSubmit = async (formData) => {
     console.log(formData);
-    const patient = {...formData, role:`patient`}
+    const patient = { ...formData, rules: `patient` }
     const res = await fetch("/api/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -30,7 +42,7 @@ const PatientForm = () => {
 
     const data = await res.json();
     if (res.ok) {
-       toast.success("Register successful!", { position: "top-right" }); 
+      toast.success("Register successful!", { position: "top-right" });
       router.push("/signin");
     } else {
       toast.error(data.message || "Register failed!", { position: "top-right" });
@@ -67,39 +79,39 @@ const PatientForm = () => {
           )}
         </div>
 
-          {/* First name and Last Name  */}
+        {/* First name and Last Name  */}
         <div className="flex gap-4">
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="firstName">
-            First Name
-          </label>
-          <Input
-            id="firstName"
-            {...register("firstName", { required: "First name is required" })}
-            className="w-full"
-          />
-          {errors.firstName && (
-            <span className="text-red-500 text-sm">
-              {errors.firstName.message}
-            </span>
-          )}
-        </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2" htmlFor="firstName">
+              First Name
+            </label>
+            <Input
+              id="firstName"
+              {...register("firstName", { required: "First name is required" })}
+              className="w-full"
+            />
+            {errors.firstName && (
+              <span className="text-red-500 text-sm">
+                {errors.firstName.message}
+              </span>
+            )}
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="lastName">
-            Last Name
-          </label>
-          <Input
-            id="lastName"
-            {...register("lastName", { required: "Last name is required" })}
-            className="w-full"
-          />
-          {errors.lastName && (
-            <span className="text-red-500 text-sm">
-              {errors.lastName.message}
-            </span>
-          )}
-        </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2" htmlFor="lastName">
+              Last Name
+            </label>
+            <Input
+              id="lastName"
+              {...register("lastName", { required: "Last name is required" })}
+              className="w-full"
+            />
+            {errors.lastName && (
+              <span className="text-red-500 text-sm">
+                {errors.lastName.message}
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="mb-4">
@@ -150,38 +162,86 @@ const PatientForm = () => {
         </div>
         {/* Preferred Appointment Date and Time */}
         <div className="flex gap-4">
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="firstName">
-          Preferred Appointment Date
-          </label>
-          <Input
-            id="firstName"
-            {...register("appointmentDate", { required: "Appointment Date is required" })}
-            className="w-full"
-          />
-          {errors.firstName && (
-            <span className="text-red-500 text-sm">
-              {errors.firstName.message}
-            </span>
-          )}
-        </div>
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2" htmlFor="firstName">
+              Preferred Appointment Date
+            </label>
+            <Input
+              id="appointmentDate"
+              type="date"
+              {...register("appointmentDate", { required: "Appointment Date is required" })}
+              className="w-full"
+            />
+            {errors.firstName && (
+              <span className="text-red-500 text-sm">
+                {errors.firstName.message}
+              </span>
+            )}
+          </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="lastName">
-          Time
+          <div className="mb-4">
+            <label className="block text-sm font-medium mb-2" htmlFor="lastName">
+              Time
+            </label>
+            <Input
+              id="appointmentTime"
+              type="time"
+              {...register("appointmentTime", { required: "Appointment Time is required" })}
+              className="w-full"
+            />
+            {errors.lastName && (
+              <span className="text-red-500 text-sm">
+                {errors.lastName.message}
+              </span>
+            )}
+          </div>
+        </div>
+        {/* seclect Gander  */}
+        {/* <div className="mb-4">
+          <label className="block text-sm font-medium mb-2" htmlFor="gender">
+            Gender
           </label>
-          <Input
-            id="lastName"
-            {...register("time", { required: "Time is required" })}
-            className="w-full"
-          />
-          {errors.lastName && (
-            <span className="text-red-500 text-sm">
-              {errors.lastName.message}
-            </span>
+          <select
+            id="gender"
+            {...register("gender", { required: "Gender is required" })}
+            className="w-full p-2 border rounded-md bg-white dark:bg-gray-800 dark:text-white"
+          >
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          {errors.gender && (
+            <span className="text-red-500 text-sm">{errors.gender.message}</span>
           )}
-        </div>
-        </div>
+        </div> */}
+        <div className="mb-4">
+  <label className="block text-sm font-medium mb-2">Gender</label>
+  <Controller
+    id="gender"
+    name="gender"
+    control={control}
+    rules={{ required: "Gender is required" }}
+    render={({ field }) => (
+      <Select onValueChange={field.onChange} value={field.value}>
+        <SelectTrigger className="w-full">
+          <SelectValue placeholder="Select a Gender" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            <SelectLabel>Gender</SelectLabel>
+            <SelectItem value="male">Male</SelectItem>
+            <SelectItem value="female">Female</SelectItem>
+            <SelectItem value="other">Other</SelectItem>
+          </SelectGroup>
+        </SelectContent>
+      </Select>
+    )}
+  />
+  {errors.gender && (
+    <span className="text-red-500 text-sm">{errors.gender.message}</span>
+  )}
+</div>
 
         {/* sign up button  */}
         <div className="mt-6">
@@ -191,7 +251,7 @@ const PatientForm = () => {
         </div>
       </form>
       <p className="my-4 dark:text-gray-300">
-        Already have an account? Click here to 
+        Already have an account? Click here to
         <Link className="ml-1 font-bold dark:text-[#022dbb] text-[#022dbb]" href={"/signin"}>
           Sign in
         </Link>
