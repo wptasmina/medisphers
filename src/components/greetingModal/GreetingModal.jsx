@@ -13,11 +13,16 @@ import { Button } from '@/components/ui/button';
 import { getFancyGreeting } from '@/lib/greetingGenerator';
 
 export default function GreetingModal() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false); // default to false
   const [greeting, setGreeting] = useState('');
 
   useEffect(() => {
-    setGreeting(getFancyGreeting());
+    const hasSeenGreeting = sessionStorage.getItem('hasSeenGreeting');
+    if (!hasSeenGreeting) {
+      setGreeting(getFancyGreeting() || 'Welcome!');
+      setOpen(true);
+      sessionStorage.setItem('hasSeenGreeting', 'true');
+    }
   }, []);
 
   return (
@@ -32,7 +37,11 @@ export default function GreetingModal() {
 
         <div className="flex justify-center mt-6">
           <DialogClose asChild>
-            <Button variant="secondary" className="bg-white text-[#022bbd] hover:bg-gray-300 cursor-pointer">
+            <Button
+              variant="secondary"
+              className="bg-white text-[#022bbd] hover:bg-gray-300 cursor-pointer"
+              onClick={() => setOpen(false)}
+            >
               Got it
             </Button>
           </DialogClose>
@@ -41,4 +50,3 @@ export default function GreetingModal() {
     </Dialog>
   );
 }
-
