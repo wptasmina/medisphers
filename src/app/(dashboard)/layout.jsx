@@ -17,7 +17,7 @@ import {
   SidebarInset,
   SidebarProvider,
 } from "@/components/ui/sidebar";
-import { ThemeBtn } from '@/components/shared/ThemeBtn';
+import { ThemeBtn } from '@/components/shared/ThemeSelector';
 
 export default async function Layout({ children }) {
 

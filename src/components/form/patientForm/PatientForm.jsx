@@ -8,17 +8,9 @@ import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { toast} from "react-toastify";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 
-const RegistrationForm = () => {
+
+const PatientForm = () => {
   const {
     register,
     handleSubmit,
@@ -29,10 +21,11 @@ const RegistrationForm = () => {
 
   const onSubmit = async (formData) => {
     console.log(formData);
+    const patient = {...formData, role:`patient`}
     const res = await fetch("/api/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(patient),
     });
 
     const data = await res.json();
@@ -154,23 +147,6 @@ const RegistrationForm = () => {
         </div>
         <div>
         </div>
-
-        <div>
-        <Select>
-      <SelectTrigger className="w-full">
-        <SelectValue placeholder="Select a fruit" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
-          <SelectItem value="apple">Doctor</SelectItem>
-          <SelectItem value="banana">Banana</SelectItem>
-          <SelectItem value="blueberry">Blueberry</SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
-        </div>
-
         <div className="mt-6">
           <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300 dark:hover:text-gray-950 cursor-pointer ">
             Sign Up
@@ -187,4 +163,4 @@ const RegistrationForm = () => {
   );
 };
 
-export default RegistrationForm;
+export default PatientForm;
