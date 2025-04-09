@@ -67,6 +67,8 @@ const PatientForm = () => {
           )}
         </div>
 
+          {/* First name and Last Name  */}
+        <div className="flex gap-4">
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="firstName">
             First Name
@@ -97,6 +99,7 @@ const PatientForm = () => {
               {errors.lastName.message}
             </span>
           )}
+        </div>
         </div>
 
         <div className="mb-4">
@@ -145,8 +148,42 @@ const PatientForm = () => {
             </span>
           )}
         </div>
-        <div>
+        {/* Preferred Appointment Date and Time */}
+        <div className="flex gap-4">
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-2" htmlFor="firstName">
+          Preferred Appointment Date
+          </label>
+          <Input
+            id="firstName"
+            {...register("appointmentDate", { required: "Appointment Date is required" })}
+            className="w-full"
+          />
+          {errors.firstName && (
+            <span className="text-red-500 text-sm">
+              {errors.firstName.message}
+            </span>
+          )}
         </div>
+
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-2" htmlFor="lastName">
+          Time
+          </label>
+          <Input
+            id="lastName"
+            {...register("time", { required: "Time is required" })}
+            className="w-full"
+          />
+          {errors.lastName && (
+            <span className="text-red-500 text-sm">
+              {errors.lastName.message}
+            </span>
+          )}
+        </div>
+        </div>
+
+        {/* sign up button  */}
         <div className="mt-6">
           <Button type="submit" className="w-full bg-[#022dbb] dark:text-gray-300 dark:hover:text-gray-950 cursor-pointer ">
             Sign Up
