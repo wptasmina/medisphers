@@ -34,7 +34,7 @@ const PatientForm = () => {
 
   const onSubmit = async (formData) => {
     console.log(formData);
-    const patient = { ...formData, rules: `patient` }
+    const patient = { ...formData, role: `patient` }
     const res = await fetch("/api/user/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
