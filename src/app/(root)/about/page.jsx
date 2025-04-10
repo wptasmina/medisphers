@@ -37,7 +37,7 @@ export default function About() {
               </ul>
             </div>
           </div>
-          <div>
+          <div className="border rounded-2xl">
             <img
               src="/banner1.png"
               width={600}
