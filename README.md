@@ -12,7 +12,7 @@ First, run the development server:
 
 -----**conflicts** Hole------
 
-1) git checkout main (যে ব্রাঞ্চে করফিক্ট হয়েছে) <br/>
+1) git checkout main (যে ব্রাঞ্চে করফিক্ট হয়েছে ব্রাঞ্চের নাম ) <br/>
 2) git pull origin main <br/>
 
 3) git checkout main (যে ব্রাঞ্চে করফিক্ট হয়েছে ব্রাঞ্চের নাম) <br/>
