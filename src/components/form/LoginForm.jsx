@@ -74,7 +74,7 @@ const LoginForm = () => {
         } else if (decoded.role === "patient") {
           router.push("/dashboard/patient");
         } else {
-          router.push("/dashboard"); // fallback
+          router.push("/dashboard");
         }
       } else {
         toast.error(data.error || "Login failed!", { position: "top-right" });
