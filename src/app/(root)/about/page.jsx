@@ -13,7 +13,7 @@ export default function About() {
       </Head>
 
       {/* Intro Section */}
-      <section className="grid md:grid-cols-2 grid-cols-1 gap-12 items-center py-12">
+      <section className="grid md:grid-cols-2 grid-cols-1 gap-12 items-center md:py-12 pt-8">
         <Image
           src="/about-banner.jpg"
           width={600}
@@ -22,16 +22,16 @@ export default function About() {
           alt="Doctor image"
         />
 
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#022dbb] dark:text-white">
+        <div className="">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#022dbb] dark:text-white pb-4">
             🩺 About MediSphere Services
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="md:text-lg text-md text-gray-600 dark:text-gray-300">
             MediSphere is a comprehensive AI-driven hospital management system that streamlines patient records, optimizes clinical operations, and empowers healthcare providers with smart decision-making tools.
           </p>
 
           {/* Specialty Cards */}
-          <div className="py-8 grid grid-cols-2 gap-6 dark:text-gray-800">
+          <div className="py-8 grid grid-cols-2 gap-4 dark:text-gray-800">
             {[
               {
                 icon: <FaUserMd className="text-4xl text-[#022dbb]" />,
@@ -82,10 +82,10 @@ export default function About() {
             { icon: "💊", title: "Smart Prescriptions", desc: "AI-driven accurate and efficient prescription generation." },
             { icon: "🧾", title: "Billing Automation", desc: "Integrated billing and insurance management system." },
             { icon: "📊", title: "Analytics Dashboard", desc: "Visual insights into hospital and patient metrics." },
-            { icon: "🔔", title: "Notifications", desc: "Follow-up reminders, test alerts, and more." },
+            { icon: "🔔", title: "Notifications", desc: "Follow-up reminders, test alerts, and more."},
             { icon: "📞", title: "Telemedicine", desc: "Encrypted video calls and remote consultations." },
           ].map((item, i) => (
-            <li key={i} className="bg-base-200 dark:bg-gray-800 p-5 rounded-xl shadow-md">
+            <li key={i} className="bg-base-200 dark:bg-gray-900 p-5 rounded-xl shadow-md">
               <span className="text-3xl">{item.icon}</span>
               <h4 className="text-lg font-semibold text-[#022dbb] mt-2">{item.title}</h4>
               <p className="mt-1 text-sm">{item.desc}</p>
@@ -95,7 +95,7 @@ export default function About() {
       </section>
 
       {/* Mission & Value Section */}
-      <section className="grid md:grid-cols-2 gap-6 py-12">
+      <section className="grid md:grid-cols-2 gap-6 md:py-12">
         {/* Mission Card */}
         <div className="transition-transform hover:-translate-y-1 hover:shadow-xl bg-base-200 dark:bg-gray-900 border-l-4 border-[#022dbb] p-6 rounded-2xl shadow-md">
           <h2 className="text-2xl font-semibold flex items-center gap-2 text-[#022dbb] dark:text-gray-300">
