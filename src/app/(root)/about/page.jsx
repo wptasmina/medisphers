@@ -13,7 +13,7 @@ export default function About() {
       </Head>
 
       {/* Intro Section */}
-      <section className="grid md:grid-cols-2 grid-cols-1 gap-12 items-center md:py-12">
+      <section className="grid md:grid-cols-2 grid-cols-1 gap-12 items-center md:py-12 pt-8">
         <Image
           src="/about-banner.jpg"
           width={600}
@@ -22,16 +22,16 @@ export default function About() {
           alt="Doctor image"
         />
 
-        <div className="space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#022dbb] dark:text-white">
+        <div className="">
+          <h1 className="text-2xl md:text-4xl font-bold text-[#022dbb] dark:text-white pb-4">
             🩺 About MediSphere Services
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
+          <p className="md:text-lg text-md text-gray-600 dark:text-gray-300">
             MediSphere is a comprehensive AI-driven hospital management system that streamlines patient records, optimizes clinical operations, and empowers healthcare providers with smart decision-making tools.
           </p>
 
           {/* Specialty Cards */}
-          <div className="py-8 grid grid-cols-2 gap-6 dark:text-gray-800">
+          <div className="py-8 grid grid-cols-2 gap-4 dark:text-gray-800">
             {[
               {
                 icon: <FaUserMd className="text-4xl text-[#022dbb]" />,
