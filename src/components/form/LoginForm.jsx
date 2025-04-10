@@ -71,8 +71,10 @@ const LoginForm = () => {
           router.push("/dashboard/doctor");
         } else if (decoded.role === "admin") {
           router.push("/admin-panel");
+        } else if (decoded.role === "patient") {
+          router.push("/dashboard/patient");
         } else {
-          router.push("/dashboard");
+          router.push("/dashboard"); // fallback
         }
       } else {
         toast.error(data.error || "Login failed!", { position: "top-right" });
@@ -138,13 +140,13 @@ const LoginForm = () => {
 
         <Button
           type="submit"
-          className="w-full bg-[#022dbb] hover:bg-[#011f99] dark:text-gray-300 dark:hover:text-gray-950"
+          className="w-full bg-[#022dbb] hover:bg-[#011f99] cursor-pointer dark:text-gray-300 dark:hover:text-gray-950"
           disabled={loading}
         >
           {loading ? "Signing in..." : "Sign In"}
         </Button>
 
-        <p className="mt-6 text-sm text-center">
+        <p className="mt-6 text-sm text-center cursor-pointer">
           New to <span className="font-bold">Medisphere</span>? Click here to
           <Link className="text-[#022dbb] font-bold ml-1" href={"/signup/doctor"}>
             Join as a doctor
