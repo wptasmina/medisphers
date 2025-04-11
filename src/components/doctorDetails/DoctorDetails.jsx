@@ -54,7 +54,7 @@ export default function DoctorDetails() {
   return (
     <>
       <motion.div
-        className="w-full p-2 lg:max-w-4xl mx-auto lg:p-6"
+        className="w-full p-2 lg:max-w-4xl mx-auto lg:p-6  pt-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
