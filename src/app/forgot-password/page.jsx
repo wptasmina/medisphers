@@ -66,7 +66,7 @@ const ForgotPassword = () => {
       </div>
 
       <div className="mb-6">
-        <Label htmlFor="password" >New Password</Label>
+        <Label htmlFor="password" className="mb-2">New Password</Label>
         <div className="relative">
           <Input
             id="password"
