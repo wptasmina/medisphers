@@ -8,11 +8,9 @@ import { Label } from "@/components/ui/label";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-const ForgotPassword = () => {
+const ResetPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
   const {
     register,
@@ -32,15 +30,14 @@ const ForgotPassword = () => {
         }),
       });
 
-      const response = await res.json();
+      const result = await res.json();
 
       if (res.ok) {
-        toast.success("Password reset successfully!");
-        // Optionally redirect to login page
+        toast.success("✅ " + result.message);
       } else {
-        toast.error(response.error || "Failed to reset password.");
+        toast.error("❌ " + result.error);
       }
-    } catch (err) {
+    } catch (error) {
       toast.error("Something went wrong.");
     } finally {
       setLoading(false);
@@ -55,31 +52,37 @@ const ForgotPassword = () => {
       <h2 className="text-xl font-bold mb-4 text-center">Reset Password</h2>
 
       <div className="mb-4">
-        <Label htmlFor="email" className="mb-2">Email</Label>
+        <Label htmlFor="email">Email</Label>
         <Input
           id="email"
           type="email"
           placeholder="Enter your email"
+          disabled={loading}
           {...register("email", { required: "Email is required" })}
         />
         {errors.email && (
-          <p className="text-red-500 text-sm mt-1 read-only">{errors.email.message}</p>
+          <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
         )}
       </div>
 
       <div className="mb-6">
-        <Label htmlFor="password" className="mb-2">New Password</Label>
+        <Label htmlFor="password">New Password</Label>
         <div className="relative">
           <Input
             id="password"
             type={showPassword ? "text" : "password"}
-            placeholder="Enter your new password"
-            {...register("password", { required: "Password is required" })}
+            placeholder="Enter new password"
+            disabled={loading}
+            {...register("password", {
+              required: "Password is required",
+              minLength: { value: 6, message: "Minimum 6 characters required" },
+            })}
           />
           <button
             type="button"
-            onClick={togglePasswordVisibility}
+            onClick={() => setShowPassword(!showPassword)}
             className="absolute right-3 top-1/2 transform -translate-y-1/2"
+            aria-label="Toggle password visibility"
           >
             {showPassword ? (
               <FaEyeSlash className="w-5 h-5 text-gray-500" />
@@ -93,11 +96,11 @@ const ForgotPassword = () => {
         )}
       </div>
 
-      <Button type="submit" className="w-full cursor-pointer" disabled={loading}>
+      <Button type="submit" className="w-full" disabled={loading}>
         {loading ? "Resetting..." : "Reset Password"}
       </Button>
     </form>
   );
 };
 
-export default ForgotPassword;
+export default ResetPassword;
