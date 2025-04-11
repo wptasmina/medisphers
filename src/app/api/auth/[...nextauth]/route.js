@@ -10,6 +10,8 @@ export default NextAuth({
       credentials: {
         email: { label: "Email", type: "email" },
         password: { label: "Password", type: "password" },
+        date: { label:"Appointment Data", type:"date"},
+        time: { label:"Appointment Time", type:"time"}
       },
       async authorize(credentials) {
         const { db } = await connectToDatabase();

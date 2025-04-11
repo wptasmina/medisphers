@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> development
 
 "use client";
 
@@ -47,6 +51,7 @@ const AllDoctors = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="w-11/12 mx-auto py-28">
       <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-[#022dbb] mb-8">
         Our MediSphere Specialists
@@ -101,3 +106,8 @@ const AllDoctors = () => {
 export default AllDoctors;
 
 
+=======
+    <div>All Doctors page</div>
+  )
+}
+>>>>>>> development

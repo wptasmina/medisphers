@@ -8,7 +8,15 @@ import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import { toast} from "react-toastify";
-
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 const RegistrationForm = () => {
   const {
@@ -143,6 +151,24 @@ const RegistrationForm = () => {
               {errors.password.message}
             </span>
           )}
+        </div>
+        <div>
+        </div>
+
+        <div>
+        <Select>
+      <SelectTrigger className="w-full">
+        <SelectValue placeholder="Select a fruit" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel>Fruits</SelectLabel>
+          <SelectItem value="apple">Doctor</SelectItem>
+          <SelectItem value="banana">Banana</SelectItem>
+          <SelectItem value="blueberry">Blueberry</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
         </div>
 
         <div className="mt-6">
