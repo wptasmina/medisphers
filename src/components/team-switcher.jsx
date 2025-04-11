@@ -28,6 +28,9 @@ export function TeamSwitcher({
   if (!activeTeam) {
     return null
   }
+  if (!teams || teams.length === 0) {
+    return null;
+  }
 
   return (
     (<SidebarMenu>

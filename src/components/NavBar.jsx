@@ -68,7 +68,7 @@ export default function NavBar() {
           px-6 py-8 mt-68 space-y-3 font-medium">
             <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
             <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
-            <Link href="/doctors" onClick={() => setIsOpen(false)}>Doctors</Link>
+            <Link href="/doctors" onClick={() => setIsOpen(false)}>All Doctors</Link>
             <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
           </div>
         )}
