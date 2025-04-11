@@ -20,7 +20,6 @@ export async function connectToDatabase() {
  
   const db = client.db(MONGODB_DB);
 
-
   cachedClient = client;
   cachedDb = db;
 
