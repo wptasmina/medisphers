@@ -47,10 +47,10 @@ export default function AddDoctorForm() {
     };
 
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto dark:text-white">
             <div className="max-w-5xl mx-auto">
                 <h2 className="text-xl font-bold pb-2 pl-4">Add Doctor</h2>
-                <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-6 bg-white rounded-lg shadow">
+                <form onSubmit={handleSubmit(onSubmit)} className="p-6 space-y-6 bg-white dark:bg-emerald-400 rounded-lg shadow">
                     {/* Basic Info */}
                     <div className="grid grid-cols-2 gap-4">
                         <div>
