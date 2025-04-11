@@ -8,6 +8,8 @@ import { CiLight } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { toast } from "react-toastify";
+// import { useState } from 'react';
+import { AlignJustify, X } from "lucide-react";
 
 export default function NavBar() {
   const { user, logout } = useAuth();
@@ -18,6 +20,10 @@ export default function NavBar() {
     toast.success("Successfully logged out!", { position: "top-right" });
     router.push("/signin");
   };
+
+  // Navbar mobile togglemenu 
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   // Dark Mode Implementation
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -42,14 +48,37 @@ export default function NavBar() {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-base-300 backdrop-blur dark:bg-gray-900/70 shadow-md z-50 border-b">
-      <div className="w-11/12 mx-auto py-3 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full bg-base-300 backdrop-blur dark:bg-gray-900/70 shadow-md z-50 border-b">
+      <div className="w-11/12 mx-auto py-3 flex justify-between items-center relative">
+      
+        {/* Mobile Toggle Button */}
+        <div className="md:hidden z-40">
+          <button onClick={toggleMenu}>
+            {isOpen ? (
+              <X className="h-4 w-4 text-black dark:text-white" />
+            ) : (
+              <AlignJustify className="h-6 w-6 text-black dark:text-white" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden z-40 flex flex-col absolute bg-white w-[100%] dark:bg-gray-800 shadow-2xl
+          px-6 py-8 mt-68 space-y-3 font-medium">
+            <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
+            <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
+            <Link href="/doctors" onClick={() => setIsOpen(false)}>Doctors</Link>
+            <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+          </div>
+        )}
+
         {/* Logo */}
         <Link href="/">
           <img src="/Medisheper-logo.png" alt="Logo" className="w-28 h-12 p-1 object-cover" />
         </Link>
 
-        {/* Navigation Links */}
+        {/*Dactop Navigation Links */}
         <div className="hidden md:flex space-x-6 justify-center items-center ">
           <Link href="/" className="text-gray-800 font-semibold dark:text-white hover:text-[#022dbb]">
             Home
@@ -64,7 +93,7 @@ export default function NavBar() {
             Contact Us
           </Link>
           <Link href="/dashboard" className="text-gray-800 font-semibold rounded-full dark:px-4 py-1 dark:bg-gray-800 shadow-2xl dark:text-white hover:text-[#022dbb]">
-          Dashboard
+            Dashboard
           </Link>
         </div>
 
@@ -90,6 +119,6 @@ export default function NavBar() {
           )}
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
