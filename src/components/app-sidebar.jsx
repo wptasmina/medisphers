@@ -113,7 +113,7 @@ const data = {
           url: "/dashboard/add-doctor",
         },
         {
-          title: "profile",
+          title: "Profile",
           url: "/dashboard/profile",
         },
       ],

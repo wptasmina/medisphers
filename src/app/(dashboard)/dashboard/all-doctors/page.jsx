@@ -50,7 +50,7 @@ const AllDoctors = () => {
   return (
     <div className="w-11/12 mx-auto py-10">
       <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-[#022dbb] mb-8">
-        Our MediSphere Specialists
+        All MediSphere Specialists Doctors
       </h1>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
