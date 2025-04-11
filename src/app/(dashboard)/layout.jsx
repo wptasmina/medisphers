@@ -78,9 +78,10 @@ export default function Layout({ children }) {
                   <DropdownMenuContent>
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
+                    <DropdownMenuItem>Name</DropdownMenuItem>
+                    <DropdownMenuItem>Email</DropdownMenuItem>
                     <DropdownMenuItem>Profile</DropdownMenuItem>
                     <DropdownMenuItem>Billing</DropdownMenuItem>
-                    <DropdownMenuItem>Subscription</DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
 
