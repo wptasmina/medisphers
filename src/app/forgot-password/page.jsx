@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-const ResetPassword = () => {
+const ForgotPassword = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -52,7 +52,7 @@ const ResetPassword = () => {
       <h2 className="text-xl font-bold mb-4 text-center">Reset Password</h2>
 
       <div className="mb-4">
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email" className="mb-2">Email</Label>
         <Input
           id="email"
           type="email"
@@ -66,7 +66,7 @@ const ResetPassword = () => {
       </div>
 
       <div className="mb-6">
-        <Label htmlFor="password">New Password</Label>
+        <Label htmlFor="password" className="mb-2">New Password</Label>
         <div className="relative">
           <Input
             id="password"
@@ -96,11 +96,11 @@ const ResetPassword = () => {
         )}
       </div>
 
-      <Button type="submit" className="w-full" disabled={loading}>
+      <Button type="submit" className="w-full cursor-pointer" disabled={loading}>
         {loading ? "Resetting..." : "Reset Password"}
       </Button>
     </form>
   );
 };
 
-export default ResetPassword;
+export default ForgotPassword;
