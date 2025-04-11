@@ -1,6 +1,9 @@
+import AddDoctorForm from "@/components/form/addDoctorForm";
 
 export default function AddDoctor() {
   return (
-    <div>Add Doctor</div>
+    <div className="w-11/12 mx-auto py-8">
+      <AddDoctorForm></AddDoctorForm>
+    </div>
   )
 }

@@ -1,7 +1,10 @@
+import EditDoctorForm from "@/components/form/EditDoctorForm";
 
 
 export default function EditDoctor() {
   return (
-    <div>Edit Doctor page</div>
+    <div>
+      {/* <EditDoctorForm/> */}
+    </div>
   )
 }
