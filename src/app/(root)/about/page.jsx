@@ -145,74 +145,74 @@ export default function About() {
         </div>
       </section>
 
-<<<<<<< HEAD
-            <div className="p-6 bg-base-200 dark:bg-gray-800 rounded-xl shadow-lg">
-              <h2 className="text-2xl text-blue-700 font-semibold dark:text-gray-300">Why Choose MediSphere?</h2>
-              <ul className="mt-2 text-gray-500 list-disc list-inside">
-                <li>Secure cloud-based medical record management</li>
-                <li>Efficient appointment scheduling & patient tracking</li>
-                <li>User-friendly interface with real-time updates</li>
-                <li>HIPAA-compliant data security</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border rounded-2xl">
-            <img
-              src="/banner1.png"
-              width={600}
-              height={600}
-              className="rounded h-full w-full"
-              alt="Doctor image"
-            />
-          </div>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 py-6 mx-auto">
-          <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-fuchsia-500 transition-all">
-            <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
-              <FaUserMd className="text-4xl text-fuchsia-500" />
-            </div>
-            <h3 className="text-center text-sm font-semibold tracking-wide text-black">
-              FAMILY MEDICINE
-            </h3>
-          </div>
-          <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-red-500 transition-all">
-            <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
-              <FaHeartbeat className="text-4xl text-red-500" />
-            </div>
-            <h3 className="text-center text-sm font-semibold tracking-wide text-black">
-              CARDIOLOGY & DIABETES
-            </h3>
-          </div>
-          <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-orange-500 transition-all">
-            <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
-              <FaPills className="text-4xl text-orange-500" />
-            </div>
-            <h3 className="text-center text-sm font-semibold tracking-wide text-black">
-              HEALTH & WELLNESS
-            </h3>
-          </div>
-          <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-sky-500 transition-all">
-            <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
-              <FaStore className="text-4xl text-sky-500" />
-            </div>
-            <h3 className="text-center text-sm font-semibold tracking-wide text-black">
-              MEDISPHERE PHARMACY
-            </h3>
-          </div>
-        </div>
-        <div>
-          <Link href="/contact" className="bg-[#022dbb]"><Button className="bg-[#022dbb]">Get in Touch</Button></Link>
-        </div>
-=======
-      {/* Contact CTA */}
-      <div className="text-center pb-10">
-        <Link href="/contact">
-          <Button className="bg-[#022dbb] text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition cursor-pointer">
-            Get in Touch
-          </Button>
-        </Link>
->>>>>>> development
-      </div>
-    </div>
+{/* // <<<<<<< HEAD */}
+//             <div className="p-6 bg-base-200 dark:bg-gray-800 rounded-xl shadow-lg">
+//               <h2 className="text-2xl text-blue-700 font-semibold dark:text-gray-300">Why Choose MediSphere?</h2>
+//               <ul className="mt-2 text-gray-500 list-disc list-inside">
+//                 <li>Secure cloud-based medical record management</li>
+//                 <li>Efficient appointment scheduling & patient tracking</li>
+//                 <li>User-friendly interface with real-time updates</li>
+//                 <li>HIPAA-compliant data security</li>
+//               </ul>
+//             </div>
+//           </div>
+//           <div className="border rounded-2xl">
+//             <img
+//               src="/banner1.png"
+//               width={600}
+//               height={600}
+//               className="rounded h-full w-full"
+//               alt="Doctor image"
+//             />
+//           </div>
+//         </div>
+//         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 py-6 mx-auto">
+//           <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-fuchsia-500 transition-all">
+//             <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
+//               <FaUserMd className="text-4xl text-fuchsia-500" />
+//             </div>
+//             <h3 className="text-center text-sm font-semibold tracking-wide text-black">
+//               FAMILY MEDICINE
+//             </h3>
+//           </div>
+//           <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-red-500 transition-all">
+//             <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
+//               <FaHeartbeat className="text-4xl text-red-500" />
+//             </div>
+//             <h3 className="text-center text-sm font-semibold tracking-wide text-black">
+//               CARDIOLOGY & DIABETES
+//             </h3>
+//           </div>
+//           <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-orange-500 transition-all">
+//             <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
+//               <FaPills className="text-4xl text-orange-500" />
+//             </div>
+//             <h3 className="text-center text-sm font-semibold tracking-wide text-black">
+//               HEALTH & WELLNESS
+//             </h3>
+//           </div>
+//           <div className="flex flex-col items-center justify-center bg-white rounded-lg p-6 shadow-md hover:shadow-xl hover:bg-sky-500 transition-all">
+//             <div className="rounded-full border-2 border-gray-200 bg-white p-4 mb-4">
+//               <FaStore className="text-4xl text-sky-500" />
+//             </div>
+//             <h3 className="text-center text-sm font-semibold tracking-wide text-black">
+//               MEDISPHERE PHARMACY
+//             </h3>
+//           </div>
+//         </div>
+//         <div>
+//           <Link href="/contact" className="bg-[#022dbb]"><Button className="bg-[#022dbb]">Get in Touch</Button></Link>
+//         </div>
+// =======
+//       {/* Contact CTA */}
+//       <div className="text-center pb-10">
+//         <Link href="/contact">
+//           <Button className="bg-[#022dbb] text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition cursor-pointer">
+//             Get in Touch
+//           </Button>
+//         </Link>
+// >>>>>>> development
+//       </div>
+//     </div>
   );
 }

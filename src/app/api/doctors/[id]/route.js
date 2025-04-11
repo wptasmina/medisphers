@@ -1,97 +1,61 @@
-// import { connectToDatabase } from "@/lib/dbConnect";
-
-// import { ObjectId } from "mongodb";
-
-// export async function GET(request, { params }) {
-//     try {
-//         const { db } = await connectToDatabase();
-//         const doctorsCollection = db.collection("doctors"); // Replace with your collection name
-
-//         const { id } = params;
-        
-//         // Validate MongoDB ObjectId
-//         if (!ObjectId.isValid(id)) {
-//             return new Response(JSON.stringify({ message: "Invalid doctor ID" }), {
-//                 status: 400,
-//                 headers: { "Content-Type": "application/json" },
-//             });
-//         }
-
-//         // Find doctor by ID
-//         const doctor = await doctorsCollection.findOne({ _id: new ObjectId(id) });
-
-//         if (!doctor) {
-//             return new Response(JSON.stringify({ message: "Doctor not found" }), {
-//                 status: 404,
-//                 headers: { "Content-Type": "application/json" },
-//             });
-//         }
-
-//         return new Response(JSON.stringify(doctor), {
-//             status: 200,
-//             headers: { "Content-Type": "application/json" },
-//         });
-
-//     } catch (error) {
-//         return new Response(JSON.stringify({ message: "Server Error", error }), {
-//             status: 500,
-//             headers: { "Content-Type": "application/json" },
-//         });
-//     }
-// }
-
-
 import { connectToDatabase } from '@/lib/dbConnect';
 import { ObjectId } from 'mongodb';
 
 // GET /api/doctors/[id]
 export async function GET(request, { params }) {
+  const { id } = params;
+
+  if (!ObjectId.isValid(id)) {
+    return new Response(JSON.stringify({ message: 'Invalid doctor ID' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
   try {
     const { db } = await connectToDatabase();
-    const { id } = params;
-
-    if (!ObjectId.isValid(id)) {
-      return new Response(JSON.stringify({ message: "Invalid doctor ID" }), {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      });
-    }
-
-    const doctor = await db.collection("doctors").findOne({ _id: new ObjectId(id) });
+    const doctor = await db.collection('doctors').findOne({ _id: new ObjectId(id) });
 
     if (!doctor) {
-      return new Response(JSON.stringify({ message: "Doctor not found" }), {
+      return new Response(JSON.stringify({ message: 'Doctor not found' }), {
         status: 404,
-        headers: { "Content-Type": "application/json" },
+        headers: { 'Content-Type': 'application/json' },
       });
     }
 
     return new Response(JSON.stringify(doctor), {
       status: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: { 'Content-Type': 'application/json' },
     });
-
   } catch (error) {
-    return new Response(JSON.stringify({ message: "Server Error", error: error.message }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
+    console.error('GET /api/doctors/[id] error:', error);
+    return new Response(
+      JSON.stringify({ message: 'Server Error', error: error.message }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
   }
 }
 
 // PUT /api/doctors/[id]
-export async function PUT(req, { params }) {
-  try {
-    const { db } = await connectToDatabase();
-    const { id } = params;
-    const body = await req.json();
+export async function PUT(request, { params }) {
+  const { id } = params;
 
-    if (!ObjectId.isValid(id)) {
-      return new Response(JSON.stringify({ message: "Invalid doctor ID" }), {
-        status: 400,
-        headers: { "Content-Type": "application/json" },
-      });
+  if (!ObjectId.isValid(id)) {
+    return new Response(JSON.stringify({ message: 'Invalid doctor ID' }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  try {
+    const body = await request.json();
+
+    // Remove _id if it exists in the body to avoid mutation error
+    if (body._id) {
+      delete body._id;
     }
+
+    const { db } = await connectToDatabase();
 
     const result = await db.collection('doctors').updateOne(
       { _id: new ObjectId(id) },
@@ -99,18 +63,22 @@ export async function PUT(req, { params }) {
     );
 
     if (result.matchedCount === 0) {
-      return new Response(JSON.stringify({ message: "Doctor not found" }), {
+      return new Response(JSON.stringify({ message: 'Doctor not found' }), {
         status: 404,
+        headers: { 'Content-Type': 'application/json' },
       });
     }
 
-    return new Response(JSON.stringify({ success: true, result }), {
+    return new Response(JSON.stringify({ success: true }), {
       status: 200,
+      headers: { 'Content-Type': 'application/json' },
     });
-
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Update failed', detail: error.message }), {
-      status: 500,
-    });
+    console.error('PUT /api/doctors/[id] error:', error);
+    return new Response(
+      JSON.stringify({ message: 'Update failed', error: error.message }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
   }
 }
+

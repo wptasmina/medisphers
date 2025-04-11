@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> development
 
 "use client";
 
@@ -51,13 +48,12 @@ const AllDoctors = () => {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="w-11/12 mx-auto py-28">
+    <div className="w-11/12 mx-auto py-10">
       <h1 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-[#022dbb] mb-8">
         Our MediSphere Specialists
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {doctorsData.map((doctor) => (
           <div
             key={doctor._id}
@@ -102,12 +98,4 @@ const AllDoctors = () => {
     </div>
   );
 };
-
 export default AllDoctors;
-
-
-=======
-    <div>All Doctors page</div>
-  )
-}
->>>>>>> development
