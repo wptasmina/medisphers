@@ -109,7 +109,7 @@ const LoginForm = () => {
             </div>
           )}
         </div>
-
+        {/* Password  */}
         <div className="mb-6">
           <Label htmlFor="password" className="mb-2">Password</Label>
           <div className="relative">
@@ -136,6 +136,14 @@ const LoginForm = () => {
               <FormMessage>{errors.password?.message}</FormMessage>
             </div>
           )}
+          <div className="mt-2 text-right">
+            <Link
+              href="/forgot-password"
+              className="text-sm text-blue-600 hover:underline dark:text-blue-400"
+            >
+              Forgot password?
+            </Link>
+          </div>
         </div>
 
         <Button
