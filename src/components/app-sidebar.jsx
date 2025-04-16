@@ -3,19 +3,11 @@
 import * as React from "react"
 import {
   ArrowLeftFromLine,
-  AudioWaveform,
-  BriefcaseMedical,
-  CalendarDays,
-  CircleDollarSign,
-  ClipboardList,
-  Command,
-  GalleryVerticalEnd,
+  Stethoscope,
+  UserRoundPlus,
+  UserRoundCog,
   MessagesSquare,
   Settings,
-  Stethoscope,
-  UserRoundCog,
-  UserRoundPlus,
-  Users,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -30,224 +22,14 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 
-// This is sample data.
+// Simulated user data (replace with real user info from auth/session)
 const data = {
   user: {
     name: "Medisphere",
     email: "medisphere@example.com",
     avatar: "/avatars/Medisheper-logo.png",
+    role: "admin", // Change to 'doctor' or 'patient' to test other roles
   },
-  // teams: [
-  //   {
-  //     name: "Acme Inc",
-  //     logo: GalleryVerticalEnd,
-  //     plan: "Enterprise",
-  //   },
-  //   {
-  //     name: "Acme Corp.",
-  //     logo: AudioWaveform,
-  //     plan: "Startup",
-  //   },
-  //   {
-  //     name: "Evil Corp.",
-  //     logo: Command,
-  //     plan: "Free",
-  //   },
-  // ],
-  navMain: [
-    {
-      title: "Dashboard",
-      url: "/dashboard",
-      icon: Stethoscope,
-      isActive: true,
-      items: [
-        {
-          // title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    // {
-    //   title: "Appointment",
-    //   url: "#",
-    //   icon: CalendarDays,
-    //   isActive: true,
-    //   items: [
-    //     {
-    //       title: "History",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Starred",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Settings",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
-    {
-      title: "Doctor",
-      url: "/dashboard/doctor",
-      icon: UserRoundPlus,
-      items: [
-        {
-          title: "All Doctors",
-          url: "/dashboard/all-doctors",
-        },
-        // {
-        //   title: "Edit Doctor",
-        //   url: "/dashboard/edit-doctor",
-        // },
-        {
-          title: "Add Doctor",
-          url: "/dashboard/add-doctor",
-        },
-        {
-          title: "Profile",
-          url: "/dashboard/profile",
-        },
-      ],
-    },
-    // {
-    //   title: "Patient",
-    //   url: "#",
-    //   icon: UserRoundCog,
-    //   items: [
-    //     {
-    //       title: "Introduction",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Get Started",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Tutorials",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Changelog",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Staff",
-    //   url: "#",
-    //   icon: Users,
-    //   items: [
-    //     {
-    //       title: "Introduction",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Get Started",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Tutorials",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Changelog",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Payments",
-    //   url: "#",
-    //   icon: CircleDollarSign,
-    //   items: [
-    //     {
-    //       title: "Introduction",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Get Started",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Tutorials",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Changelog",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Patient Records",
-    //   url: "#",
-    //   icon: ClipboardList,
-    //   items: [
-    //     {
-    //       title: "Introduction",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Get Started",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Tutorials",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Changelog",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Department",
-    //   url: "#",
-    //   icon: BriefcaseMedical,
-    //   items: [
-    //     {
-    //       title: "Introduction",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Get Started",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Tutorials",
-    //       url: "#",
-    //     },
-    //     {
-    //       title: "Changelog",
-    //       url: "#",
-    //     },
-    //   ],
-    // },
-    {
-      title: "Massage",
-      url: "/contact",
-      icon: MessagesSquare,
-      items: [
-        {
-          title: "Contact",
-          url: "/contact",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "/settings",
-      icon: Settings,
-      // items: [
-      //   {
-      //     title: "General",
-      //     url: "#",
-      //   },
-      // ],
-    },
-  ],
   projects: [
     {
       name: "Log Out",
@@ -257,22 +39,83 @@ const data = {
   ],
 }
 
-export function AppSidebar({
-  ...props
-}) {
+// Role-based menu configuration
+const navMainItems = {
+  admin: [
+    {
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: Stethoscope,
+    },
+    {
+      title: "Doctor",
+      url: "/dashboard/doctor",
+      icon: UserRoundPlus,
+      items: [
+        { title: "All Doctors", url: "/dashboard/all-doctors" },
+        { title: "Add Doctor", url: "/dashboard/add-doctor" },
+        { title: "Profile", url: "/dashboard/profile" },
+      ],
+    },
+    {
+      title: "Messages",
+      url: "/contact",
+      icon: MessagesSquare,
+    },
+    {
+      title: "Settings",
+      url: "/settings",
+      icon: Settings,
+    },
+  ],
+  doctor: [
+    {
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: Stethoscope,
+    },
+    {
+      title: "Profile",
+      url: "/dashboard/profile",
+      icon: UserRoundCog,
+    },
+    {
+      title: "Messages",
+      url: "/contact",
+      icon: MessagesSquare,
+    },
+  ],
+  patient: [
+    {
+      title: "Dashboard",
+      url: "/dashboard",
+      icon: Stethoscope,
+    },
+    {
+      title: "Messages",
+      url: "/contact",
+      icon: MessagesSquare,
+    },
+  ],
+}
+
+export function AppSidebar({ ...props }) {
+  const role = data.user.role || "patient"
+  const navItems = navMainItems[role] || []
+
   return (
-    (<Sidebar collapsible="icon" {...props}>
+    <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams || []} />
+        <TeamSwitcher teams={[]} />
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <NavMain items={navItems} />
         <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
       </SidebarFooter>
       <SidebarRail />
-    </Sidebar>)
-  );
+    </Sidebar>
+  )
 }
