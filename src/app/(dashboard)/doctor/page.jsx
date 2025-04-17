@@ -1,5 +1,5 @@
 
-// page.jsx
+//doctor page.jsx
 
 export default function Page() {
   return (

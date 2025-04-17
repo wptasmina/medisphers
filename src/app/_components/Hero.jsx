@@ -1,13 +1,12 @@
 import { Button } from '@/components/ui/button'
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
-import React from 'react'
 
 
 export default function Hero() {
   return (
     <section className='pt-14'>
-      <div className="w-11/12 mx-auto  py-8 px-3 ">
+      <div className="w-11/12 mx-auto  py-8">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 items-center self-start md:gap-8">
           <div>
             <div className="max-w-lg md:max-w-none self-start  px-3 md:px-0">
