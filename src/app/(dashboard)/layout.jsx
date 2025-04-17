@@ -100,7 +100,6 @@ export default function Layout({ children }) {
             </ThemeProvider>
           </SidebarInset>
         </SidebarProvider >
-
       </body>
     </html>
   );

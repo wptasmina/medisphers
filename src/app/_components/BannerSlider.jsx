@@ -76,6 +76,7 @@ const BannerSlider = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>
+
         </>
     );
 };

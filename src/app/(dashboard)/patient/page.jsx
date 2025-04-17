@@ -1,5 +1,5 @@
 
-// page.jsx
+//patient page.jsx
 
 export default function Page() {
   return (
