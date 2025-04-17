@@ -63,6 +63,7 @@ const RegistrationForm = () => {
                 value: /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif))$/i,
                 message:
                   "Please enter a valid image URL (e.g., .jpg, .png, .jpeg)",
+                  accept: "image/*",
               },
             })}
             className="w-full"

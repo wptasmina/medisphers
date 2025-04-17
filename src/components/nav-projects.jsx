@@ -18,6 +18,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import Link from "next/link";
 
 export function NavProjects({
   projects
@@ -31,10 +32,10 @@ export function NavProjects({
         {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
             <SidebarMenuButton asChild>
-              <a href={item.url}>
+              <Link href={item.url}>
                 <item.icon />
                 <span>{item.name}</span>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         ))}
@@ -43,3 +44,19 @@ export function NavProjects({
     </SidebarGroup>)
   );
 }
+// export function NavProjects({ projects }) {
+//   return (
+//     <div className="space-y-1">
+//       {projects.map((project, i) => (
+//         <button
+//           key={i}
+//           onClick={project.onClick}
+//           className="w-full flex items-center gap-2 p-2 rounded hover:bg-muted"
+//         >
+//           <project.icon className="w-4 h-4" />
+//           <span>{project.name}</span>
+//         </button>
+//       ))}
+//     </div>
+//   );
+// }

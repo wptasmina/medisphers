@@ -68,13 +68,13 @@ const LoginForm = () => {
 
         // Role-based redirect
         if (decoded.role === "doctor") {
-          router.push("/dashboard/doctor");
+          router.push("/doctor");
         } else if (decoded.role === "admin") {
           router.push("/admin-panel");
         } else if (decoded.role === "patient") {
-          router.push("/dashboard/patient");
+          router.push("/patient");
         } else {
-          router.push("/dashboard");
+          router.push("/admin");
         }
       } else {
         toast.error(data.error || "Login failed!", { position: "top-right" });
@@ -157,11 +157,15 @@ const LoginForm = () => {
         <p className="mt-6 text-sm text-center cursor-pointer">
           New to <span className="font-bold">Medisphere</span>? Click here to
           <Link className="text-[#022dbb] font-bold ml-1" href={"/signup/doctor"}>
-            Join as a doctor
-          </Link>{" "}
-          or
+            Join as a doctor 
+          </Link> 
+            Or
           <Link className="text-[#022dbb] font-bold ml-1" href={"/signup/patient"}>
-            Register as a patient
+            Register as a patient 
+          </Link> 
+          Or
+          <Link className="text-[#022dbb] font-bold ml-1" href={"/signup/staff"}>
+            Register as a Staff 
           </Link>
           .
         </p>
