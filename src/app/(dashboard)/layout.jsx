@@ -1,3 +1,5 @@
+//Admin Layout:
+
 // layout.jsx
 
 import { AppSidebar } from "@/components/app-sidebar";
