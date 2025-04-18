@@ -11,7 +11,9 @@ import {
   Command,
   GalleryVerticalEnd,
   Home,
+  Mail,
   MessagesSquare,
+  Phone,
   Settings,
   Stethoscope,
   UserRoundCog,
@@ -59,8 +61,20 @@ const data = {
       isActive: true,
       items: [
         {
+          title: "Book Appointment",
+          url: "/appointment/book-appointment",
+        },
+        {
+          title: "Edit Appointment",
+          url: "/appointment/edit-appointment",
+        },
+        {
+          title: "View Appointment",
+          url: "/appointment/view-appointment",
+        },
+        {
           title: "History",
-          url: "#",
+          url: "/appointment/history",
         },
       ],
     },
@@ -76,10 +90,6 @@ const data = {
         {
           title: "Edit Doctor",
           url: "/doctor/edit-doctor",
-        },
-        {
-          title: "Add Doctor",
-          url: "/dashboard/add-doctor",
         },
         {
           title: "Profile",
@@ -108,13 +118,29 @@ const data = {
       icon: Users,
       items: [
         {
-          title: "Introduction",
-          url: "#",
+          title: "Profile", //view or edit personal profile
+          url: "/staff/profile",
         },
         {
-          title: "Get Started",
-          url: "#",
+          title: "Schedule",
+          url: "/staff/schedule", // Daily/weekly work schedule
         },
+        {
+          title: "Tasks",
+          url: "/staff/tasks",
+        },
+        {
+          title: "Attendance",
+          url: "/staff/attendance",
+        },
+        {
+          title: "Payroll",
+          url: "/staff/payroll",
+        },
+        // {
+        //   title: "Settings",
+        //   url: "/staff/settings",
+        // },
       ],
     },
     {
@@ -186,28 +212,28 @@ const data = {
         },
       ],
     },
-    {
-      title: "Massage",
-      url: "/contact",
-      icon: MessagesSquare,
-      items: [
-        {
-          title: "Contact",
-          url: "/contact",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "/settings",
-      icon: Settings,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-      ],
-    },
+    // {
+    //   title: "Massage",
+    //   url: "/contact",
+    //   icon: MessagesSquare,
+    //   items: [
+    //     {
+    //       title: "Contact",
+    //       url: "/contact",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Settings",
+    //   url: "/settings",
+    //   icon: Settings,
+    //   items: [
+    //     {
+    //       title: "General",
+    //       url: "#",
+    //     },
+    //   ],
+    // },
   ],
   projects: [
     {
@@ -215,6 +241,28 @@ const data = {
       url: "/",
       icon: Home,
     },
+    
+    {
+      name: "Chat", 
+      url: "/chat",
+      icon: MessagesSquare,
+    },
+    {
+      name: "Calls", 
+      url: "/calls",
+      icon: Phone,
+    },
+    {
+      name: "Email", 
+      url: "/email",
+      icon: Mail,
+    },
+    {
+      name: "Settings",
+      url: "/settings",
+      icon: Settings,
+    },
+    
     {
       name: "Log Out",
       url: "/logout",
@@ -238,7 +286,6 @@ export function AppSidebar({...props}) {
   ];
   
   const patientAllowed = [
-    "Dashboard",
     "Patient",
     "Massage",
     "Settings",
