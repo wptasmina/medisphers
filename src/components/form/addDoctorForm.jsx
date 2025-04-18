@@ -32,6 +32,7 @@ export default function AddDoctorForm() {
     });
 
     const onSubmit = async (data) => {
+        data.createdAt = new Date();  // adds current timestamp
         const res = await fetch('/api/doctors', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
