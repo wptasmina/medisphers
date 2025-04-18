@@ -59,12 +59,19 @@ export default function Layout({ children }) {
               </Breadcrumb>
 
               {/* Notifications and Mode Toggle */}
-              <div className="flex items-center ml-auto gap-4">
+              <div className="flex items-center ml-auto gap-4 ">
                 {/* Bell Notification Button */}
                 <DropdownMenu>
-                  <DropdownMenuTrigger>
-                    <Bell />
+                  <DropdownMenuTrigger asChild>
+                    <button className="focus:outline-none outline-none">
+                      <Bell />
+                    </button>
                   </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuLabel>Message Notification</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>Thinks for everything</DropdownMenuItem>
+                  </DropdownMenuContent>
                 </DropdownMenu>
 
                 {/* Mode Toggle Button */}
@@ -82,6 +89,7 @@ export default function Layout({ children }) {
                     <DropdownMenuItem>Email</DropdownMenuItem>
                     <DropdownMenuItem>Profile</DropdownMenuItem>
                     <DropdownMenuItem>Billing</DropdownMenuItem>
+                    <DropdownMenuItem>LogOut</DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
 
