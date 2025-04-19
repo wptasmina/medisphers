@@ -23,7 +23,20 @@ First, run the development server:
 7) git push origin main <br/>
 
 -----------------------------------------------------------
+Login info:<br/>
 
+Admin: admin@medisphere.com
+pass: !Admin123 
+
+Doctor: doctor@medisphere.com
+pass: !Doctor123
+
+
+Prtient: patient@medisphere.com
+pass: !Patient123
+
+Staff: staff@medisphere.com
+pass: !Staff123
 ```bash
 npm run dev
 # or
