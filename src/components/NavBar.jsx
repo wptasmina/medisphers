@@ -92,9 +92,6 @@ export default function NavBar() {
           <Link href="/contact" className="text-gray-800 font-semibold dark:text-white hover:text-[#022dbb]">
             Contact Us
           </Link>
-          <Link href="/dashboard" className="text-gray-800 font-semibold rounded-full dark:px-4 py-1 dark:bg-gray-800 shadow-2xl dark:text-white hover:text-[#022dbb]">
-            Dashboard
-          </Link>
         </div>
 
         {/* Dark Mode Toggle & Auth Buttons */}
