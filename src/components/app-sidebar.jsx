@@ -114,7 +114,7 @@ const data = {
     },
     {
       title: "Staff",
-      url: "#",
+      url: "/staff",
       icon: Users,
       items: [
         {

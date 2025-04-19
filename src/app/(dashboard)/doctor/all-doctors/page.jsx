@@ -25,7 +25,7 @@ const AllDoctors = () => {
         setLoading(false);
       }
     }
-
+  
     fetchDoctors();
   }, []);
 
