@@ -29,6 +29,7 @@ import {
 import { Bell, User } from "lucide-react";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import { ModeToggle } from "@/components/shared/mode-toggle";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -107,6 +108,7 @@ export default function Layout({ children }) {
             >
               {/* Page Content */}
               <main>{children}</main>
+              <ToastContainer richColors position="top-right" />
             </ThemeProvider>
           </SidebarInset>
         </SidebarProvider >
