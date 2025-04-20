@@ -1,43 +1,39 @@
 "use client";
 
+import { Slack } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ViewAppointmentsPage() {
   const [appointments, setAppointments] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Replace this mock data with your API data
   useEffect(() => {
-    const mockAppointments = [
-      {
-        id: 1,
-        name: "John Doe",
-        doctor: "Dr. Alice",
-        date: "2025-04-20",
-        time: "10:00 AM",
-        email: "john@example.com",
-        reason: "Routine Check-up",
-        type: "In-person",
-      },
-      {
-        id: 2,
-        name: "Jane Smith",
-        doctor: "Dr. Bob",
-        date: "2025-04-22",
-        time: "2:30 PM",
-        email: "jane@example.com",
-        reason: "Follow-up",
-        type: "Online",
-      },
-    ];
+    const fetchAppointments = async () => {
+      try {
+        const res = await fetch("/api/appointments");
+        const data = await res.json();
+        setAppointments(data);
+      } catch (error) {
+        console.error("Error fetching appointments:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    setTimeout(() => setAppointments(mockAppointments), 500);
+    fetchAppointments();
   }, []);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
       <h1 className="text-3xl font-bold mb-6">View Appointments</h1>
-      {appointments.length === 0 ? (
-        <p className="text-gray-500">No appointments found.</p>
+
+      {loading ? (
+        <div className="flex flex-col items-center justify-center py-20 text-[#022dbb]">
+          <Slack className="w-10 h-10 animate-spin mb-4" />
+          <p className="text-sm">Loading appointments...</p>
+        </div>
+      ) : appointments.length === 0 ? (
+        <p className="text-red-500">No appointments found.</p>
       ) : (
         <div className="overflow-x-auto border rounded-lg shadow">
           <table className="min-w-full divide-y divide-gray-200 bg-white">
@@ -54,32 +50,28 @@ export default function ViewAppointmentsPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
-  {appointments.map((appt, index) => (
-    <tr key={appt.id} className="hover:bg-gray-50 transition">
-      <td className="px-6 py-4 text-sm text-gray-800">{index + 1}</td>
-
-      {/* Name with image */}
-      <td className="px-6 py-4 text-sm text-gray-800">
-        <div className="flex items-center space-x-3">
-          <img
-            src={appt.image || "/default-avatar.png"}
-            alt={appt.name}
-            className="w-8 h-8 rounded-full object-cover"
-          />
-          <span>{appt.name}</span>
-        </div>
-      </td>
-
-      <td className="px-6 py-4 text-sm text-gray-800">{appt.doctor}</td>
-      <td className="px-6 py-4 text-sm text-gray-800">{appt.date}</td>
-      <td className="px-6 py-4 text-sm text-gray-800">{appt.time}</td>
-      <td className="px-6 py-4 text-sm text-gray-800">{appt.email}</td>
-      <td className="px-6 py-4 text-sm text-gray-800">{appt.type}</td>
-      <td className="px-6 py-4 text-sm text-gray-800">{appt.reason}</td>
-    </tr>
-  ))}
-</tbody>
-
+              {appointments.map((appt, index) => (
+                <tr key={appt.id} className="hover:bg-gray-50 transition">
+                  <td className="px-6 py-4 text-sm text-gray-800">{index + 1}</td>
+                  <td className="px-6 py-4 text-sm text-gray-800">
+                    <div className="flex items-center space-x-3">
+                      <img
+                        src={appt.image || "/default-avatar.png"}
+                        alt={appt.name}
+                        className="w-8 h-8 rounded-full object-cover"
+                      />
+                      <span>{appt.name}</span>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 text-sm text-gray-800">{appt.doctor}</td>
+                  <td className="px-6 py-4 text-sm text-gray-800">{appt.date}</td>
+                  <td className="px-6 py-4 text-sm text-gray-800">{appt.time}</td>
+                  <td className="px-6 py-4 text-sm text-gray-800">{appt.email}</td>
+                  <td className="px-6 py-4 text-sm text-gray-800">{appt.type}</td>
+                  <td className="px-6 py-4 text-sm text-gray-800">{appt.reason}</td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       )}

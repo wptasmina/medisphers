@@ -1,0 +1,25 @@
+
+[
+    {
+      "name": "John Doe",
+      "doctor": "Dr. Alice",
+      "date": "2025-04-20",
+      "time": "10:00 AM",
+      "email": "john@example.com",
+      "reason": "Routine Check-up",
+      "type": "In-person",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "doctor": "Dr. Bob",
+      "date": "2025-04-22",
+      "time": "2:30 PM",
+      "email": "jane@example.com",
+      "reason": "Follow-up",
+      "type": "Online",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg"
+    }
+  ]
+  
+ 
