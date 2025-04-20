@@ -3,7 +3,7 @@ import { ObjectId } from 'mongodb';
 
 // GET /api/doctors/[id]
 export async function GET(request, { params }) {
-  const { id } = params;
+  const { id } = await params;
 
   if (!ObjectId.isValid(id)) {
     return new Response(JSON.stringify({ message: 'Invalid doctor ID' }), {
