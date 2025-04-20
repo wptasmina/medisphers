@@ -23,7 +23,7 @@ export default function DoctorDetails() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const user = { name: "Joy Chy", email: "joychy@gmail.com" };
+  const user = { name: "medishpere", email: "medishpere@gmail.com" };
 
   useEffect(() => {
     async function fetchDoctorDetails() {
