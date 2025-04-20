@@ -64,18 +64,18 @@ const data = {
           title: "Book Appointment",
           url: "/appointment/book-appointment",
         },
-        {
-          title: "Edit Appointment",
-          url: "/appointment/edit-appointment",
-        },
+        // {
+        //   title: "Edit Appointment",
+        //   url: "/appointment/edit-appointment",
+        // },
         {
           title: "View Appointment",
           url: "/appointment/view-appointment",
         },
-        {
-          title: "History",
-          url: "/appointment/history",
-        },
+        // {
+        //   title: "History",
+        //   url: "/appointment/history",
+        // },
       ],
     },
     {

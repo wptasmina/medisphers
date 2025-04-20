@@ -3,20 +3,26 @@
     {
       "name": "John Doe",
       "doctor": "Dr. Alice",
+      "payment": "cash",
+      "age":"36",
       "date": "2025-04-20",
       "time": "10:00 AM",
       "email": "john@example.com",
       "reason": "Routine Check-up",
+      "Fees": "50",      
       "type": "In-person",
       "image": "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
       "name": "Jane Smith",
       "doctor": "Dr. Bob",
+      "payment": "cash",
+      "age":"26",
       "date": "2025-04-22",
       "time": "2:30 PM",
       "email": "jane@example.com",
       "reason": "Follow-up",
+      "Fees": "60",
       "type": "Online",
       "image": "https://randomuser.me/api/portraits/women/2.jpg"
     }
