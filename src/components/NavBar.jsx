@@ -9,10 +9,13 @@ import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { toast } from "react-toastify";
 import { AlignJustify, X } from "lucide-react";
+import Image from "next/image";
 
 export default function NavBar() {
   const { user, logout } = useAuth();
   const router = useRouter();
+  // console.log(user)
+  console.log(user?.photoUrl)
 
   const handleLogout = () => {
     logout();
@@ -100,10 +103,12 @@ export default function NavBar() {
           {user?.email ? (
             <div className="flex items-center gap-3">
               {/* Show user profile image if available */}
-              {user?.photoURL && (
-                <img
-                  srsrc={user?.photoURL || "/default-profile.png"}
+              {user?.photoUrl && (
+                <Image
+                  src={user?.photoUrl || ""}
                   alt="User"
+                  width={40}
+                  height={40}
                   className="w-10 h-10 rounded-full border-2 border-[#022dbb] object-cover"
                 />
               )}

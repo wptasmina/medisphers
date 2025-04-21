@@ -92,10 +92,6 @@ const data = {
           url: "/doctor/all-doctors",
         },
         {
-          title: "Edit Doctor",
-          url: "/doctor/edit-doctor",
-        },
-        {
           title: "Profile",
           url: "/doctor/profile",
         },
