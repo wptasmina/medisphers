@@ -38,6 +38,26 @@ const AllDoctors = () => {
     fetchDoctors();
   }, []);
 
+  // deleteDoctor 
+  const deleteDoctor = async (id) => {
+    const confirmDelete = confirm("Are you sure you want to delete this doctor?");
+    if (!confirmDelete) return;
+  
+    try {
+      const res = await fetch(`/api/doctors/${id}`, {
+        method: "DELETE",
+      });
+  
+      if (!res.ok) throw new Error("Failed to delete doctor");
+  
+      // Filter out the deleted doctor from the UI
+      setDoctorsData((prev) => prev.filter((doctor) => doctor._id !== id));
+    } catch (err) {
+      console.error("Error deleting doctor:", err);
+      alert("Failed to delete doctor");
+    }
+  };
+
   const indexOfLastDoctor = currentPage * doctorsPerPage;
   const indexOfFirstDoctor = indexOfLastDoctor - doctorsPerPage;
   const currentDoctors = doctorsData.slice(indexOfFirstDoctor, indexOfLastDoctor);
@@ -53,7 +73,7 @@ const AllDoctors = () => {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-[#022dbb]">
         <Slack className="w-10 h-10 animate-spin mb-4" />
-        <p className="text-sm">Loading doctors...</p>
+        <p className="text-sm">Loading all-doctors...</p>
       </div>
     );
   }
@@ -136,7 +156,7 @@ const AllDoctors = () => {
                         <SquarePen className="w-4 h-4" />
                       </div>
                     </Link>
-                    <div className="text-red-500 cursor-pointer dark:text-red-500 ">
+                    <div onClick={() => deleteDoctor(doctor._id)} className="text-red-500 cursor-pointer dark:text-red-500 ">
                       <Trash2 className="w-4 h-4" />
                     </div>
                   </div>
