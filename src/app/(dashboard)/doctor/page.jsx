@@ -29,7 +29,7 @@ export default async function HomePage() {
               <img
                 src={doctor.photo || "/default-avatar.png"}
                 alt={doctor.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover object-top"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-[#022dbb]">{doctor.name}</h3>
