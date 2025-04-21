@@ -14,6 +14,8 @@ import {
   SelectItem,
 } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
+import { Slack } from 'lucide-react';
+
 
 export default function EditDoctorForm({ doctorId }) {
   const {
@@ -72,7 +74,10 @@ export default function EditDoctorForm({ doctorId }) {
     }
   };
 
-  if (!doctorData) return <p>Loading doctor info...</p>;
+  if (!doctorData) return  <div className="flex flex-col items-center justify-center py-20 text-[#022dbb]">
+  <Slack className="w-10 h-10 animate-spin mb-4" />
+  <p className="text-sm">Loading EditDoctor...</p>
+</div>;
 
   return (
     <div className="w-11/12 mx-auto dark:text-white">
@@ -214,7 +219,7 @@ export default function EditDoctorForm({ doctorId }) {
             <Input {...register('photo')} placeholder={doctorData?.photo || 'https://...'} className="dark:bg-blue-50 dark:text-black"/>
           </div>
 
-          <Button type="submit" className="bg-[#022dbb] text-white hover:text-gray-200 dark:hover:text-[#022dbb] dark:hover:bg-blue-50 duration-300 px-4 py-2 rounded-md">
+          <Button type="submit" className="bg-[#022dbb] cursor-pointer text-white hover:text-gray-200 dark:hover:text-[#022dbb] dark:hover:bg-blue-50 duration-300 px-4 py-2 rounded-md">
             Update doctor
           </Button>
         </form>

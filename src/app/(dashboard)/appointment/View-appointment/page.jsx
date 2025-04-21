@@ -4,6 +4,8 @@ import { Check, Slack, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
+
+
 export default function ViewAppointmentsPage() {
   const [appointments, setAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
