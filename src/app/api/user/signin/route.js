@@ -42,7 +42,7 @@ export async function POST(req) {
       id: existingUser._id, 
       email: existingUser.email, 
       name: existingUser.firstName, 
-      photoURL: existingUser?.photoURL || "/default-avatar.png",
+      photoUrl: existingUser?.photoUrl || "/default-avatar.png",
       // profile: existingUser?.photoUrl || "",
       role: existingUser.role || "user", // Add the role here
     },
