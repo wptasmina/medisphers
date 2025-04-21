@@ -17,7 +17,7 @@ import { useParams } from "next/navigation";
 
 
 export default function DoctorDetails() {
-  const { id } = useParams(); // ✅ Get doctor ID from URL
+  const { id } = useParams(); 
   console.log(id)
   const [doctor, setDoctor] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -28,7 +28,7 @@ export default function DoctorDetails() {
   useEffect(() => {
     async function fetchDoctorDetails() {
       try {
-        const response = await fetch(`/api/doctors/${id}`); // ✅ Fetch doctor by ID
+        const response = await fetch(`/api/doctors/${id}`); 
         const data = await response.json();
         console.log(data)
         setDoctor(data);
