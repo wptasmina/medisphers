@@ -42,7 +42,8 @@ export async function POST(req) {
       id: existingUser._id, 
       email: existingUser.email, 
       name: existingUser.firstName, 
-      profile: existingUser?.photoUrl || "",
+      photoURL: existingUser?.photoURL || "/default-avatar.png",
+      // profile: existingUser?.photoUrl || "",
       role: existingUser.role || "user", // Add the role here
     },
     process.env.JWT_SECRET,

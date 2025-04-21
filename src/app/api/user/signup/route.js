@@ -2,7 +2,7 @@ import { connectToDatabase } from "@/lib/dbConnect";
 import bcrypt from "bcryptjs";
 
 export async function POST(req) {
-  const { photoUrl, firstName, lastName, email, password, role } = await req.json();
+  const { photoURL, firstName, lastName, email, password, role } = await req.json();
 
   if (!firstName || !lastName || !email || !password) {
     return new Response(JSON.stringify({ error: "All fields are required" }), { status: 400 });
@@ -16,7 +16,7 @@ export async function POST(req) {
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
-  await db.collection("users").insertOne({ photoUrl, firstName, lastName, email, password: hashedPassword, role });
+  await db.collection("users").insertOne({ photoURL, firstName, lastName, email, password: hashedPassword, role });
 
   return new Response(JSON.stringify({ message: "User registered successfully" }), { status: 201 });
 }
