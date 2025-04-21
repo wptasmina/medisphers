@@ -52,6 +52,10 @@ const data = {
           title: "Overview",
           url: "/dashboard",
         },
+        {
+          title: "Add Doctor",
+          url: "/add-doctor",
+        },
       ],
     },
     {
@@ -60,17 +64,17 @@ const data = {
       icon: CalendarDays,
       isActive: true,
       items: [
-        {
-          title: "Book Appointment",
-          url: "/appointment/book-appointment",
-        },
+        // {
+        //   title: "Book Appointment",
+        //   url: "/appointment/book-appointment",
+        // },
         // {
         //   title: "Edit Appointment",
         //   url: "/appointment/edit-appointment",
         // },
         {
           title: "View Appointment",
-          url: "/appointment/view-appointment",
+          url: "appointment/view-appointment",
         },
         // {
         //   title: "History",
@@ -278,6 +282,7 @@ export function AppSidebar({...props}) {
 
   const doctorAllowed = [
     "Dashboard",
+    "Add Doctor",
     "Appointment",
     "Doctor",
     "Massage",
