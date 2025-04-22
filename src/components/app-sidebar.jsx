@@ -61,7 +61,7 @@ const data = {
     },
     {
       title: "Appointment",
-      url: "#",
+      url: "/appointment",
       icon: CalendarDays,
       isActive: true,
       items: [

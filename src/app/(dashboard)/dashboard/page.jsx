@@ -15,6 +15,7 @@ import {
   Legend
 } from "chart.js";
 import { Separator } from "@/components/ui/separator";
+import DashboardAllDoctors from "@/components/dashboardAllDoctor";
 
 ChartJS.register(
   CategoryScale,
@@ -156,11 +157,11 @@ export default function page() {
       </Card>
 
       <Card className="md:col-span-2 lg:col-span-4">
-        <CardHeader>
-          <CardTitle>Recent Reports</CardTitle>
-        </CardHeader>
+        {/* <CardHeader>
+          <CardTitle>All Doctors1</CardTitle>
+        </CardHeader> */}
         <CardContent>
-          <div className="flex flex-col gap-2">
+          {/* <div className="flex flex-col gap-2">
             <div className="flex justify-between">
               <p>A shower broken in room number 135...</p>
               <Button variant="outline">View Report</Button>
@@ -170,7 +171,8 @@ export default function page() {
               <p>A shower broken in room number 137...</p>
               <Button variant="outline">View Report</Button>
             </div>
-          </div>
+          </div> */}
+          <DashboardAllDoctors/>
         </CardContent>
       </Card>
     </div>
