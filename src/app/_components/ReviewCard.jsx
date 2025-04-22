@@ -1,7 +1,8 @@
 "use client";
 
-import { Rating } from '@smastrom/react-rating';
+import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+
 import { Quote } from "lucide-react";
 
 

@@ -16,6 +16,7 @@ import {
   Phone,
   Settings,
   Stethoscope,
+  Store,
   UserRoundCog,
   UserRoundPlus,
   Users,
@@ -52,6 +53,10 @@ const data = {
           title: "Overview",
           url: "/dashboard",
         },
+        {
+          title: "Add Doctor",
+          url: "/add-doctor",
+        },
       ],
     },
     {
@@ -60,22 +65,22 @@ const data = {
       icon: CalendarDays,
       isActive: true,
       items: [
-        {
-          title: "Book Appointment",
-          url: "/appointment/book-appointment",
-        },
-        {
-          title: "Edit Appointment",
-          url: "/appointment/edit-appointment",
-        },
+        // {
+        //   title: "Book Appointment",
+        //   url: "/appointment/book-appointment",
+        // },
+        // {
+        //   title: "Edit Appointment",
+        //   url: "/appointment/edit-appointment",
+        // },
         {
           title: "View Appointment",
-          url: "/appointment/view-appointment",
+          url: "appointment/view-appointment",
         },
-        {
-          title: "History",
-          url: "/appointment/history",
-        },
+        // {
+        //   title: "History",
+        //   url: "/appointment/history",
+        // },
       ],
     },
     {
@@ -86,10 +91,6 @@ const data = {
         {
           title: "All Doctors",
           url: "/doctor/all-doctors",
-        },
-        {
-          title: "Edit Doctor",
-          url: "/doctor/edit-doctor",
         },
         {
           title: "Profile",
@@ -114,11 +115,11 @@ const data = {
     },
     {
       title: "Staff",
-      url: "#",
+      url: "/staff",
       icon: Users,
       items: [
         {
-          title: "Profile", //view or edit personal profile
+          title: "Staff Profile", //view or edit personal profile
           url: "/staff/profile",
         },
         {
@@ -150,18 +151,6 @@ const data = {
       items: [
         {
           title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
           url: "#",
         },
       ],
@@ -243,6 +232,11 @@ const data = {
     },
     
     {
+      name: "Shop", 
+      url: "/shop",
+      icon: Store,
+    },
+    {
       name: "Chat", 
       url: "/chat",
       icon: MessagesSquare,
@@ -278,7 +272,9 @@ export function AppSidebar({...props}) {
 
   const doctorAllowed = [
     "Dashboard",
+    "Add Doctor",
     "Appointment",
+    "Add Medicine",
     "Doctor",
     "Massage",
     "Overview",

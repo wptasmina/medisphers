@@ -23,23 +23,23 @@ export default function BookingModal({ doctor, user, isOpen, onClose }) {
         <DialogHeader>
           <DialogTitle>Book Appointment</DialogTitle>
         </DialogHeader>
-        
+
         <div className="space-y-4">
-     
+
           <div>
             <Label>Doctor Name</Label>
-            <Input value={doctor.name} readOnly />
+            <Input value={doctor?.name} readOnly />
           </div>
           <div>
             <Label>Department</Label>
-            <Input value={doctor.department} readOnly />
+            <Input value={doctor?.department} readOnly />
           </div>
           <div>
             <Label>Speciality</Label>
-            <Input value={doctor.speciality} readOnly />
+            <Input value={doctor?.speciality} readOnly />
           </div>
-          
-     
+
+
           <div>
             <Label>Your Name</Label>
             <Input value={userName} onChange={(e) => setUserName(e.target.value)} />
@@ -48,8 +48,8 @@ export default function BookingModal({ doctor, user, isOpen, onClose }) {
             <Label>Your Email</Label>
             <Input value={userEmail} onChange={(e) => setUserEmail(e.target.value)} />
           </div>
-          
 
+          {/* Appointment  */}
           <div>
             <Label>Select Appointment Time</Label>
             <Select onValueChange={setSelectedTime}>
@@ -57,17 +57,34 @@ export default function BookingModal({ doctor, user, isOpen, onClose }) {
                 <SelectValue placeholder="Choose a time" />
               </SelectTrigger>
               <SelectContent>
-                {Object.entries(doctor.appointmentTime).map(([day, time]) => (
+                {doctor?.appointmentTime &&
+                  Object.entries(doctor.appointmentTime).map(([day, time]) => (
+                    <SelectItem key={day} value={`${day} - ${time}`}>
+                      {day}: {time}
+                    </SelectItem>
+                  ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* <div>
+            <Label>Select Appointment Time</Label>
+            <Select onValueChange={setSelectedTime}>
+              <SelectTrigger>
+                <SelectValue placeholder="Choose a time" />
+              </SelectTrigger>
+              <SelectContent>
+                {Object.entries(doctor?.appointmentTime).map(([day, time]) => (
                   <SelectItem key={day} value={`${day} - ${time}`}>
                     {day}: {time}
                   </SelectItem>
                 ))}
               </SelectContent>
             </Select>
-          </div>
-          
-  
-          <Button className="w-full bg-blue-700" onClick={handleBooking} disabled={!selectedTime}>
+          </div> */}
+
+
+          <Button className="w-full bg-[#022dbb]" onClick={handleBooking} disabled={!selectedTime}>
             Confirm Booking
           </Button>
         </div>
