@@ -1,9 +1,11 @@
+"use client";
+
 import AppointmentTable from "@/components/AppointmentTable";
 
-export default function ViewAppointmentPage() {
+export default function ViewAppointmentsPage() {
   return (
-    <main className="p-6">
-      <AppointmentTable />
-    </main>
+    <div>
+      <AppointmentTable></AppointmentTable>
+    </div>
   );
 }
