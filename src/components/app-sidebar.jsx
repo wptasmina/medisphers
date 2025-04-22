@@ -233,7 +233,7 @@ const data = {
     
     {
       name: "Shop", 
-      url: "/shop",
+      url: "/medicines",
       icon: Store,
     },
     {
