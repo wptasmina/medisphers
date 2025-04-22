@@ -16,6 +16,7 @@ import {
   Phone,
   Settings,
   Stethoscope,
+  Store,
   UserRoundCog,
   UserRoundPlus,
   Users,
@@ -118,7 +119,7 @@ const data = {
       icon: Users,
       items: [
         {
-          title: "Profile", //view or edit personal profile
+          title: "Staff Profile", //view or edit personal profile
           url: "/staff/profile",
         },
         {
@@ -150,18 +151,6 @@ const data = {
       items: [
         {
           title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
           url: "#",
         },
       ],
@@ -243,6 +232,11 @@ const data = {
     },
     
     {
+      name: "Shop", 
+      url: "/shop",
+      icon: Store,
+    },
+    {
       name: "Chat", 
       url: "/chat",
       icon: MessagesSquare,
@@ -280,6 +274,7 @@ export function AppSidebar({...props}) {
     "Dashboard",
     "Add Doctor",
     "Appointment",
+    "Add Medicine",
     "Doctor",
     "Massage",
     "Overview",
