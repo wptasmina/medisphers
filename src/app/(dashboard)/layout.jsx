@@ -1,3 +1,4 @@
+'use client';
 //Admin Layout:
 
 // layout.jsx
