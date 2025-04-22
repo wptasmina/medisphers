@@ -1,9 +1,7 @@
-import AppointmentTable from "@/components/AppointmentTable";
+import React from 'react'
 
-export default function ViewAppointmentPage() {
+export default function page() {
   return (
-    <main className="p-6">
-      <AppointmentTable />
-    </main>
-  );
+    <div>view-appointment page</div>
+  )
 }
