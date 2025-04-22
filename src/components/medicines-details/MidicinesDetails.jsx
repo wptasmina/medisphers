@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import MedicinesSuggest from '../medicines-suggest/MedicinesSuggest'
 
 export default function MidicinesDetails() {
   return (
@@ -36,8 +37,10 @@ export default function MidicinesDetails() {
           </div>
 
         </div>
-        {/* <div>Task</div> */}
       </div>
+        <div>
+          <MedicinesSuggest/>
+        </div>
     </div>
   )
 }
