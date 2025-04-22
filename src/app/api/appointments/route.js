@@ -1,18 +1,12 @@
 import { connectToDatabase } from "@/lib/mongodb";
+import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
     const { db } = await connectToDatabase();
     const appointments = await db.collection("appointments").find({}).toArray();
-
-    return new Response(JSON.stringify(appointments), {
-      status: 200,
-      headers: { "Content-Type": "application/json" }
-    });
+    return NextResponse.json(appointments);
   } catch (error) {
-    return new Response(JSON.stringify({ message: "Error fetching appointments", error }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
+    return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
