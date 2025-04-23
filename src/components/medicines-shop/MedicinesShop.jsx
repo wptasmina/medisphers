@@ -17,32 +17,36 @@ export default async function MedicinesShop() {
 
   return (
     <div className="w-11/12 mx-auto pt-6 pb-12">
-      <h2 className="md:text-4xl text-2xl font-bold text-center mb-6">
-        Explore <span className="text-[#022dbb]">Medicines</span>
-      </h2>
+    <h2 className="md:text-4xl text-2xl font-bold text-center mb-6">
+      Explore <span className="text-[#022dbb]">Medicines</span>
+    </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {medicines.map((med, index) => (
-          <Link href={`/shop/midicine-details`} key={index}>
-            <Card className="w-auto md:p-4 p-2">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {medicines.map((med, index) => (
+        <Link href={`/shop/midicine-details`} key={index}>
+          <Card className="flex flex-col h-full lg:p-4 md:p-3 p-2">
+            <div className="w-full aspect-[4/3] relative">
               <Image
-                src={med.image}
-                width={400}
-                height={500}
+                src={med.image} 
                 alt={med.name}
-                className="w-full md:h-40 h-24 rounded-t-lg object-cover"
+                fill
+                className="object-cover rounded-t-lg"
               />
-              <CardHeader>
-                <CardTitle className="text-center">{med.name}</CardTitle>
-                <CardDescription className="text-center text-green-500">
-                  <span className="line-through">{med.discount}</span>{" "}
-                  <span className="text-xl font-bold">{med.price}</span>
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </Link>
-        ))}
-      </div>
+            </div>
+
+            <CardHeader className="px-0">
+              <CardTitle className="text-center text-sm md:text-base">
+                {med.name}
+              </CardTitle>
+              <CardDescription className="text-center text-green-600 text-sm md:text-lg">
+                <span className="line-through mr-2 text-sm">{med.discount}</span>
+                <span className="font-bold">{med.price}</span>
+              </CardDescription>
+            </CardHeader>
+          </Card>
+        </Link>
+      ))}
     </div>
+  </div>
   );
 }
