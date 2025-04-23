@@ -6,7 +6,7 @@ First, run the development server:
 1) git checkout development <br>
 2) git pull <br>
 3) git checkout Tasmina(নিজের ব্রাঞ্চের নাম)<br>
-4) git merged development <br>
+4) git merge development <br>
 5) ( নিজের ব্রাঞ্চে আছেন কিনা চেক করোন। )<br>
 <br/><br/>
 
