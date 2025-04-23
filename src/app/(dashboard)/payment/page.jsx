@@ -96,7 +96,7 @@ export default function PaymentPage() {
               <CheckoutForm clientSecret={clientSecret} bookingData={bookingData} />
             </Elements>
           ) : (
-            <p>Loading payment form...</p>
+            <p>Loading payment form....</p>
           )}
         </CardContent>
       </Card>
