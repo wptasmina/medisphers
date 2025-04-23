@@ -25,14 +25,14 @@ export default function MedicinesSuggest() {
   ]
 
   return (
-    <div className="w-10/12 mx-auto py-8 overflow-hidden bg-pink-600 my-8">
+    <div className="py-8 overflow-hidden border">
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index} className="p-4">
             <img
               src={src}
               alt={`Medicine ${index + 1}`}
-              className="rounded-lg w-20 h-20 object-cover shadow-md"
+              className="rounded-lg w-full object-cover shadow-md"
             />
           </div>
         ))}
