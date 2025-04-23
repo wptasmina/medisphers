@@ -1,8 +1,8 @@
 // components/MidicinesDetails.jsx
 import Image from 'next/image'
-import React from 'react'
+import MedicinesSuggest from '../medicines-suggest/MedicinesSuggest'
 
-export default function MedicinesDetails({ medicine }) {
+export default function MedicineDetails({ medicine }) {
   return (
     <div className='w-11/12 mx-auto'>
       <div className='grid grid-cols-1 gap-6 items-center'>
@@ -36,6 +36,9 @@ export default function MedicinesDetails({ medicine }) {
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          {/* <MedicinesSuggest /> */}
         </div>
       </div>
     </div>
