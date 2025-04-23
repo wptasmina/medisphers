@@ -10,7 +10,7 @@ export default async function Service() {
 
   const doctors = await servicesCollection
     .find({})
-    .sort({ workExperienceYears: -1 }) // Sort by highest workExperience
+    .sort({ workExperienceYears: -1 }) // Sort by highest years of workExperience
     .limit(6)
     .toArray();
 
