@@ -1,4 +1,4 @@
-// This is a SERVER COMPONENT — don't use "use client"
+
 import { connectToDatabase, collectionName } from '@/lib/dbConnect';
 import {
   Card,
@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+
 
 export default async function MedicinesShop() {
   const { db } = await connectToDatabase();
