@@ -26,12 +26,14 @@ export default function MedicineDetails() {
     fetchMedicine()
   }, [id])
 
-  if (loading) return <div className="text-center p-6">Loading...</div>
+  if (loading) return <div className="w-full flex justify-center items-center h-[300px]">
+    <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-[#022dbb] border-solid"></div>
+  </div>
   if (!medicine) return <div className="text-center p-6 text-red-500">Medicine not found</div>
 
 
   return (
-    <div className="w-11/12 mx-auto p-6"> 
+    <div className="w-11/12 mx-auto p-6">
       <div className='grid grid-cols-1 gap-6 items-center '>
         <div className="grid md:grid-cols-2 gap-6 bg-white dark:bg-gray-900 p-5 shadow-xl rounded-lg mt-6">
           <div className="w-full aspect-[4/3] relative">
