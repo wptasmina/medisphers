@@ -24,7 +24,7 @@ export default async function MedicinesShop() {
 
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       {medicines.map((med, index) => (
-        <Link href={`/shop/midicine-details`} key={index}>
+        <Link href={`/shop/details`} key={index}>
           <Card className="flex flex-col h-full lg:p-4 md:p-3 p-2">
             <div className="w-full aspect-[4/3] relative">
               <Image

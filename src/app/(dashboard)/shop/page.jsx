@@ -1,8 +1,7 @@
+import MedicinesShop from "@/components/medicines-shop/MedicinesShop";
 
-import MedicinesShop from "@/components/medicines-shop/MedicinesShop"
 
-
-export default function Page() {
+export default function page() {
   return (
     <>
       <MedicinesShop />

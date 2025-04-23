@@ -1,12 +1,14 @@
-import MidicinesDetails from '@/components/medicines-details/MidicinesDetails'
+
 // components //medicines-details/MidicinesDetails
+
+import MedicineDetails from "@/components/medicine-details/MedicineDetails";
 
 
 export default function page() {
   return (
         
     <div> 
-        <MidicinesDetails/> 
+        <MedicineDetails/> 
     </div>
   )
 }
