@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
 import Image from "next/image"
+// import MedicinesSuggest from "@/components/medicines-suggest/MedicinesSuggest"
 
 export default function MedicineDetails() {
   const { id } = useParams()
@@ -35,9 +36,9 @@ export default function MedicineDetails() {
   return (
     <div className="w-11/12 mx-auto p-6">
       <div className='grid grid-cols-1 gap-6 items-center '>
-        <div className="grid md:grid-cols-2 gap-6 bg-white dark:bg-gray-900 p-5 shadow-xl rounded-lg mt-6">
+        <div className="grid md:grid-cols-2 gap-6 items-center bg-white dark:bg-gray-900 p-5 shadow-xl rounded-lg mt-6">
           <div className="w-full aspect-[4/3] relative">
-            <Image src={medicine.image} alt={medicine.name} fill className="object-cover rounded" />
+            <Image src={medicine?.image} alt={medicine?.name} fill className="object-cover rounded" />
           </div>
           <div>
             <h2 className="text-2xl font-bold mb-2">{medicine?.name}</h2>
@@ -63,7 +64,8 @@ export default function MedicineDetails() {
             <p><strong>Manufacturer:</strong> {medicine?.manufacturer}</p>
           </div>
         </div>
-
+        {/* MedicinesSuggest */}
+        {/* <MedicinesSuggest /> */}
       </div>
     </div>
   )
