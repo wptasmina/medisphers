@@ -1,4 +1,7 @@
-"use client";
+'use client';
+//Admin Layout:
+
+// layout.jsx
 
 import { AppSidebar } from "@/components/app-sidebar";
 import {

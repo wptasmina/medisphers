@@ -61,7 +61,7 @@ const data = {
     },
     {
       title: "Appointment",
-      url: "#",
+      url: "/appointment",
       icon: CalendarDays,
       isActive: true,
       items: [
@@ -108,8 +108,8 @@ const data = {
           url: "/patient/profile",
         },
         {
-          title: "Get Started",
-          url: "#",
+          title: "Dashboard",
+          url: "/patient/dashboard",
         },
       ],
     },
