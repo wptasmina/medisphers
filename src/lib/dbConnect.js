@@ -11,7 +11,7 @@ let cachedDb = null;
 
 export const collectionName = {
   servicesCollection: "doctors",
-  // appointmentsCollection: "appointments"
+  medicinesCollection: "medicines"
 }
 export async function connectToDatabase() {
   if (cachedClient && cachedDb) return { client: cachedClient, db: cachedDb };

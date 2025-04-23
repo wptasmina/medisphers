@@ -4,10 +4,8 @@ import Link from "next/link";
 
 
 
-
 export default function ServiceCard({ item }) {
   const { _id, photo, name, year, workExperienceYears, department, about } = item;
-
 
   return (
     <Link href={`/doctors/${_id}`}>
