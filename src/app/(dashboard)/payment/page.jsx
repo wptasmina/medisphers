@@ -49,7 +49,7 @@ function CheckoutForm({ clientSecret, bookingData }) {
       <div className="p-4 border rounded-md bg-white shadow-sm">
         <CardElement />
       </div>
-      <Button type="submit" disabled={!stripe || loading}>
+      <Button className="bg-blue-700" type="submit" disabled={!stripe || loading}>
         {loading ? "Processing..." : `Pay $${bookingData.fees || 500}`}
       </Button>
     </form>
@@ -83,13 +83,13 @@ export default function PaymentPage() {
   }, [bookingData.fees]);
 
   return (
-    <div className="max-w-md mx-auto mt-10">
-      <Card>
+      <div className="max-w-md mx-auto mt-10">
+      <Card className="bg-blue-50">
         <CardContent className="p-6">
-          <h2 className="text-xl font-semibold mb-2">Pay for Appointment</h2>
-          <p className="text-sm mb-2">Patient: {bookingData.name}</p>
-          <p className="text-sm mb-2">Email: {bookingData.email}</p>
-          <p className="text-sm mb-4">Amount: ${bookingData.fees}</p>
+          <h2 className="text-xl font-semibold mb-2 text-blue-600">Pay for Appointment</h2>
+          <p className="text-sm mb-2 dark:text-black">Patient: {bookingData.name}</p>
+          <p className="text-sm mb-2 dark:text-black">Email: {bookingData.email}</p>
+          <p className="text-sm mb-4 dark:text-black">Amount: ${bookingData.fees}</p>
 
           {clientSecret ? (
             <Elements stripe={stripePromise} options={{ clientSecret }}>
