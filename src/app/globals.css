@@ -46,6 +46,9 @@
 }
 
 :root {
+  --primary-colour: #022dbb;
+  --primary-bg: #EFF6FF;
+  --primary-border: #022dbb;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -116,6 +119,8 @@
   --sidebar-ring: oklch(0.442 0.017 285.786);
 }
 
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -123,4 +128,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.slick-prev:before, .slick-next:before {
+  background: #000;
+  border-radius: 100%;
+  color: #b3b1b1;
+}
+.slick-dots{
+  color: #fff;
+}
+.slick-slide > div {
+  height: 100% !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+.slick-track {
+  display: flex !important;
+}
+.slick-list {
+  overflow: visible;
 }
