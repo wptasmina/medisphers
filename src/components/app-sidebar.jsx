@@ -146,12 +146,12 @@ const data = {
     },
     {
       title: "Payments",
-      url: "/payment",
+      url: "#",
       icon: CircleDollarSign,
       items: [
         {
-          title: "Payment Page",
-          url: "/payment",
+          title: "Introduction",
+          url: "#",
         },
       ],
     },
