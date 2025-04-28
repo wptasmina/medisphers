@@ -20,7 +20,7 @@ const PatientDashboard = () => {
       >
         {/* Upcoming Appointments */}
         <Card className="shadow-lg border-blue-300">
-          <CardHeader className="flex items-center gap-3">
+          <CardHeader className="flex items-center gap-4">
             <Calendar className="w-8 h-8 text-[#022dbb]" />
             <CardTitle className="text-lg">Upcoming Appointments</CardTitle>
           </CardHeader>
