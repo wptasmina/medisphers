@@ -5,8 +5,8 @@ This is a [Live Link](https://medisphers.vercel.app)<br> project bootstrapped wi
 First, run the development server:
 1) git checkout development <br>
 2) git pull <br>
-3) git checkout Tasmina(নিজের ব্রাঞ্চের নাম)<br>
-4) git merged development <br>
+3) git checkout Tasmina  (নিজের ব্রাঞ্চের নাম)<br>
+4) git merge development <br>
 5) ( নিজের ব্রাঞ্চে আছেন কিনা চেক করোন। )<br>
 <br/><br/>
 
@@ -23,7 +23,20 @@ First, run the development server:
 7) git push origin main <br/>
 
 -----------------------------------------------------------
+Login info:<br/>
 
+Admin: admin@medisphere.com
+pass: !Admin123 
+
+Doctor: doctor@medisphere.com
+pass: !Doctor123
+
+
+Prtient: patient@medisphere.com
+pass: !Patient123
+
+Staff: staff@medisphere.com
+pass: !Staff123
 ```bash
 npm run dev
 # or
