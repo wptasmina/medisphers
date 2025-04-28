@@ -19,8 +19,8 @@ const PatientDashboard = () => {
         className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
       >
         {/* Upcoming Appointments */}
-        <Card className="shadow-lg border-blue-300">
-          <CardHeader className="flex items-center gap-4">
+        <Card className="shadow-lg border-blue-200">
+          <CardHeader className="flex items-center gap-3">
             <Calendar className="w-8 h-8 text-[#022dbb]" />
             <CardTitle className="text-lg">Upcoming Appointments</CardTitle>
           </CardHeader>
