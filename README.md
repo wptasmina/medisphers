@@ -1,29 +1,5 @@
 This is a [Live Link](https://medisphers.vercel.app)<br> project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-
-First, run the development server:
-1) git checkout development <br>
-2) git pull <br>
-3) git checkout Tasmina (নিজের ব্রাঞ্চের নাম)<br>
-4) git merge development <br>
-5) ( নিজের ব্রাঞ্চে আছেন কিনা চেক করোন। )<br>
-<br/><br/>
-
------**conflicts** Hole------
-
-1) git checkout main (যে ব্রাঞ্চে করফিক্ট হয়েছে ব্রাঞ্চের নাম ) <br/>
-2) git pull origin main <br/>
-
-3) git checkout main (যে ব্রাঞ্চে করফিক্ট হয়েছে ব্রাঞ্চের নাম) <br/>
-4) git merge development (যে ব্রাঞ্চের সাথে মার্জ করবেন) <br/>
-
-5) git add . <br/>
-6) git commit -m "Merged development into main" <br/>
-7) git push origin main <br/>
-
------------------------------------------------------------
-
 ```bash
 npm run dev
 # or
