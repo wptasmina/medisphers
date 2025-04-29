@@ -41,8 +41,8 @@ export default async function MedicinesShop() {
                 {med.name}
               </CardTitle>
               <CardDescription className="text-center text-green-600 text-sm md:text-lg">
-                <span className="line-through mr-2 text-sm">{med.discount}</span>
-                <span className="font-bold">{med.price}</span>
+                <span className="line-through mr-2 text-sm">${med.discount}</span>
+                <span className="font-bold">${med.price}</span>
               </CardDescription>
             </CardHeader>
           </Card>
