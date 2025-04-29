@@ -59,7 +59,7 @@ export default function DoctorDetails() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Card className="px-2 pb-4 shadow-lg rounded-2xl lg:p-6">
+        <Card className="px-2 pb-4 shadow-lg rounded-2xl lg:p-6 mt-20">
           <div className="flex flex-col items-center gap-6 lg:flex-row">
             <Image
               src={doctor.photo}
@@ -143,7 +143,7 @@ export default function DoctorDetails() {
               )}
             </ul>
             <Button
-              className="mt-6 w-full bg-[#022dbb]"
+              className="mt-6 w-full bg-[#022dbb] dark:text-gray-200 dark:hover:text-gray-800 cursor-pointer"
               onClick={() => setIsModalOpen(true)}
             >
               Book an Appointment
