@@ -1,4 +1,4 @@
-"use client"; // <-- 👈 required for client hooks like useSearchParams
+"use client";
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
@@ -33,12 +33,9 @@ function CheckoutForm({ clientSecret, bookingData }) {
     } else if (result.paymentIntent.status === "succeeded") {
       alert("Payment successful!");
 
-      // Save booking to MongoDB
       await fetch("/api/appointments", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(bookingData),
       });
     }
@@ -56,7 +53,7 @@ function CheckoutForm({ clientSecret, bookingData }) {
   );
 }
 
-export default function PaymentPage() {
+export default function PaymentPageClient() {
   const [clientSecret, setClientSecret] = useState("");
   const searchParams = useSearchParams();
 
@@ -69,7 +66,7 @@ export default function PaymentPage() {
     date: searchParams.get("date"),
     time: searchParams.get("time"),
     payment: searchParams.get("payment"),
-    fees: searchParams.get("fees") || "500", // fallback fee
+    fees: searchParams.get("fees") || "500",
   };
 
   useEffect(() => {
@@ -83,7 +80,7 @@ export default function PaymentPage() {
   }, [bookingData.fees]);
 
   return (
-      <div className="max-w-md mx-auto mt-10">
+    <div className="max-w-md mx-auto mt-10">
       <Card className="bg-blue-50">
         <CardContent className="p-6">
           <h2 className="text-xl font-semibold mb-2 text-blue-600">Pay for Appointment</h2>
