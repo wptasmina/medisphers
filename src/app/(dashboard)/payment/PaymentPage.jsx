@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
@@ -35,7 +35,9 @@ function CheckoutForm({ clientSecret, bookingData }) {
 
       await fetch("/api/appointments", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(bookingData),
       });
     }
@@ -53,27 +55,27 @@ function CheckoutForm({ clientSecret, bookingData }) {
   );
 }
 
-export default function PaymentPageClient() {
-  const [clientSecret, setClientSecret] = useState("");
+export default function PaymentPage() {
   const searchParams = useSearchParams();
+  const [clientSecret, setClientSecret] = useState("");
 
   const bookingData = {
-    name: searchParams.get("name"),
-    email: searchParams.get("email"),
-    doctor: searchParams.get("doctor"),
-    department: searchParams.get("department"),
-    speciality: searchParams.get("speciality"),
-    date: searchParams.get("date"),
-    time: searchParams.get("time"),
-    payment: searchParams.get("payment"),
+    name: searchParams.get("name") || "",
+    email: searchParams.get("email") || "",
+    doctor: searchParams.get("doctor") || "",
+    department: searchParams.get("department") || "",
+    speciality: searchParams.get("speciality") || "",
+    date: searchParams.get("date") || "",
+    time: searchParams.get("time") || "",
+    payment: searchParams.get("payment") || "",
     fees: searchParams.get("fees") || "500",
   };
 
   useEffect(() => {
     const amount = parseInt(bookingData.fees) * 100;
+
     fetch("/api/payment-intent", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount }),
     })
       .then((res) => res.json())
@@ -85,16 +87,16 @@ export default function PaymentPageClient() {
       <Card className="bg-blue-50">
         <CardContent className="p-6">
           <h2 className="text-xl font-semibold mb-2 text-blue-600">Pay for Appointment</h2>
-          <p className="text-sm mb-2 dark:text-black">Patient: {bookingData.name}</p>
-          <p className="text-sm mb-2 dark:text-black">Email: {bookingData.email}</p>
-          <p className="text-sm mb-4 dark:text-black">Amount: ${bookingData.fees}</p>
+          <p className="text-sm mb-2 text-black">Patient: {bookingData.name}</p>
+          <p className="text-sm mb-2 text-black">Email: {bookingData.email}</p>
+          <p className="text-sm mb-4 text-black">Amount: ${bookingData.fees}</p>
 
           {clientSecret ? (
             <Elements stripe={stripePromise} options={{ clientSecret }}>
               <CheckoutForm clientSecret={clientSecret} bookingData={bookingData} />
             </Elements>
           ) : (
-            <p>Loading payment form....</p>
+            <p>Loading payment form…</p>
           )}
         </CardContent>
       </Card>
