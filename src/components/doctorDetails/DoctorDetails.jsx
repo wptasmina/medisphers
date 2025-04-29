@@ -54,24 +54,24 @@ export default function DoctorDetails() {
   return (
     <>
       <motion.div
-        className="w-full p-2 lg:max-w-4xl mx-auto lg:p-6  pt-20"
+        className="w-full p-2 lg:max-w-4xl mx-auto lg:p-6 pt-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Card className="px-2 pb-4 shadow-lg rounded-2xl lg:p-6 mt-20">
+        <Card className="px-2 pb-4 shadow-lg rounded-2xl lg:p-6 lg:mt-20 md:my-8 my-4">
           <div className="flex flex-col items-center gap-6 lg:flex-row">
             <Image
-              src={doctor.photo}
-              alt={doctor.name}
+              src={doctor?.photo}
+              alt={doctor?.name}
               width={120}
               height={120}
               className="rounded-full border shadow-md"
             />
             <div>
-              <h2 className="text-2xl font-bold">{doctor.name}</h2>
-              <p className="text-gray-600">{doctor.doctor_id}</p>
-              
+              <h2 className="text-2xl font-bold">{doctor?.name}</h2>
+              <p className="text-gray-600">{doctor?.doctor_id}</p>
+
               <p className={`text-sm ${doctor.availableStatus ? "text-green-500" : "text-red-500"}`}>
                 {doctor.availableStatus ? "Available" : "Unavailable"}
               </p>
