@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const PatientDashboard = () => {
   return (
-    <div className="w-11/12 max-w-screen-xl mx-auto py-10">
+    <div className="w-11/12 max-w-screen-xl mx-auto py-12">
       <h1 className="text-4xl font-bold text-center text-[#022dbb] mb-10">
         Welcome to MediSphere, Patient!
       </h1>
