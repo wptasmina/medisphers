@@ -6,7 +6,7 @@ export async function GET(request, { params }) {
   const { id } = params;
 
   if (!ObjectId.isValid(id)) {
-    return new Response(JSON.stringify({ message: 'Invalid doctor ID' }), {
+    return new Response(JSON.stringify({ message: `You requested ID: ${id}` }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' },
     });

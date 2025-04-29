@@ -17,7 +17,7 @@ import { useParams } from "next/navigation";
 
 
 export default function DoctorDetails() {
-  const { id } = useParams(); 
+  const { id } = useParams();
   console.log(id)
   const [doctor, setDoctor] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -28,7 +28,7 @@ export default function DoctorDetails() {
   useEffect(() => {
     async function fetchDoctorDetails() {
       try {
-        const response = await fetch(`/api/doctors/${id}`); 
+        const response = await fetch(`/api/doctors/${id}`);
         const data = await response.json();
         console.log(data)
         setDoctor(data);
@@ -71,9 +71,11 @@ export default function DoctorDetails() {
             <div>
               <h2 className="text-2xl font-bold">{doctor.name}</h2>
               <p className="text-gray-600">{doctor.doctor_id}</p>
-              <p className="text-sm text-green-400">
+              
+              <p className={`text-sm ${doctor.availableStatus ? "text-green-500" : "text-red-500"}`}>
                 {doctor.availableStatus ? "Available" : "Unavailable"}
               </p>
+
             </div>
           </div>
 
