@@ -3,7 +3,6 @@ This is a [Live Link](https://medisphers.vercel.app)<br> project bootstrapped wi
 
 Medisphers is a full-featured hospital management system designed to streamline patient, doctor, and admin workflows. Built with a modern tech stack, it includes authentication, appointments, payments, and email notifications, all in a clean, responsive UI.
 
----
 
 ## 🧰 Tech Stack
 
@@ -17,7 +16,6 @@ Medisphers is a full-featured hospital management system designed to streamline 
 | Payments         | Integrated Payment Method (e.g., Stripe/SSLCommerz)      |
 | Animations       | Framer Motion                                            |
 
----
 
 ## 🚀 Features
 
@@ -31,7 +29,6 @@ Medisphers is a full-featured hospital management system designed to streamline 
 | 📧 Email Notifications     | Automated emails for confirmations and updates via EmailJS   |
 | 🎨 Clean UI                | Modern, accessible UI built with Shadcn and Tailwind CSS      |
 
----
 
 ## 🌐 Demo
 
